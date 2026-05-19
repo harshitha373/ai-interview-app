@@ -269,21 +269,53 @@ app.post("/api/change-password", authenticateToken, async (req, res) => {
   }
 });
 
-// Email sending
+// Email sending (SMTP Config for Development/Fallback)
 const emailPassword = process.env.EMAIL_PASS ? process.env.EMAIL_PASS.replace(/\s+/g, '') : '';
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
-  secure: true, // use SSL
-  family: 4, // FORCES IPv4 DNS resolution (Bypasses Render ENETUNREACH IPv6 blocker!)
+  secure: true,
+  family: 4,
   auth: {
     user: process.env.EMAIL_USER,
     pass: emailPassword
   },
   tls: {
-    rejectUnauthorized: false // Bypasses container-level certificate handshaking blocks
+    rejectUnauthorized: false
   }
 });
+
+// Unified Email Dispatcher (Bypasses Render Free Tier Port Blocks via Brevo HTTP API on port 443!)
+const sendEmail = async ({ to, subject, html }) => {
+  if (process.env.BREVO_API_KEY) {
+    console.log(`[EMAIL SERVICE] Attempting dispatch via Brevo HTTP API for: ${to}`);
+    await axios.post(
+      'https://api.brevo.com/v3/smtp/email',
+      {
+        sender: { name: 'Shnoor AI Support', email: process.env.EMAIL_USER || 'harshitha@shnoor.com' },
+        to: [{ email: to }],
+        subject: subject,
+        htmlContent: html
+      },
+      {
+        headers: {
+          'api-key': process.env.BREVO_API_KEY,
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    console.log(`[EMAIL SERVICE] Sent successfully via Brevo HTTP API to: ${to}`);
+  } else {
+    console.log(`[EMAIL SERVICE] Attempting dispatch via Gmail SMTP for: ${to}`);
+    await transporter.sendMail({
+      from: `"Shnoor AI Support" <${process.env.EMAIL_USER}>`,
+      to: to,
+      subject: subject,
+      html: html
+    });
+    console.log(`[EMAIL SERVICE] Sent successfully via Gmail SMTP to: ${to}`);
+  }
+};
 
 //Forgot Password API endpoints
 
@@ -309,28 +341,26 @@ app.post("/api/forgot-password", async (req, res) => {
     // Send Reset Email
     const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${token}`;
 
-    const mailOptions = {
-      from: `"Shnoor AI Support" <${process.env.EMAIL_USER}>`,
+    const emailHtml = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
+        <h2 style="color: #1e40af; text-align: center;">Password Reset Request</h2>
+        <p>Hello,</p>
+        <p>We received a request to reset your password for your Shnoor AI Interview Systems account.</p>
+        <p>Click the button below to set a new password. This link will expire in 1 hour.</p>
+        <div style="text-align: center; margin: 30px 0;">
+          <a href="${resetLink}" style="background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Reset Password</a>
+        </div>
+        <p>If you did not request this, please ignore this email. Your password will remain unchanged.</p>
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+        <p style="font-size: 12px; color: #666; text-align: center;">Shnoor AI Interview Systems &copy; 2026</p>
+      </div>
+    `;
+
+    await sendEmail({
       to: email,
       subject: "Password Reset Request - Shnoor AI",
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
-          <h2 style="color: #1e40af; text-align: center;">Password Reset Request</h2>
-          <p>Hello,</p>
-          <p>We received a request to reset your password for your Shnoor AI Interview Systems account.</p>
-          <p>Click the button below to set a new password. This link will expire in 1 hour.</p>
-          <div style="text-align: center; margin: 30px 0;">
-            <a href="${resetLink}" style="background-color: #2563eb; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">Reset Password</a>
-          </div>
-          <p>If you did not request this, please ignore this email. Your password will remain unchanged.</p>
-          <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
-          <p style="font-size: 12px; color: #666; text-align: center;">Shnoor AI Interview Systems &copy; 2026</p>
-        </div>
-      `
-    };
-
-    await transporter.sendMail(mailOptions);
-    console.log(`[EMAIL SENT] Password reset email sent to: ${email}`);
+      html: emailHtml
+    });
 
     res.json({
       message: "A password reset link has been sent to your email address. Please check your inbox."
@@ -1690,39 +1720,37 @@ app.post("/api/admin/queries/reply", async (req, res) => {
     const { name, email, subject, message } = queryData.rows[0];
 
     // 2. Send official response email
-    const mailOptions = {
-      from: `"Shnoor AI Support" <${process.env.EMAIL_USER}>`,
+    const emailHtml = `
+      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #e2e8f0; border-radius: 16px; color: #1e293b;">
+        <div style="text-align: center; marginBottom: 25px;">
+          <h2 style="color: #4f46e5; margin: 0;">Support Resolution</h2>
+          <p style="color: #64748b; font-size: 0.9rem;">Shnoor AI Interview Systems</p>
+        </div>
+        
+        <p>Hello <strong>${name}</strong>,</p>
+        <p>Thank you for reaching out to our support team. Our administrators have reviewed your inquiry regarding "<em>${subject || 'General Issue'}</em>" and provided the following response:</p>
+        
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 12px; border-left: 4px solid #4f46e5; margin: 25px 0;">
+          <p style="margin: 0; line-height: 1.6; color: #334155;">${reply}</p>
+        </div>
+        
+        <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 20px;">
+          <p style="margin: 0;"><strong>Original Inquiry:</strong></p>
+          <p style="font-style: italic; margin-top: 5px;">"${message}"</p>
+        </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9rem;">Best Regards,<br/><strong>Shnoor AI Support Team</strong></p>
+        
+        <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 25px 0;">
+        <p style="font-size: 11px; color: #94a3b8; text-align: center;">This is an automated response from Shnoor AI. Please do not reply directly to this email.</p>
+      </div>
+    `;
+
+    await sendEmail({
       to: email,
       subject: `RE: ${subject || 'Support Request'} - Shnoor AI`,
-      html: `
-        <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 30px; border: 1px solid #e2e8f0; border-radius: 16px; color: #1e293b;">
-          <div style="text-align: center; marginBottom: 25px;">
-            <h2 style="color: #4f46e5; margin: 0;">Support Resolution</h2>
-            <p style="color: #64748b; font-size: 0.9rem;">Shnoor AI Interview Systems</p>
-          </div>
-          
-          <p>Hello <strong>${name}</strong>,</p>
-          <p>Thank you for reaching out to our support team. Our administrators have reviewed your inquiry regarding "<em>${subject || 'General Issue'}</em>" and provided the following response:</p>
-          
-          <div style="background-color: #f8fafc; padding: 20px; border-radius: 12px; border-left: 4px solid #4f46e5; margin: 25px 0;">
-            <p style="margin: 0; line-height: 1.6; color: #334155;">${reply}</p>
-          </div>
-          
-          <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 30px; border-top: 1px solid #f1f5f9; padding-top: 20px;">
-            <p style="margin: 0;"><strong>Original Inquiry:</strong></p>
-            <p style="font-style: italic; margin-top: 5px;">"${message}"</p>
-          </div>
-          
-          <p style="margin-top: 30px; font-size: 0.9rem;">Best Regards,<br/><strong>Shnoor AI Support Team</strong></p>
-          
-          <hr style="border: 0; border-top: 1px solid #f1f5f9; margin: 25px 0;">
-          <p style="font-size: 11px; color: #94a3b8; text-align: center;">This is an automated response from Shnoor AI. Please do not reply directly to this email.</p>
-        </div>
-      `
-    };
-
-    await transporter.sendMail(mailOptions);
-    console.log(`[SUPPORT REPLY] Email sent to: ${email}`);
+      html: emailHtml
+    });
 
     // 3. Update status in database
     await query("UPDATE queries SET status = 'replied' WHERE id = $1", [id]);
