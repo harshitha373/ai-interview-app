@@ -219,6 +219,22 @@ const initDB = async () => {
       )
     `);
 
+    // Seed Default Admin User if empty
+    const userCount = await query("SELECT COUNT(*) FROM users");
+    if (parseInt(userCount.rows[0].count) === 0) {
+      console.log("Seeding default admin user...");
+      await query(`
+        INSERT INTO users (name, email, password, role)
+        VALUES ($1, $2, $3, $4)
+      `, [
+        "Thota Harshitha",
+        "harshitha@shnoor.com",
+        "$2b$10$L6q.lcje8JdKcXdqRDcPYuFP5fy4u958oFRNpEQlMo4XBa.0V/h4K",
+        "admin"
+      ]);
+      console.log("Default admin user seeded successfully.");
+    }
+
     console.log("Database initialized successfully");
   } catch (err) {
     console.error("Error initializing database:", err);
