@@ -1104,6 +1104,13 @@ const AdminChats = () => {
                               <span style={{ fontStyle: 'italic', opacity: 0.7, display: 'flex', alignItems: 'center', gap: '5px' }}>
                                 <Eraser size={14} /> This message was deleted
                               </span>
+                            ) : m.message_type === 'clear_history_request' ? (
+                              <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                                <span style={{ fontWeight: '600', fontStyle: 'italic', opacity: 0.95 }}>{m.message}</span>
+                                <div style={{ fontSize: '0.72rem', fontWeight: '800', color: m.feedback_status === 'accepted' ? '#10b981' : m.feedback_status === 'rejected' ? '#ef4444' : '#fb923c', background: 'rgba(255,255,255,0.06)', padding: '4px 8px', borderRadius: '6px', alignSelf: 'flex-start', marginTop: '4px' }}>
+                                  Status: {m.feedback_status === 'accepted' ? 'Approved & Resolved' : m.feedback_status === 'rejected' ? 'Rejected by Candidate' : 'Pending Candidate Approval'}
+                                </div>
+                              </div>
                             ) : (m.message_type === 'text' && !m.message?.includes('[DOCUMENT:') && !m.message?.includes('[Attachment:')) ? (
                               isChatSearchMode && chatSearchQuery ? (
                                 m.message.split(new RegExp(`(${chatSearchQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')).map((part, i) => (

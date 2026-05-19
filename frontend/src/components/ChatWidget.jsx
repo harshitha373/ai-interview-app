@@ -592,16 +592,7 @@ const ChatWidget = () => {
                     )}
                   </div>
 
-                  {isAdmin && isLast && !m.feedback_done && !feedbackSession && (
-                    <button
-                      onClick={() => setFeedbackSession({ messageId: m.id, adminId: m.admin_id, step: 0, scores: {} })}
-                      style={{ marginTop: '8px', alignSelf: 'flex-start', background: '#fff', border: '1px solid #4f46e5', color: '#4f46e5', padding: '4px 12px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: '600', cursor: 'pointer' }}
-                    >
-                      Rate this response
-                    </button>
-                  )}
-
-                  {feedbackSession && feedbackSession.messageId === m.id && isAdmin && isLast && (
+                  {feedbackSession && feedbackSession.messageId === m.id && (
                     <FeedbackForm
                       step={feedbackSession.step}
                       onRate={(score) => {
