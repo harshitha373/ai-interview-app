@@ -421,3 +421,13 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
+
+/* Recharts SVG Background Fix */
+.recharts-background,
+.recharts-cartesian-grid-background,
+.recharts-surface,
+rect.recharts-background-rect {
+  fill: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
