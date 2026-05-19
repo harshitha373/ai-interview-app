@@ -1202,16 +1202,6 @@ app.get("/api/candidate/results/:userId", async (req, res) => {
   }
 });
 
-app.get("/api/test-db", async (req, res) => {
-  try {
-    const ints = await query("SELECT id, application_id, score, status, answered_count FROM interviews");
-    const apps = await query("SELECT id, status, hr_score, final_status FROM applications");
-    res.json({ interviews: ints.rows, applications: apps.rows });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-});
-
 // Admin Applications
 app.get("/api/admin/applications", async (req, res) => {
   try {
