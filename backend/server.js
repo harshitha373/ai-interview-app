@@ -1206,9 +1206,9 @@ app.get("/api/candidate/results/:userId", async (req, res) => {
 app.get("/api/admin/applications", async (req, res) => {
   try {
     // --- Data Self-Healing Sync ---
-    // Scan for any pending applications that actually have completed interviews
-    const pendingApps = await query("SELECT * FROM applications WHERE final_status = 'pending'");
-    for (const app of pendingApps.rows) {
+    // Scan all applications to ensure their scores and statuses are perfectly synced and correct
+    const allApps = await query("SELECT * FROM applications");
+    for (const app of allApps.rows) {
       const interviews = await query("SELECT * FROM interviews WHERE application_id = $1 AND status = 'completed'", [app.id]);
       if (interviews.rows.length > 0) {
         const trInt = interviews.rows.find(i => i.interview_type === 'Technical');
@@ -1226,8 +1226,13 @@ app.get("/api/admin/applications", async (req, res) => {
         if (!app.is_it_role) {
           // Non-IT role: only needs HR round
           if (hrInt) {
-            const hrScore = (hrInt.score !== null && hrInt.score !== undefined) ? hrInt.score : 0;
-            const percentage = calculatePercentage(hrScore);
+            let rawScore = hrInt.score;
+            // Zero out score automatically if answered count is <= 2
+            if (hrInt.answered_count <= 2 && rawScore !== 0) {
+              await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+              rawScore = 0;
+            }
+            const percentage = calculatePercentage((rawScore !== null && rawScore !== undefined) ? rawScore : 0);
             const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
             
             await query(
@@ -1238,8 +1243,12 @@ app.get("/api/admin/applications", async (req, res) => {
         } else {
           // IT role: needs TR (and optionally HR if they passed TR)
           if (trInt) {
-            const trScore = (trInt.score !== null && trInt.score !== undefined) ? trInt.score : 0;
-            const trPercentage = calculatePercentage(trScore);
+            let trRawScore = trInt.score;
+            if (trInt.answered_count <= 2 && trRawScore !== 0) {
+              await query("UPDATE interviews SET score = 0 WHERE id = $1", [trInt.id]);
+              trRawScore = 0;
+            }
+            const trPercentage = calculatePercentage((trRawScore !== null && trRawScore !== undefined) ? trRawScore : 0);
             const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
 
             if (!trQualified) {
@@ -1250,8 +1259,12 @@ app.get("/api/admin/applications", async (req, res) => {
             } else {
               // Passed TR! Check if HR is also completed
               if (hrInt) {
-                const hrScore = (hrInt.score !== null && hrInt.score !== undefined) ? hrInt.score : 0;
-                const hrPercentage = calculatePercentage(hrScore);
+                let hrRawScore = hrInt.score;
+                if (hrInt.answered_count <= 2 && hrRawScore !== 0) {
+                  await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+                  hrRawScore = 0;
+                }
+                const hrPercentage = calculatePercentage((hrRawScore !== null && hrRawScore !== undefined) ? hrRawScore : 0);
                 const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
                 
                 await query(
