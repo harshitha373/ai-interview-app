@@ -1841,9 +1841,41 @@ function AdminDashboard() {
                                 <button className="btn-view-analysis" style={{ background: 'var(--primary-light)', color: 'var(--primary)', border: '1px solid #DBEAFE', padding: '6px 10px', fontSize: '0.7rem', borderRadius: '8px', fontWeight: 700 }} onClick={() => { setSelectedAnalysis(r.analysisData); setCurrentCandidateName(r.name); setShowAnalysisModal(true); }}>Analysis</button>
                               </td>
                               <td style={{ textAlign: 'center' }}>
-                                <div style={{ display: 'flex', gap: '4px', justifyContent: 'center' }}>
-                                  <button className="header-btn" style={{ background: '#F1F5F9', color: 'var(--text-main)', border: '1px solid var(--border-color)', padding: '6px 8px', fontSize: '0.65rem', borderRadius: '6px', fontWeight: 700 }} onClick={() => { setCurrentVideoUrl(`${API_BASE}${r.videoUrl}`); setCurrentCandidateName(r.name); setShowVideoModal(true); }}>Video</button>
-                                  <button className="header-btn" style={{ background: '#F1F5F9', color: 'var(--text-main)', border: '1px solid var(--border-color)', padding: '6px 8px', fontSize: '0.65rem', borderRadius: '6px', fontWeight: 700 }} onClick={() => handleDownloadSinglePDF(r)}>PDF</button>
+                                <div style={{ display: 'flex', gap: '6px', justifyContent: 'center' }}>
+                                  <button 
+                                    className="btn-view-analysis" 
+                                    style={{ 
+                                      background: 'rgba(59, 130, 246, 0.1)', 
+                                      color: '#3b82f6', 
+                                      border: '1px solid rgba(59, 130, 246, 0.2)', 
+                                      padding: '6px 10px', 
+                                      fontSize: '0.7rem', 
+                                      borderRadius: '8px', 
+                                      fontWeight: 700,
+                                      cursor: 'pointer',
+                                      transition: 'all 0.2s ease'
+                                    }} 
+                                    onClick={() => { setCurrentVideoUrl(`${API_BASE}${r.videoUrl}`); setCurrentCandidateName(r.name); setShowVideoModal(true); }}
+                                  >
+                                    Video
+                                  </button>
+                                  <button 
+                                    className="btn-view-analysis" 
+                                    style={{ 
+                                      background: 'rgba(239, 68, 68, 0.1)', 
+                                      color: '#ef4444', 
+                                      border: '1px solid rgba(239, 68, 68, 0.2)', 
+                                      padding: '6px 10px', 
+                                      fontSize: '0.7rem', 
+                                      borderRadius: '8px', 
+                                      fontWeight: 700,
+                                      cursor: 'pointer',
+                                      transition: 'all 0.2s ease'
+                                    }} 
+                                    onClick={() => handleDownloadSinglePDF(r)}
+                                  >
+                                    PDF
+                                  </button>
                                 </div>
                               </td>
                             </tr>
