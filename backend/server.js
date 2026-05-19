@@ -266,11 +266,12 @@ app.post("/api/change-password", authenticateToken, async (req, res) => {
 });
 
 // Email sending
+const emailPassword = process.env.EMAIL_PASS ? process.env.EMAIL_PASS.replace(/\s+/g, '') : '';
 const transporter = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE || 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
+    pass: emailPassword
   }
 });
 
