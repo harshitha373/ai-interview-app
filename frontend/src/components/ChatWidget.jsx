@@ -363,8 +363,8 @@ const ChatWidget = () => {
       });
       if (res.data.success) {
         if (res.data.action === 'trigger_feedback') {
-          // Trigger the feedback form immediately for this session
-          setFeedbackSession({ messageId, adminId: null, step: 0, scores: {} });
+          // Trigger the feedback form with an intermediate Rate this response step
+          setFeedbackSession({ messageId, adminId: null, showRateButton: true, step: 0, scores: {} });
         } else {
           loadChat();
         }
@@ -575,7 +575,7 @@ const ChatWidget = () => {
                                   onClick={() => handleRespondClear(m.id, 'ok')}
                                   style={{ background: '#4f46e5', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}
                                 >
-                                  Yes, Resolve & Clear
+                                  Yes, Resolved & Clear
                                 </button>
                                 <button 
                                   type="button"
@@ -593,20 +593,43 @@ const ChatWidget = () => {
                   </div>
 
                   {feedbackSession && feedbackSession.messageId === m.id && (
-                    <FeedbackForm
-                      step={feedbackSession.step}
-                      onRate={(score) => {
-                        const steps = ['helpfulness', 'clarity', 'communication', 'responseSpeed', 'satisfaction'];
-                        const currentKey = steps[feedbackSession.step];
-                        const newScores = { ...feedbackSession.scores, [currentKey]: score };
+                    feedbackSession.showRateButton ? (
+                      <div style={{ marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                        <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--text-muted)' }}>Thank you for resolving! Please share your experience:</div>
+                        <button
+                          onClick={() => setFeedbackSession(prev => ({ ...prev, showRateButton: false }))}
+                          style={{
+                            background: '#4f46e5',
+                            color: '#fff',
+                            border: 'none',
+                            padding: '8px 16px',
+                            borderRadius: '8px',
+                            fontSize: '0.8rem',
+                            fontWeight: 'bold',
+                            cursor: 'pointer',
+                            alignSelf: 'flex-start',
+                            boxShadow: '0 2px 6px rgba(79, 70, 229, 0.3)'
+                          }}
+                        >
+                          Rate this response
+                        </button>
+                      </div>
+                    ) : (
+                      <FeedbackForm
+                        step={feedbackSession.step}
+                        onRate={(score) => {
+                          const steps = ['helpfulness', 'clarity', 'communication', 'responseSpeed', 'satisfaction'];
+                          const currentKey = steps[feedbackSession.step];
+                          const newScores = { ...feedbackSession.scores, [currentKey]: score };
 
-                        if (feedbackSession.step < 4) {
-                          setFeedbackSession({ ...feedbackSession, step: feedbackSession.step + 1, scores: newScores });
-                        } else {
-                          handleFeedbackSubmit(newScores, "");
-                        }
-                      }}
-                    />
+                          if (feedbackSession.step < 4) {
+                            setFeedbackSession({ ...feedbackSession, step: feedbackSession.step + 1, scores: newScores });
+                          } else {
+                            handleFeedbackSubmit(newScores, "");
+                          }
+                        }}
+                      />
+                    )
                   )}
 
                   {(!isConsecutive || isLast) && (
