@@ -268,10 +268,15 @@ app.post("/api/change-password", authenticateToken, async (req, res) => {
 // Email sending
 const emailPassword = process.env.EMAIL_PASS ? process.env.EMAIL_PASS.replace(/\s+/g, '') : '';
 const transporter = nodemailer.createTransport({
-  service: process.env.EMAIL_SERVICE || 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // use SSL
   auth: {
     user: process.env.EMAIL_USER,
     pass: emailPassword
+  },
+  tls: {
+    rejectUnauthorized: false // Bypasses container-level certificate handshaking blocks
   }
 });
 
