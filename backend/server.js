@@ -1100,9 +1100,6 @@ app.post("/api/interview/:id/finish", async (req, res) => {
         const scoreMatch = evaluation.match(/Score\s*(?::|-|is|=)?\s*\*?\*?\[?\s*(\d+)/i);
         let score = scoreMatch ? parseInt(scoreMatch[1]) : 0;
 
-        if (score === 0 && answeredCount > 0) {
-          score = Math.min(answeredCount * 1.5, maxScore);
-        }
         if (score > maxScore) score = maxScore;
 
         const cleanEvaluation = evaluation
@@ -1229,7 +1226,7 @@ app.get("/api/admin/applications", async (req, res) => {
         if (!app.is_it_role) {
           // Non-IT role: only needs HR round
           if (hrInt) {
-            const hrScore = hrInt.score || Math.round(hrInt.answered_count * 1.5);
+            const hrScore = (hrInt.score !== null && hrInt.score !== undefined) ? hrInt.score : 0;
             const percentage = calculatePercentage(hrScore);
             const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
             
@@ -1241,7 +1238,7 @@ app.get("/api/admin/applications", async (req, res) => {
         } else {
           // IT role: needs TR (and optionally HR if they passed TR)
           if (trInt) {
-            const trScore = trInt.score || Math.round(trInt.answered_count * 1.5);
+            const trScore = (trInt.score !== null && trInt.score !== undefined) ? trInt.score : 0;
             const trPercentage = calculatePercentage(trScore);
             const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
 
@@ -1253,7 +1250,7 @@ app.get("/api/admin/applications", async (req, res) => {
             } else {
               // Passed TR! Check if HR is also completed
               if (hrInt) {
-                const hrScore = hrInt.score || Math.round(hrInt.answered_count * 1.5);
+                const hrScore = (hrInt.score !== null && hrInt.score !== undefined) ? hrInt.score : 0;
                 const hrPercentage = calculatePercentage(hrScore);
                 const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
                 
