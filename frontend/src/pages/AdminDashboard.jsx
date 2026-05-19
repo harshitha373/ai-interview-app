@@ -387,9 +387,9 @@ function AdminDashboard() {
           app.role,
           isIT ? 'IT' : 'NON-IT',
           trStatus,
-          app.tr_score ? app.tr_score : '-',
+          (app.tr_score !== null && app.tr_score !== undefined) ? app.tr_score : '-',
           hrStatus,
-          app.hr_score ? app.hr_score : '-',
+          (app.hr_score !== null && app.hr_score !== undefined) ? app.hr_score : '-',
           app.final_status === 'pending' ? 'Pending' : (app.final_status === 'selected' ? 'Selected' : 'Rejected'),
           formatDate(app.created_at)
         ];
@@ -425,9 +425,9 @@ function AdminDashboard() {
           "Role": app.role,
           "Role Type": isIT ? 'IT' : 'NON-IT',
           "TR Status": trStatus,
-          "TR Score": app.tr_score ? `${app.tr_score}%` : '-',
+          "TR Score": (app.tr_score !== null && app.tr_score !== undefined) ? `${app.tr_score}%` : '-',
           "HR Status": hrStatus,
-          "HR Score": app.hr_score ? `${app.hr_score}%` : '-',
+          "HR Score": (app.hr_score !== null && app.hr_score !== undefined) ? `${app.hr_score}%` : '-',
           "Final Status": app.final_status === 'pending' ? 'Pending' : (app.final_status === 'selected' ? 'Selected' : 'Rejected'),
           "Current Stage": app.status.replace('_', ' ').toUpperCase(),
           "Application Date": formatDate(app.created_at)
@@ -481,8 +481,8 @@ function AdminDashboard() {
 
       const head = [["Round", "Status", "Score"]];
       const body = [
-        ["Technical Round (TR)", app.is_it_role ? (app.tr_score ? (app.tr_score >= 60 ? 'Qualified' : 'Rejected') : 'Pending') : 'Not Required', app.tr_score ? `${app.tr_score}%` : '-'],
-        ["HR Round", app.hr_score ? (app.hr_score >= 60 ? 'Qualified' : 'Rejected') : 'Pending', app.hr_score ? `${app.hr_score}%` : '-']
+        ["Technical Round (TR)", app.is_it_role ? ((app.tr_score !== null && app.tr_score !== undefined) ? (app.tr_score >= 60 ? 'Qualified' : 'Rejected') : 'Pending') : 'Not Required', (app.tr_score !== null && app.tr_score !== undefined) ? `${app.tr_score}%` : '-'],
+        ["HR Round", (app.hr_score !== null && app.hr_score !== undefined) ? (app.hr_score >= 60 ? 'Qualified' : 'Rejected') : 'Pending', (app.hr_score !== null && app.hr_score !== undefined) ? `${app.hr_score}%` : '-']
       ];
 
       autoTable(doc, {
@@ -1278,9 +1278,9 @@ function AdminDashboard() {
                               <td style={{ padding: '10px 8px', textAlign: 'left', fontWeight: 'bold', fontSize: '0.75rem', color: 'var(--text-main)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }} title={app.role}>{app.role}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 'bold', fontSize: '0.7rem' }}>{isIT ? 'IT' : 'NON-IT'}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderStatusBadge(trStatus)}</td>
-                              <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 'bold', fontSize: '0.75rem' }}>{app.tr_score ? app.tr_score : '-'}</td>
+                              <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 'bold', fontSize: '0.75rem' }}>{(app.tr_score !== null && app.tr_score !== undefined) ? `${app.tr_score}%` : '-'}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderStatusBadge(hrStatus)}</td>
-                              <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 'bold', fontSize: '0.75rem' }}>{app.hr_score ? app.hr_score : '-'}</td>
+                              <td style={{ padding: '10px 8px', textAlign: 'center', fontWeight: 'bold', fontSize: '0.75rem' }}>{(app.hr_score !== null && app.hr_score !== undefined) ? `${app.hr_score}%` : '-'}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'center' }}>{renderStatusBadge(app.final_status === 'pending' ? 'Pending' : (app.final_status === 'selected' ? 'Selected' : 'Rejected'))}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'left', fontSize: '0.7rem', color: '#475569', fontWeight: 'bold' }}>{app.status.replace('_', ' ').toUpperCase()}</td>
                               <td style={{ padding: '10px 8px', textAlign: 'center', fontSize: '0.7rem', color: 'var(--text-muted)' }}>{formatDate(app.created_at)}</td>
