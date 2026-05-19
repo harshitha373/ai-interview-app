@@ -1208,6 +1208,73 @@ app.get("/api/candidate/results/:userId", async (req, res) => {
 // Admin Applications
 app.get("/api/admin/applications", async (req, res) => {
   try {
+    // --- Data Self-Healing Sync ---
+    // Scan for any pending applications that actually have completed interviews
+    const pendingApps = await query("SELECT * FROM applications WHERE final_status = 'pending'");
+    for (const app of pendingApps.rows) {
+      const interviews = await query("SELECT * FROM interviews WHERE application_id = $1 AND status = 'completed'", [app.id]);
+      if (interviews.rows.length > 0) {
+        const trInt = interviews.rows.find(i => i.interview_type === 'Technical');
+        const hrInt = interviews.rows.find(i => i.interview_type === 'HR');
+
+        const calculatePercentage = (score) => Math.min(100, Math.round((score / 40) * 100));
+        const checkViolationsSafe = (i) => 
+          i.mobile_count <= 2 &&
+          i.multi_face_count <= 2 &&
+          i.no_face_count <= 2 &&
+          i.voice_count <= 2 &&
+          i.tab_switch_count <= 2 &&
+          i.cheating_count <= 2;
+
+        if (!app.is_it_role) {
+          // Non-IT role: only needs HR round
+          if (hrInt) {
+            const hrScore = hrInt.score || Math.round(hrInt.answered_count * 1.5);
+            const percentage = calculatePercentage(hrScore);
+            const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+            
+            await query(
+              "UPDATE applications SET hr_score = $1, status = 'hr_completed', final_status = $2 WHERE id = $3",
+              [percentage, isQualified ? 'selected' : 'rejected', app.id]
+            );
+          }
+        } else {
+          // IT role: needs TR (and optionally HR if they passed TR)
+          if (trInt) {
+            const trScore = trInt.score || Math.round(trInt.answered_count * 1.5);
+            const trPercentage = calculatePercentage(trScore);
+            const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
+
+            if (!trQualified) {
+              await query(
+                "UPDATE applications SET tr_score = $1, status = 'tr_completed', final_status = 'rejected' WHERE id = $2",
+                [trPercentage, app.id]
+              );
+            } else {
+              // Passed TR! Check if HR is also completed
+              if (hrInt) {
+                const hrScore = hrInt.score || Math.round(hrInt.answered_count * 1.5);
+                const hrPercentage = calculatePercentage(hrScore);
+                const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+                
+                await query(
+                  "UPDATE applications SET tr_score = $1, hr_score = $2, status = 'hr_completed', final_status = $3 WHERE id = $4",
+                  [trPercentage, hrPercentage, hrQualified ? 'selected' : 'rejected', app.id]
+                );
+              } else {
+                // TR completed but HR pending
+                await query(
+                  "UPDATE applications SET tr_score = $1, status = 'hr_pending', final_status = 'pending' WHERE id = $2",
+                  [trPercentage, app.id]
+                );
+              }
+            }
+          }
+        }
+      }
+    }
+    // --- End Self-Healing Sync ---
+
     const apps = await query(`
       SELECT a.*, u.name as candidate_name, u.email as candidate_email,
         (SELECT COUNT(*) FROM interviews i WHERE i.application_id = a.id AND i.interview_type = 'Technical' AND (i.mobile_count > 2 OR i.multi_face_count > 2 OR i.no_face_count > 2 OR i.voice_count > 2 OR i.tab_switch_count > 2 OR i.cheating_count > 2)) as tr_violations,
