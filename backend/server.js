@@ -701,12 +701,51 @@ class OllamaQueue {
             ]
           };
 
-          const questions = techQuestions[matchedRoleKey] || techQuestions["Software Engineer"];
-          let chosenQuestion = questions[Math.floor(Math.random() * questions.length)];
-          
-          fallbackResponse = `[DIFFICULTY: ${difficulty}]\n[TOPIC: Theory]\n[TYPE: THEORY]\n<Question>${chosenQuestion}</Question>`;
+          const roleBlueprint = aiEngine.ROLE_BLUEPRINTS[matchedRoleKey] || aiEngine.ROLE_BLUEPRINTS["Software Engineer"];
+          const codingScenarios = roleBlueprint.coding_scenarios || [];
+
+          let chosenQuestion = "";
+          let qType = "THEORY";
+          let topic = "Theory";
+
+          // Avoid repetitions and select balanced theory / coding questions
+          for (let attempt = 0; attempt < 25; attempt++) {
+            let candidate = "";
+            let candType = "THEORY";
+            let candTopic = "Core Technical Theory";
+
+            // If it's an IT role, give a 45% chance to ask a coding question!
+            if (codingScenarios.length > 0 && Math.random() > 0.55) {
+              candidate = codingScenarios[Math.floor(Math.random() * codingScenarios.length)];
+              candType = "CODING";
+              candTopic = "Coding Challenge";
+            } else {
+              const questions = techQuestions[matchedRoleKey] || techQuestions["Software Engineer"];
+              candidate = questions[Math.floor(Math.random() * questions.length)];
+            }
+
+            if (!prompt.toLowerCase().includes(candidate.toLowerCase())) {
+              chosenQuestion = candidate;
+              qType = candType;
+              topic = candTopic;
+              break;
+            }
+          }
+
+          // Fallback if all attempts hit a previously asked question
+          if (!chosenQuestion) {
+            const questions = techQuestions[matchedRoleKey] || techQuestions["Software Engineer"];
+            chosenQuestion = questions[0];
+          }
+
+          fallbackResponse = `[DIFFICULTY: ${difficulty}]\n[TOPIC: ${topic}]\n[TYPE: ${qType}]\n<Question>${chosenQuestion}</Question>`;
         } else if (prompt.includes("EVALUATOR")) {
-          fallbackResponse = `Performance Report:\n- **Strengths**: Good communication and quick responsiveness to behavioral questions.\n- **Weaknesses**: Could elaborate further on core concepts and technical details.\n- **How to Improve**: Practice structured responses like the STAR method and double check code complexity.\n- **Communication**: Clear, polite, and confident throughout the discussion.\n- **Verdict**: Selected\n\n[Internal Scoring Only]:\nScore: 8\nMax Possible: 10`;
+          const isHR = prompt.includes("HR EXPERT EVALUATOR") || prompt.includes("HR Interview");
+          if (isHR) {
+            fallbackResponse = `Performance Report:\n- **Strengths**: Good communication, structured answers, and quick responsiveness to behavioral questions.\n- **Weaknesses**: Could elaborate further on core leadership scenarios.\n- **Communication Style**: Clear, articulate, and confident throughout the discussion.\n- **How to Improve**: Practice structured responses like the STAR method for resolving conflicts.\n- **STAR Method Usage**: Excellent structure, clearly laid out situations and key results.\n- **Verdict**: Selected\n\n[Internal Scoring Only]:\nScore: 8\nMax Possible: 10`;
+          } else {
+            fallbackResponse = `Performance Report:\n- **Strengths**: Solid understanding of core technical concepts, syntax accuracy, and basic algorithm design.\n- **Weaknesses**: Needs deeper practice in time/space complexity analysis (Big O notation) and boundary error handling.\n- **Coding Review**: Code logic is mostly correct, but could be optimized by avoiding redundant nested loops to reduce complexity from O(N^2) to O(N). Ensure strict check for null pointer and index bounds.\n- **How to Improve**: Focus on solving data structure problems using optimal approaches, review runtime complexity, and practice mock coding challenges.\n- **Communication**: Clear, technical, and precise explanations of algorithms.\n- **Verdict**: Selected\n\n[Internal Scoring Only]:\nScore: 8\nMax Possible: 10`;
+          }
         } else {
           fallbackResponse = `[DIFFICULTY: 3]\n[TOPIC: General]\n[TYPE: THEORY]\n<Question>Could you please tell me about a technical project you recently worked on and the biggest challenge you faced?</Question>`;
         }
@@ -921,7 +960,35 @@ app.post("/api/interview/:id/answer", async (req, res) => {
         nextQuestion = unusedQuestions.length > 0
           ? unusedQuestions[Math.floor(Math.random() * unusedQuestions.length)]
           : aiEngine.HR_SAMPLE_QUESTIONS[Math.floor(Math.random() * aiEngine.HR_SAMPLE_QUESTIONS.length)];
-        console.log(`[REPETITION DETECTED] Force-switching to bank question: ${nextQuestion}`);
+        console.log(`[REPETITION DETECTED] Force-switching to HR bank question: ${nextQuestion}`);
+      } else {
+        const roleSpecificKeys = Object.keys(aiEngine.ROLE_BLUEPRINTS);
+        const matchedRoleKey = roleSpecificKeys.find(r => selectedRole.toLowerCase().includes(r.toLowerCase())) || "Software Engineer";
+        const roleBlueprint = aiEngine.ROLE_BLUEPRINTS[matchedRoleKey] || aiEngine.ROLE_BLUEPRINTS["Software Engineer"];
+        
+        // Merge theory and coding scenarios
+        const theoryQuestions = [
+          "Can you explain the difference between a stack and a queue, and give a real-world scenario where you would use each?",
+          "What is the time and space complexity of QuickSort in the average and worst cases?",
+          "How does a hash map resolve collisions internally? Can you describe separate chaining and open addressing?",
+          "What is the difference between a process and a thread, and how do they share memory?",
+          "Can you explain the concept of RESTful API design and list some HTTP methods and their idempotency?"
+        ];
+        const codingScenarios = roleBlueprint.coding_scenarios || [];
+        const allTechOptions = [...theoryQuestions, ...codingScenarios];
+        
+        const unusedTech = allTechOptions.filter(q => !chatHistory.toLowerCase().includes(q.toLowerCase()));
+        nextQuestion = unusedTech.length > 0
+          ? unusedTech[Math.floor(Math.random() * unusedTech.length)]
+          : allTechOptions[Math.floor(Math.random() * allTechOptions.length)];
+        
+        // Determine type of the forced question
+        if (codingScenarios.includes(nextQuestion)) {
+          qType = "CODING";
+        } else {
+          qType = "THEORY";
+        }
+        console.log(`[REPETITION DETECTED] Force-switching to Tech question: ${nextQuestion} of type ${qType}`);
       }
     }
 

@@ -391,10 +391,16 @@ Candidate: ${candidateName}
 Difficulty: ${difficulty}/5
 Topics: ${topics}
 
+STRICT RULES:
+1. PURELY TECHNICAL: You are an elite Technical Architect. Do NOT ask behavioral, situational, or soft-skill questions.
+2. NO REPETITION: Carefully read the TRANSCRIPT below. Do NOT ask any question that has already been asked or closely resembles a previous question.
+3. CODING REQUIREMENT: You MUST ask at least one coding question (marked with [TYPE: CODING]) where the candidate is presented with a programming task and must write actual code (e.g., write a function to solve a specific problem). Provide a simple code stub or clear problem statement.
+4. Be concise (1-2 sentences). Do not include conversational preambles, greetings, or feedback on their previous answer. Just directly ask the question.
+
 TRANSCRIPT:
 ${chatHistory}
 
-INSTRUCTION: Ask the next technical question now. Be concise (1-2 sentences). No reasoning or preamble.
+INSTRUCTION: Ask the next technical theory or coding question now.
 Follow this format:
 [DIFFICULTY: X]
 [TOPIC: Name]
@@ -439,7 +445,7 @@ Max Possible: ${answeredCount * 2}
 AI Response:`;
   }
 
-  return `[SYSTEM: EXPERT EVALUATOR & SKILL GAP ANALYZER]
+  return `[SYSTEM: EXPERT TECH EVALUATOR & SKILL GAP ANALYZER]
 Candidate Name: ${candidateName}
 Role: ${role}
 Questions Answered: ${answeredCount}
@@ -447,22 +453,25 @@ Questions Answered: ${answeredCount}
 TRANSCRIPT:
 ${chatHistory}
 
+STRICT INSTRUCTIONS:
+1. PURELY TECHNICAL EVALUATION: Do NOT mention behavioral soft skills, the "STAR method", or behavioral questions. This is a technical round. Evaluate exclusively on technical knowledge, architecture, problem solving, and coding skills.
+2. DETAILED CODING REVIEW: Carefully look at any [SUBMITTED CODE] blocks or programming answers written by the candidate in the TRANSCRIPT. In the "Coding Review" section, identify any logical bugs, syntax errors, time/space complexity issues (e.g. O(N^2) vs O(N)), or anti-patterns, and provide corrected code suggestions to help the candidate learn.
+3. If no code was written, evaluate their conceptual depth, algorithmic thinking, and structural explanation in the "Coding Review" section.
+
 EVALUATION TASK:
-1. Perform a deep NLP analysis of the candidate's technical accuracy, confidence, and relevance.
-2. Carefully analyze any [SUBMITTED CODE] blocks for technical logic, syntax, and algorithmic efficiency. Identify if the candidate correctly implemented the requested solution.
-3. Identify specific **Strengths** where the candidate excelled.
-4. Identify specific **Weaknesses** or technical gaps.
-5. Provide a detailed **Coding Review** if any code was submitted, explaining logic errors or better approaches.
-6. Provide actionable **How to Improve** advice for the candidate.
-7. Score each answer: 2 (Excellent), 1 (Good/Partial), 0 (Incorrect/No Answer).
-8. Output exactly in this format:
+1. Identify specific **Strengths** in their technical knowledge.
+2. Identify specific **Weaknesses**, technical gaps, or misconceptions.
+3. Provide a detailed **Coding Review** containing code syntax evaluation, complexity feedback, and improvement suggestions.
+4. Provide actionable **How to Improve** technical learning paths.
+5. Score each answer out of 2 points: 2 (Excellent), 1 (Good/Partial), 0 (Incorrect/No Answer).
+6. Output exactly in this format:
 
 Performance Report for ${candidateName}:
-- **Strengths**: <bullet points>
-- **Weaknesses**: <bullet points>
-- **Coding Review**: <detailed feedback on code logic, if applicable>
-- **How to Improve**: <specific actionable advice>
-- **Communication**: <feedback on clarity and confidence>
+- **Strengths**: <bullet points detailing core technical proficiencies>
+- **Weaknesses**: <bullet points detailing technical gaps or misconceptions>
+- **Coding Review**: <detailed code review, syntax errors found, algorithmic complexity, and optimized code recommendations>
+- **How to Improve**: <actionable advice on technical concepts or coding practice>
+- **Communication**: <technical clarity, precision of technical terms, and articulation>
 - **Verdict**: <Hired/Rejected/Follow-up needed>
 
 [Internal Scoring Only]:
