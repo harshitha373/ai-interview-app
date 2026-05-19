@@ -3,7 +3,7 @@ import axios from 'axios';
 import { MessageSquare, X, Send, RefreshCw, UserCircle2, Clock, Paperclip, FileText, Image as ImageIcon, Download, Mic, Check } from 'lucide-react';
 
 const api = axios.create({
-  baseURL: (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace(/\/$/, ''),
+  baseURL: (import.meta.env.VITE_API_URL ? `${import.meta.env.VITE_API_URL}/api` : 'http://localhost:5000/api').replace(/\/$/, ''),
   headers: { 'Content-Type': 'application/json' }
 });
 
@@ -323,21 +323,54 @@ const ChatWidget = () => {
         comment
       });
 
-      setFeedbackSession(null);
-      // Update local messages to mark this one as rated
-      setMessages(prev => prev.map(m =>
-        m.id === feedbackSession.messageId ? { ...m, feedback_done: true } : m
-      ));
+      // If this feedback session was triggered by a clear/close query request, clear the history in DB
+      const originalMsg = messages.find(m => m.id === feedbackSession.messageId);
+      const wasClearRequest = originalMsg && originalMsg.message_type === 'clear_history_request';
+      
+      if (wasClearRequest) {
+        await api.delete(`/chat/admin/sessions/${session.session_id}/clear`);
+      }
 
-      //adding  a "Thank you" message
-      setMessages(prev => [...prev, {
-        id: Date.now(),
-        sender: 'system',
-        message: 'Thank you for your feedback!',
-        created_at: new Date().toISOString()
-      }]);
+      setFeedbackSession(null);
+      
+      if (wasClearRequest) {
+        loadChat();
+      } else {
+        // Update local messages to mark this one as rated
+        setMessages(prev => prev.map(m =>
+          m.id === feedbackSession.messageId ? { ...m, feedback_done: true } : m
+        ));
+
+        // Adding a "Thank you" message
+        setMessages(prev => [...prev, {
+          id: Date.now(),
+          sender: 'system',
+          message: 'Thank you for your feedback!',
+          created_at: new Date().toISOString()
+        }]);
+      }
     } catch (err) {
       console.error('Failed to submit feedback', err);
+    }
+  };
+
+  const handleRespondClear = async (messageId, response) => {
+    if (!session) return;
+    try {
+      const res = await api.post(`/chat/candidate/sessions/${session.session_id}/respond-clear`, {
+        response,
+        message_id: messageId
+      });
+      if (res.data.success) {
+        if (res.data.action === 'trigger_feedback') {
+          // Trigger the feedback form immediately for this session
+          setFeedbackSession({ messageId, adminId: null, step: 0, scores: {} });
+        } else {
+          loadChat();
+        }
+      }
+    } catch (err) {
+      console.error('Failed to respond to close query request', err);
     }
   };
 
@@ -424,21 +457,21 @@ const ChatWidget = () => {
 
         <div style={{ display: 'flex', gap: '12px', zIndex: 1 }}>
           <div
-            style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'background 0.2s' }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.2)'}
-            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+            style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--bg-input)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', border: '1px solid var(--border-color)' }}
+            onMouseEnter={(e) => e.currentTarget.style.background = 'var(--border-color)'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'var(--bg-input)'}
             onClick={(e) => { e.stopPropagation(); handleRefresh(); }}
             title="Refresh chat"
           >
-            <RefreshCw size={16} color="#e2e8f0" className={isRefreshing ? 'spinning-icon' : ''} />
+            <RefreshCw size={16} color="currentColor" style={{ color: 'var(--text-main)' }} className={isRefreshing ? 'spinning-icon' : ''} />
           </div>
           <div
-            style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'background 0.2s' }}
+            style={{ width: '32px', height: '32px', borderRadius: '50%', background: 'var(--bg-input)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', transition: 'all 0.2s', border: '1px solid var(--border-color)' }}
             onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(239, 68, 68, 0.8)'}
-            onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255,255,255,0.1)'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'var(--bg-input)'}
             onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
           >
-            <X size={16} color="#e2e8f0" />
+            <X size={16} color="currentColor" style={{ color: 'var(--text-main)' }} />
           </div>
         </div>
       </div>
@@ -523,6 +556,38 @@ const ChatWidget = () => {
                         {(!m.message_type || m.message_type === 'text') && (
                           (m.message?.includes('[DOCUMENT:') || m.message?.includes('[IMAGE:') || m.message?.includes('[Attachment:')) ? '' : m.message
                         )}
+
+                        {m.message_type === 'clear_history_request' && (
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                            <div style={{ fontWeight: '600', color: 'var(--text-main)' }}>{m.message}</div>
+                            {m.feedback_status === 'accepted' ? (
+                              <div style={{ color: '#10b981', fontSize: '0.8rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                ✓ You accepted this request. Thank you for your feedback!
+                              </div>
+                            ) : m.feedback_status === 'rejected' ? (
+                              <div style={{ color: '#ef4444', fontSize: '0.8rem', fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                                ✗ You rejected this request.
+                              </div>
+                            ) : (
+                              <div style={{ display: 'flex', gap: '8px', marginTop: '4px' }}>
+                                <button 
+                                  type="button"
+                                  onClick={() => handleRespondClear(m.id, 'ok')}
+                                  style={{ background: '#4f46e5', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}
+                                >
+                                  Yes, Resolve & Clear
+                                </button>
+                                <button 
+                                  type="button"
+                                  onClick={() => handleRespondClear(m.id, 'no')}
+                                  style={{ background: 'transparent', border: '1px solid var(--border-color)', color: 'var(--text-main)', padding: '6px 14px', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}
+                                >
+                                  No, Keep Open
+                                </button>
+                              </div>
+                            )}
+                          </div>
+                        )}
                       </>
                     )}
                   </div>
@@ -569,8 +634,8 @@ const ChatWidget = () => {
               <div style={{ position: 'relative' }}>
                 <Paperclip
                   size={22}
-                  color="var(--text-muted)"
-                  style={{ cursor: 'pointer', transition: 'color 0.2s' }}
+                  color="currentColor"
+                  style={{ cursor: 'pointer', transition: 'color 0.2s', color: 'var(--text-muted)' }}
                   onMouseEnter={(e) => e.currentTarget.style.color = 'var(--primary)'}
                   onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
                   onClick={() => setShowAttachmentMenu(!showAttachmentMenu)}

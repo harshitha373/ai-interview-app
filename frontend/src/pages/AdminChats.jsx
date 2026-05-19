@@ -8,8 +8,13 @@ import {
   Phone, Video, Key
 } from 'lucide-react';
 
+const getBaseURL = () => {
+  const envUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+  return envUrl.endsWith('/api') ? envUrl : `${envUrl}/api`;
+};
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: getBaseURL(),
   headers: {
     'Content-Type': 'application/json'
   }
@@ -542,9 +547,17 @@ const AdminChats = () => {
     } catch (err) { console.error(err); }
   };
 
-  const handleClearChat = async () => {
-    if (!window.confirm("Clear?")) return;
-    try { await api.delete(`/chat/admin/sessions/${activeSession.session_id}/clear`); fetchMessages(); setShowHeaderMenu(false); } catch (err) { console.error(err); }
+  const handleCloseQuery = async () => {
+    if (!window.confirm("Are you sure you want to request to close this query? This will ask the candidate for their permission and feedback.")) return;
+    try {
+      await api.post(`/chat/admin/request-clear/${activeSession.session_id}`);
+      fetchMessages();
+      setShowHeaderMenu(false);
+      alert("Close request sent! The candidate will be prompted for their permission and feedback inside their chat widget.");
+    } catch (err) {
+      console.error(err);
+      alert("Failed to send close request.");
+    }
   };
 
   const handleDeleteSession = async () => {
@@ -1000,7 +1013,7 @@ const AdminChats = () => {
                               } catch (err) { console.error(err); }
                             }
                           },
-                          { label: 'Clear History', icon: Eraser, act: handleClearChat, color: '#ef4444' },
+                          { label: 'Close Query', icon: Trash2, act: handleCloseQuery, color: '#ef4444' },
                           activeSession.user_role === 'group' ? { label: 'Delete Group', icon: Trash2, act: handleDeleteSession, color: '#ef4444' } : null
                         ].filter(Boolean).map((m, i) => (
                           <div key={i} onClick={() => { m.act(); setShowHeaderMenu(false); }} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 18px', cursor: 'pointer', color: m.color || '#475569', fontSize: '0.85rem', fontWeight: '700' }} onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(59, 130, 246, 0.05)'} onMouseLeave={(e) => e.currentTarget.style.background = 'transparent'}><m.icon size={16} /> {m.label}</div>
