@@ -1,0 +1,86 @@
+[
+  {
+    "id": 4,
+    "name": "Vittanala Hema Sai",
+    "email": "hemasaivittanala@gmail.com",
+    "password": "$2b$10$H6XB6bHj.M1efjJ6uP7kz.NpnxQOFLTls46xFq/ryg/FSIbGukxlK",
+    "role": "candidate-non-student",
+    "created_at": "2026-04-27T05:08:27.913Z",
+    "reset_token": null,
+    "reset_token_expiry": null,
+    "college_name": null,
+    "roll_number": null
+  },
+  {
+    "id": 1,
+    "name": "Ruchitha Thota",
+    "email": "ruchithathota123@gmail.com",
+    "password": "$2b$10$PwtbY3OpfcX9LgmRVZrra.796QSfzAoKertiaiNwLBUi.eFJCmd26",
+    "role": "candidate-non-student",
+    "created_at": "2026-04-24T02:05:59.511Z",
+    "reset_token": "f9f6c3d624e02f86f104dd8d317a95fc49504559fab7f1485940140e1d32b72d",
+    "reset_token_expiry": "2026-04-28T13:52:17.483Z",
+    "college_name": null,
+    "roll_number": null
+  },
+  {
+    "id": 3,
+    "name": "Harshu",
+    "email": "thotaharshitha123@gmail.com",
+    "password": "$2b$10$Vq/KjQcDG/rjtNXQqIUDGushUaZ/hBqPcnak4a7QtIL1UK42y.Ijm",
+    "role": "candidate-non-student",
+    "created_at": "2026-04-24T04:50:16.734Z",
+    "reset_token": "25ea0ef3a77416a00719cbf1d1a6d5b3e31330badd8e4b117795fb5d97d762a7",
+    "reset_token_expiry": "2026-04-28T14:40:17.854Z",
+    "college_name": null,
+    "roll_number": null
+  },
+  {
+    "id": 8,
+    "name": "Paturi Vasantha",
+    "email": "22nu1a0593@nsrit.edu.in",
+    "password": "$2b$10$xQYUJ5LloqlgSuxEkA1w/.SanK22vh00sC3n2fhKpJx.kBoxkLFQG",
+    "role": "candidate-student",
+    "created_at": "2026-05-04T01:36:54.605Z",
+    "reset_token": null,
+    "reset_token_expiry": null,
+    "college_name": "NSRIT",
+    "roll_number": "22nu1a0593"
+  },
+  {
+    "id": 9,
+    "name": "Gayathri",
+    "email": "22nu1a0588@nsrit.edu.in",
+    "password": "$2b$10$l.gPS9px2mmeeny7JirWeOqXdbWGszy0nFBZl4opRAChebiFwG4Ly",
+    "role": "candidate-student",
+    "created_at": "2026-05-05T06:18:58.522Z",
+    "reset_token": null,
+    "reset_token_expiry": null,
+    "college_name": "Gayatri Vidya Parishad College of Engineering",
+    "roll_number": "22nu1a0573"
+  },
+  {
+    "id": 2,
+    "name": "Thota Harshitha",
+    "email": "harshitha@shnoor.com",
+    "password": "$2b$10$L6q.lcje8JdKcXdqRDcPYuFP5fy4u958oFRNpEQlMo4XBa.0V/h4K",
+    "role": "admin",
+    "created_at": "2026-04-24T02:06:22.801Z",
+    "reset_token": "ae3b60d96e352bb32f301dc2fa3721395113bcc6fa8ada9d8be448fdc24e2afc",
+    "reset_token_expiry": "2026-05-05T13:19:58.837Z",
+    "college_name": null,
+    "roll_number": null
+  },
+  {
+    "id": 5,
+    "name": "Geetha Sri",
+    "email": "thotaharshitha1424@gmail.com",
+    "password": "$2b$10$FsmIUuIUqQ.4TP2SqaC3A.HxIUuGuNT/trKQdbGzEyntauutRAG72",
+    "role": "candidate-non-student",
+    "created_at": "2026-04-28T08:12:58.322Z",
+    "reset_token": null,
+    "reset_token_expiry": null,
+    "college_name": null,
+    "roll_number": null
+  }
+]

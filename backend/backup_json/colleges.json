@@ -1,0 +1,1514 @@
+[
+  {
+    "id": 14,
+    "name": "Ambalika Institute of Management and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 16,
+    "name": "Amity School of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 17,
+    "name": "Anand Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 18,
+    "name": "Andhra Loyola Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 19,
+    "name": "Andhra University College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 21,
+    "name": "Annasaheb Dange College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 22,
+    "name": "Anna University Regional Campus Coimbatore",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 23,
+    "name": "Anurag University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 24,
+    "name": "Army Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 25,
+    "name": "Arya College of Engineering and IT",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 26,
+    "name": "Assam Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 27,
+    "name": "Atal Bihari Vajpayee Indian Institute of Information Technology and Management",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 28,
+    "name": "Aurora’s Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 29,
+    "name": "B. M. S. College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 30,
+    "name": "Babu Banarasi Das Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 31,
+    "name": "Balaji Institute of Technology and Science",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 32,
+    "name": "Ballari Institute of Technology and Management",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 33,
+    "name": "Bannari Amman Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 34,
+    "name": "Bapatla Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 35,
+    "name": "Basaveshwar Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 36,
+    "name": "BBD National Institute of Technology and Management",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 37,
+    "name": "Beant College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 38,
+    "name": "Bengal College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 39,
+    "name": "Bhagalpur College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 40,
+    "name": "Bharath Institute of Higher Education and Research",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 41,
+    "name": "Bharati Vidyapeeth College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 42,
+    "name": "Bhopal Institute of Technology and Science",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 43,
+    "name": "Birla Institute of Technology Mesra",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 44,
+    "name": "Birla Institute of Technology and Science Pilani",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 45,
+    "name": "BMS Institute of Technology and Management",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 46,
+    "name": "BNM Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 47,
+    "name": "BVRIT Hyderabad College of Engineering for Women",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 48,
+    "name": "C. V. Raman Global University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 50,
+    "name": "CMR Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 51,
+    "name": "Chandigarh Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 52,
+    "name": "Channabasaveshwara Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 53,
+    "name": "Chaitanya Bharathi Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 54,
+    "name": "Chandigarh University Institute of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 55,
+    "name": "Chennai Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 56,
+    "name": "Christ University Faculty of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 57,
+    "name": "Cochin University College of Engineering Kuttanad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 58,
+    "name": "Coimbatore Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 59,
+    "name": "College of Engineering and Technology Bhubaneswar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 60,
+    "name": "College of Engineering Guindy",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 61,
+    "name": "College of Engineering Pune",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 62,
+    "name": "College of Technology Pantnagar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 63,
+    "name": "CUSAT School of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 64,
+    "name": "D. Y. Patil College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 65,
+    "name": "Dayananda Sagar College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 66,
+    "name": "Deccan College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 67,
+    "name": "Delhi Technological University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 68,
+    "name": "Dhirubhai Ambani Institute of Information and Communication Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 69,
+    "name": "DIT University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 70,
+    "name": "Don Bosco Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 71,
+    "name": "Dr. Ambedkar Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 72,
+    "name": "Dr. Mahalingam College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 73,
+    "name": "Dumkal Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 74,
+    "name": "EGS Pillay Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 75,
+    "name": "Einstein College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 76,
+    "name": "Fr. Conceicao Rodrigues College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 77,
+    "name": "G. H. Raisoni College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 78,
+    "name": "G. Narayanamma Institute of Technology and Science",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 79,
+    "name": "Galgotias College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 80,
+    "name": "Gandhi Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 82,
+    "name": "GITAM School of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 83,
+    "name": "GLA University Institute of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 84,
+    "name": "Global Academy of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 85,
+    "name": "GMR Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 86,
+    "name": "Government College of Engineering Amravati",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 87,
+    "name": "Government College of Engineering Karad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 88,
+    "name": "Government Engineering College Barton Hill",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 89,
+    "name": "Government Engineering College Thrissur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 2,
+    "name": "ABES Engineering College",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 1,
+    "name": "Aalim Muhammed Salegh College of Engineering",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 9,
+    "name": "AKGEC Ghaziabad",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 11,
+    "name": "Al-Ameen Engineering College",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 8,
+    "name": "Ajay Kumar Garg Engineering College",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 6,
+    "name": "Ahmedabad Institute of Technology",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 20,
+    "name": "Anil Neerukonda Institute of Technology and Sciences",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 81,
+    "name": "Gayatri Vidya Parishad College of Engineering",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 15,
+    "name": "AMC Engineering College",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 4,
+    "name": "Acharya Institute of Technology",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 3,
+    "name": "Academy of Technology",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 5,
+    "name": "Adhiyamaan College of Engineering",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 10,
+    "name": "Alagappa Chettiar College of Engineering and Technology",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 12,
+    "name": "Aligarh College of Engineering and Technology",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 13,
+    "name": "Amal Jyothi College of Engineering",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 90,
+    "name": "Graphic Era Deemed to be University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 91,
+    "name": "Guru Nanak Dev Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 92,
+    "name": "Haldia Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 93,
+    "name": "Heritage Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 94,
+    "name": "HKBK College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 95,
+    "name": "ICFAI Tech School Hyderabad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 96,
+    "name": "Indian Institute of Engineering Science and Technology Shibpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 97,
+    "name": "Indian Institute of Information Technology Allahabad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 98,
+    "name": "Indian Institute of Information Technology Design and Manufacturing Jabalpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 99,
+    "name": "Indian Institute of Information Technology Gwalior",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 100,
+    "name": "Indian Institute of Information Technology Kottayam",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 101,
+    "name": "Indian Institute of Technology Bhubaneswar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 102,
+    "name": "Indian Institute of Technology Bombay",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 103,
+    "name": "Indian Institute of Technology Delhi",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 104,
+    "name": "Indian Institute of Technology Gandhinagar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 105,
+    "name": "Indian Institute of Technology Guwahati",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 106,
+    "name": "Indian Institute of Technology Hyderabad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 107,
+    "name": "Indian Institute of Technology Indore",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 108,
+    "name": "Indian Institute of Technology Jodhpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 109,
+    "name": "Indian Institute of Technology Kanpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 110,
+    "name": "Indian Institute of Technology Kharagpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 111,
+    "name": "Indian Institute of Technology Madras",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 112,
+    "name": "Indian Institute of Technology Mandi",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 113,
+    "name": "Indian Institute of Technology Patna",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 114,
+    "name": "Indian Institute of Technology Roorkee",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 115,
+    "name": "Indira Gandhi Institute of Technology Sarang",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 116,
+    "name": "Indraprastha Institute of Information Technology Delhi",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 117,
+    "name": "Institute of Aeronautical Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 118,
+    "name": "Institute of Chemical Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 119,
+    "name": "Institute of Engineering and Management Kolkata",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 120,
+    "name": "Institute of Engineering and Technology Lucknow",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 121,
+    "name": "Institute of Infrastructure Technology Research and Management",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 122,
+    "name": "Jadavpur University Faculty of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 123,
+    "name": "Jalpaiguri Government Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 124,
+    "name": "Jamia Millia Islamia Faculty of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 125,
+    "name": "Jawaharlal Nehru Technological University Anantapur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 126,
+    "name": "Jawaharlal Nehru Technological University Hyderabad",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 127,
+    "name": "Jawaharlal Nehru Technological University Kakinada",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 128,
+    "name": "JIIT Noida",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 129,
+    "name": "JIS College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 130,
+    "name": "JNTUH University College of Engineering Sultanpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 131,
+    "name": "K. J. Somaiya College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 132,
+    "name": "Kakatiya Institute of Technology and Science",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 133,
+    "name": "Kalasalingam Academy of Research and Education",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 134,
+    "name": "Kalinga Institute of Industrial Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 135,
+    "name": "Karpagam College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 136,
+    "name": "KLE Technological University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 137,
+    "name": "KLS Gogte Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 138,
+    "name": "Kongu Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 139,
+    "name": "KPR Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 140,
+    "name": "Krishna Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 141,
+    "name": "Kumaraguru College of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 142,
+    "name": "L. D. College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 143,
+    "name": "Lakshmi Narain College of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 144,
+    "name": "Lakireddy Bali Reddy College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 145,
+    "name": "Loyola Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 146,
+    "name": "M. S. Ramaiah Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 147,
+    "name": "Madanapalle Institute of Technology and Science",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 148,
+    "name": "Madras Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 149,
+    "name": "Maharaja Agrasen Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 150,
+    "name": "Maharaja Sayajirao University Faculty of Technology and Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 151,
+    "name": "Mahatma Gandhi Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 152,
+    "name": "Malaviya National Institute of Technology Jaipur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 153,
+    "name": "Malla Reddy Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 154,
+    "name": "Mangalore Institute of Technology and Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 155,
+    "name": "Mar Athanasius College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 156,
+    "name": "Mar Baselios College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 157,
+    "name": "Marwadi University Faculty of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 158,
+    "name": "Maulana Azad National Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 159,
+    "name": "Muffakham Jah College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 160,
+    "name": "MVJ College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 161,
+    "name": "N. B. K. R. Institute of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 162,
+    "name": "Nadar Saraswathi College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 163,
+    "name": "Nalla Malla Reddy Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 164,
+    "name": "Narula Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 165,
+    "name": "National Institute of Engineering Mysore",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 166,
+    "name": "National Institute of Technology Agartala",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 167,
+    "name": "National Institute of Technology Andhra Pradesh",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 168,
+    "name": "National Institute of Technology Calicut",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 169,
+    "name": "National Institute of Technology Delhi",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 170,
+    "name": "National Institute of Technology Durgapur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 171,
+    "name": "National Institute of Technology Hamirpur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 172,
+    "name": "National Institute of Technology Jalandhar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 173,
+    "name": "National Institute of Technology Karnataka",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 174,
+    "name": "National Institute of Technology Kurukshetra",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 175,
+    "name": "National Institute of Technology Meghalaya",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 176,
+    "name": "National Institute of Technology Nagaland",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 177,
+    "name": "National Institute of Technology Patna",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 178,
+    "name": "National Institute of Technology Raipur",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 179,
+    "name": "National Institute of Technology Rourkela",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 180,
+    "name": "National Institute of Technology Silchar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 181,
+    "name": "National Institute of Technology Srinagar",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 182,
+    "name": "National Institute of Technology Tiruchirappalli",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 183,
+    "name": "National Institute of Technology Warangal",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 184,
+    "name": "Nehru Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 185,
+    "name": "Netaji Subhas University of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 186,
+    "name": "New Horizon College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 187,
+    "name": "Nirma University Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 188,
+    "name": "NITTE Meenakshi Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 189,
+    "name": "Noorul Islam Centre for Higher Education",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 190,
+    "name": "North Maharashtra University Engineering Campus",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 191,
+    "name": "P. A. College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 192,
+    "name": "P. E. S. College of Engineering Mandya",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 193,
+    "name": "Panimalar Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 194,
+    "name": "PES University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 195,
+    "name": "Pimpri Chinchwad College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 196,
+    "name": "PSG College of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 197,
+    "name": "R. M. K. Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 198,
+    "name": "R. V. College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 199,
+    "name": "Raghu Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 200,
+    "name": "Rajalakshmi Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.581Z"
+  },
+  {
+    "id": 201,
+    "name": "Rajiv Gandhi Institute of Technology Mumbai",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 202,
+    "name": "Ramrao Adik Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 203,
+    "name": "RNS Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 204,
+    "name": "S. A. Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 205,
+    "name": "S. B. Jain Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 206,
+    "name": "Sagi Ramakrishnam Raju Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 207,
+    "name": "Sahrdaya College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 208,
+    "name": "Sathyabama Institute of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 209,
+    "name": "Saveetha Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 210,
+    "name": "School of Engineering CUSAT",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 211,
+    "name": "Siddaganga Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 212,
+    "name": "SIES Graduate School of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 213,
+    "name": "Sir M. Visvesvaraya Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 214,
+    "name": "Sona College of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 215,
+    "name": "Sri Eshwar College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 216,
+    "name": "Sri Krishna College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 217,
+    "name": "Sri Ramakrishna Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 218,
+    "name": "Sri Sairam Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 219,
+    "name": "Sri Venkateswara College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 220,
+    "name": "Sreenidhi Institute of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 221,
+    "name": "SRKR Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 222,
+    "name": "SRM Institute of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 223,
+    "name": "St. Joseph’s College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 224,
+    "name": "St. Martin’s Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 225,
+    "name": "SVKM’s NMIMS Mukesh Patel School of Technology Management and Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 226,
+    "name": "T. John Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 227,
+    "name": "Techno India University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 228,
+    "name": "Tezpur University School of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 229,
+    "name": "Thiagarajar College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 230,
+    "name": "United College of Engineering and Research",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 231,
+    "name": "University College of Engineering Osmania University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 232,
+    "name": "University Institute of Engineering and Technology Chandigarh",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 233,
+    "name": "V. R. Siddhartha Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 234,
+    "name": "Vasavi College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 235,
+    "name": "Vel Tech Rangarajan Dr. Sagunthala R&D Institute of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 236,
+    "name": "Velammal Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 237,
+    "name": "Vellore Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 238,
+    "name": "Vidya Jyothi Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 239,
+    "name": "Vishwakarma Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 240,
+    "name": "VIT Bhopal University",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 241,
+    "name": "VIT Chennai",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 242,
+    "name": "VNR Vignana Jyothi Institute of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 243,
+    "name": "Walchand College of Engineering",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 245,
+    "name": "YMCA University of Science and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 246,
+    "name": "Z. H. College of Engineering and Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 248,
+    "name": "Pragati Engineering College",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 249,
+    "name": "MLR Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 250,
+    "name": "CMR Technical Campus",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 254,
+    "name": "BITS",
+    "status": "active",
+    "created_at": "2026-05-04T07:12:43.904Z"
+  },
+  {
+    "id": 253,
+    "name": "Baba Institute of Technology",
+    "status": "inactive",
+    "created_at": "2026-05-04T01:24:14.598Z"
+  },
+  {
+    "id": 252,
+    "name": "NSRIT",
+    "status": "active",
+    "created_at": "2026-05-04T01:23:11.762Z"
+  },
+  {
+    "id": 247,
+    "name": "Aditya Engineering College",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.651Z"
+  },
+  {
+    "id": 7,
+    "name": "AISSMS College of Engineering",
+    "status": "active",
+    "created_at": "2026-05-04T01:11:13.508Z"
+  },
+  {
+    "id": 255,
+    "name": "Kuppam",
+    "status": "active",
+    "created_at": "2026-05-05T04:00:31.792Z"
+  }
+]

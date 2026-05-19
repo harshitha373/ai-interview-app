@@ -1,0 +1,20 @@
+[
+  {
+    "id": 2,
+    "name": "Geetha Sri",
+    "email": "thotaharshitha1424@gmail.com",
+    "subject": "Technical Issue",
+    "message": "My analytical reports were incorrect.",
+    "status": "replied",
+    "created_at": "2026-05-07T05:00:10.157Z"
+  },
+  {
+    "id": 3,
+    "name": "Geetha Sri",
+    "email": "thotaharshitha1424@gmail.com",
+    "subject": "Password Issue",
+    "message": "Even though I changed my password, it is not updating.",
+    "status": "replied",
+    "created_at": "2026-05-07T05:06:10.934Z"
+  }
+]

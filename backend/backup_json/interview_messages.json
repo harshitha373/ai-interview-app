@@ -1,0 +1,2032 @@
+[
+  {
+    "id": 73,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T01:58:06.509Z"
+  },
+  {
+    "id": 74,
+    "interview_id": 17,
+    "role": "user",
+    "content": "hello everyone my name is Harshita degree in the stream of Computer Science and Engineering at nadempally Sachin Raju instruct Technology I have a good communication skills and coming to my technical background I have good foundation in C Java Python and I have done to internships on javascrities one and one is on data analysis using Python and I have a few projects on that one is banking system application",
+    "created_at": "2026-04-27T01:58:59.619Z"
+  },
+  {
+    "id": 75,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Your answer was concise and relevant, but lacks specificity in technical depth. Can you explain how your internship experience with Python data analysis improved your problem-solving skills?",
+    "created_at": "2026-04-27T01:59:36.861Z"
+  },
+  {
+    "id": 76,
+    "interview_id": 17,
+    "role": "user",
+    "content": "yes I have I have your problems when collecting data from different websites so I have collected that side and I have seen whether the data is clean or not so that I have use some Python queries and clean and the complete data when having missing values and noise that I removed those all and I process completely the data and I have good visualisation",
+    "created_at": "2026-04-27T02:00:25.078Z"
+  },
+  {
+    "id": 77,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Your answer was clear, but lacks detail on optimization techniques. Can you explain how to use indexing strategies like B-trees or hash indexes for query performance improvement in Python databases such as PostgreSQL?",
+    "created_at": "2026-04-27T02:00:49.658Z"
+  },
+  {
+    "id": 78,
+    "interview_id": 17,
+    "role": "user",
+    "content": "sorry I don't have good knowledge about be trees and has indexes in Python basis I have only that a best few queries of database like a basic queries I don't have good knowledge about that",
+    "created_at": "2026-04-27T02:01:23.163Z"
+  },
+  {
+    "id": 79,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Brief evaluation: Lacks technical depth on indexing strategies. Follow-up question: Can you describe the process of creating and using an index in Python databases like PostgreSQL for query optimization?",
+    "created_at": "2026-04-27T02:01:41.668Z"
+  },
+  {
+    "id": 80,
+    "interview_id": 17,
+    "role": "user",
+    "content": " like best for most of the supporting equality and race comparisons like that we can use index",
+    "created_at": "2026-04-27T02:02:55.490Z"
+  },
+  {
+    "id": 81,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Limited knowledge on indexing, needs improvement. Can explain B-tree vs hash indexes in Python PostgreSQL?",
+    "created_at": "2026-04-27T02:03:13.392Z"
+  },
+  {
+    "id": 82,
+    "interview_id": 17,
+    "role": "user",
+    "content": " any other programming languages",
+    "created_at": "2026-04-27T02:03:36.934Z"
+  },
+  {
+    "id": 83,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Lacks detail on B-trees and hash indexes, needs clarification. Can explain the difference between using an equality comparison with indexing in Python PostgreSQL for query optimization purposes?",
+    "created_at": "2026-04-27T02:03:52.717Z"
+  },
+  {
+    "id": 84,
+    "interview_id": 17,
+    "role": "user",
+    "content": "ine post gray SQL choosing between battery and has indexes for equality comparisons involves balancing versatility against specialised sphere between Nexus are the default and the most common index type because there highly versatile and its structure the maintain a balanced and sorted tree when coming to Haas indexes are specifically design for equality comparisons and nothing else it can do so strictly quality",
+    "created_at": "2026-04-27T02:04:52.679Z"
+  },
+  {
+    "id": 85,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Brief evaluation: Needs clarity on B-trees and hash indexes differences. Follow-up question: Can you explain the trade-offs between using B-tree and hash indexing in Python PostgreSQL for equality comparisons?",
+    "created_at": "2026-04-27T02:05:22.161Z"
+  },
+  {
+    "id": 86,
+    "interview_id": 17,
+    "role": "user",
+    "content": "could you please ask me questions other than this battery and hashing Lexus in Python or any other programming languages like Java I don't know more about this be trees and has in Texas",
+    "created_at": "2026-04-27T02:05:51.258Z"
+  },
+  {
+    "id": 87,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Evaluation lacks specificity in Python contexts. Can explain B-tree vs hash indexes trade-offs directly related to PostgreSQL's use cases?",
+    "created_at": "2026-04-27T02:06:10.755Z"
+  },
+  {
+    "id": 88,
+    "interview_id": 17,
+    "role": "user",
+    "content": "sorry I don't know",
+    "created_at": "2026-04-27T02:06:26.994Z"
+  },
+  {
+    "id": 89,
+    "interview_id": 17,
+    "role": "ai",
+    "content": "Evaluation lacks Python-specific details on indexing strategies in PostgreSQL. Can explain the trade-offs between using B-tree and hash indexes for equality comparisons directly related to this use case?\nFollow-up question: How do you choose an appropriate index type, like a B-tree or hash index, when optimizing queries involving only equality conditions in Python Postgre",
+    "created_at": "2026-04-27T02:06:58.618Z"
+  },
+  {
+    "id": 90,
+    "interview_id": 18,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T02:29:45.874Z"
+  },
+  {
+    "id": 91,
+    "interview_id": 18,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T02:30:16.929Z"
+  },
+  {
+    "id": 92,
+    "interview_id": 18,
+    "role": "user",
+    "content": "my name is Harshita BTech degree in the stream of Computer Science and Engineering h n srit I have a good communication skills and coming to my technical background I am good and have good basic Foundation with the tools like Visual Studio code and Jupiter notebook",
+    "created_at": "2026-04-27T02:30:50.220Z"
+  },
+  {
+    "id": 93,
+    "interview_id": 18,
+    "role": "ai",
+    "content": "Thank you for sharing that information about yourself and your background in computer science engineering at HNSRIT University. You mentioned having a good foundation using tools like Visual Studio Code and Jupyter Notebooks which is great to hear! Let's delve deeper into some of the technical skills from your resume:\n\n1. Can you tell me about any specific projects where you utilized these",
+    "created_at": "2026-04-27T02:31:53.431Z"
+  },
+  {
+    "id": 94,
+    "interview_id": 19,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T02:40:28.367Z"
+  },
+  {
+    "id": 95,
+    "interview_id": 19,
+    "role": "user",
+    "content": " Bachelor of Computer Application sir and I have good technical knowledge on C Java and I have electron purse I MBA on HR this is my background",
+    "created_at": "2026-04-27T02:41:10.803Z"
+  },
+  {
+    "id": 96,
+    "interview_id": 19,
+    "role": "ai",
+    "content": "Hello Ruchitha, let's begin by discussing the academic and professional journey that led you here today. Could you please elaborate on any specific projects or roles where you applied technical skills like C programming or Java in a real-world setting? Additionally, since your resume highlighted an MBA with focus on HR from Visakha Institute of Management and Science, how do you",
+    "created_at": "2026-04-27T02:42:30.446Z"
+  },
+  {
+    "id": 97,
+    "interview_id": 19,
+    "role": "user",
+    "content": "hello actually I understood that that I feel that technical knowledge for hiring people will help a lots that's why I believe that business management along with technical skills for a person have is very good",
+    "created_at": "2026-04-27T02:43:58.171Z"
+  },
+  {
+    "id": 98,
+    "interview_id": 19,
+    "role": "ai",
+    "content": "Hello Ruchitha, it's great that we are discussing the synergy between technical knowledge and business management skills in hiring processes. To better understand this balance on a practical level, could you tell me about any experiences where your HR-related MBA insights directly influenced handling or resolving workplace issues?",
+    "created_at": "2026-04-27T02:44:54.921Z"
+  },
+  {
+    "id": 99,
+    "interview_id": 20,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T05:15:32.014Z"
+  },
+  {
+    "id": 100,
+    "interview_id": 20,
+    "role": "user",
+    "content": "hello everyone my name is handsome currently person my BTech degree in the stream of Computer Science and Engineering at nsrit college I have a good knowledge in a data analysis using Python so I have done good analysis on a project called Global footwear analysis where we have collected data from website and the converted that I into charts and bar graphs",
+    "created_at": "2026-04-27T05:16:20.177Z"
+  },
+  {
+    "id": 101,
+    "interview_id": 20,
+    "role": "ai",
+    "content": "Your explanation was clear and relevant. Can you describe your experience with database connectivity in Java? How did it enhance data analysis for the Global Footwear Analysis project? Based on this information, how do you plan to apply these skills at a",
+    "created_at": "2026-04-27T05:17:05.100Z"
+  },
+  {
+    "id": 127,
+    "interview_id": 22,
+    "role": "ai",
+    "content": "Hello Vittanala, your experience with EDA using Python is impressive as it aligns well with data analysis needs. However, you haven't mentioned any specific exposure to SQL or big",
+    "created_at": "2026-04-28T03:51:21.664Z"
+  },
+  {
+    "id": 102,
+    "interview_id": 20,
+    "role": "user",
+    "content": "actually the connection with connection using Java and with the database is completely different from the data analysis which I have done by collecting that set from the website is completely based on the Python queries not the connection between database we have use it tool called Jupiter Notebook in that we have written",
+    "created_at": "2026-04-27T05:17:56.110Z"
+  },
+  {
+    "id": 103,
+    "interview_id": 20,
+    "role": "ai",
+    "content": "Your explanation was incomplete regarding database connectivity in Java for data analysis purposes. How do you plan to utilize your knowledge of Python and Jupyter Notebooks alongside Java skills at the company? In terms of technical depth, could you elaborate on how",
+    "created_at": "2026-04-27T05:18:18.842Z"
+  },
+  {
+    "id": 104,
+    "interview_id": 20,
+    "role": "user",
+    "content": "when coming to javascrills I can use my javascrills at company well the developing and application which need more security like banking applications I can develop using Java programming while coming to the Python and the Jupiter notebook these tools and programming language are helpful for me in a company to analyse the data",
+    "created_at": "2026-04-27T05:19:00.827Z"
+  },
+  {
+    "id": 105,
+    "interview_id": 20,
+    "role": "ai",
+    "content": "Incomplete detail regarding Java database connectivity application in analysis project. How do you plan to integrate your Python skills with potential projects requiring more security? Have experience working with relational databases such as MySQL or PostgreSQL using JDBC, and how would",
+    "created_at": "2026-04-27T05:19:25.096Z"
+  },
+  {
+    "id": 106,
+    "interview_id": 20,
+    "role": "user",
+    "content": "I have a good experience with poster SQL as a for example we have a Neon database which is the post to degree SQL this helps me to connect connect database to store data of my any application like I have developed in voice cloud so that complete that I stored in this neon database by connecting my project to eat and running the queries",
+    "created_at": "2026-04-27T05:20:17.710Z"
+  },
+  {
+    "id": 107,
+    "interview_id": 20,
+    "role": "ai",
+    "content": "Incomplete detail regarding Java database connectivity application in analysis project. How do you plan to integrate your Python skills with potential projects requiring more security? Have experience working with relational databases such as MySQL or PostgreSQL using JDBC, and how would",
+    "created_at": "2026-04-27T05:20:43.224Z"
+  },
+  {
+    "id": 108,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-27T05:43:26.384Z"
+  },
+  {
+    "id": 109,
+    "interview_id": 21,
+    "role": "user",
+    "content": "everyone my name is handsome family person my B.Tech degree in the stream of Computer Science and Engineering at nadempally Satin Raju Institute of Technology where I have developed good communication skills and technical knowledge on Java and python",
+    "created_at": "2026-04-27T05:44:03.739Z"
+  },
+  {
+    "id": 110,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Insufficient detail about technical skills.\"  \n\"Can you describe your experience with database connectivity in Java?",
+    "created_at": "2026-04-27T05:44:37.757Z"
+  },
+  {
+    "id": 111,
+    "interview_id": 21,
+    "role": "user",
+    "content": "structured flow to connect the database in Java load the driver registering the database driver after the fuel establish a connection using the driver manager dot get connection method with the database URL username and password after that we create a statement preparing and SQL Query using this statement after we will finally execute that query will run the command like execute query so that to execute update connection complete this is how the jdbc connection in Java Express",
+    "created_at": "2026-04-27T05:46:09.473Z"
+  },
+  {
+    "id": 112,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Your explanation of JDBC connection is clear.\"  \n\"Can you elaborate on how you handle exceptions during database operations?",
+    "created_at": "2026-04-27T05:46:44.445Z"
+  },
+  {
+    "id": 113,
+    "interview_id": 21,
+    "role": "user",
+    "content": " this are the best practices like role bags with cats",
+    "created_at": "2026-04-27T05:47:56.041Z"
+  },
+  {
+    "id": 114,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Insufficient detail about exception handling during database operations.  \n\"Can you explain how your code manages SQL exceptions and ensures data integrity?\"\n\nInterview Question: Aside from Java Script knowledge mentioned in the resume, have you",
+    "created_at": "2026-04-27T05:48:21.008Z"
+  },
+  {
+    "id": 115,
+    "interview_id": 21,
+    "role": "user",
+    "content": "yeah I can explain you well about robust exception handling like try catch final blocks proper database calls in trich blocks to catch specific exceptions next login full stack trace and relevant matter data to help with the debugging but avoid login sense to user data and ensuring that integrity like using transactions like atomicity consistency integrity and durability",
+    "created_at": "2026-04-27T05:49:32.914Z"
+  },
+  {
+    "id": 116,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Good explanation.\"  \n\"Can you provide an example where your code uses transactions for data integrity?\"\n\nInterviewer now asks about the candidate's experience with database transactions and how they ensure ACID properties in their Java applications, ste",
+    "created_at": "2026-04-27T05:50:02.410Z"
+  },
+  {
+    "id": 117,
+    "interview_id": 21,
+    "role": "user",
+    "content": "how does how does ensures acid properties atomicity the all or nothing rule if the system crashes after subtracting from account a but before adding to be the entire transaction is rule back no money is lost consistency the database moves from one valid state to another and next isolation if two transverse happen at the exact same time isolation level ensure they don't interfere with each others data before they are finished on the Transformer immediately after the new balance sale",
+    "created_at": "2026-04-27T05:51:08.091Z"
+  },
+  {
+    "id": 118,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Good explanation. How do you implement error handling for SQL exceptions in your code?  \nNow let’s discuss how you manage concurrency control when multiple users access the same data simultaneously. Can you explain that process and any specific technologies or patterns",
+    "created_at": "2026-04-27T05:51:42.704Z"
+  },
+  {
+    "id": 119,
+    "interview_id": 21,
+    "role": "user",
+    "content": "implement error handling for SQL exceptions I use try catch blocks to intercept database errors allowing the application to lock the issue and provide a user friendly message rather than crashing for managing concurrency control I typically use optimistic concurrency control which uses time stamps to check for chance changes before committing or locking to lock during a transction please open supported by database isolation levels why preventing conflicts like updates when multiple uses the same data",
+    "created_at": "2026-04-27T05:52:52.847Z"
+  },
+  {
+    "id": 120,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Good explanation. How do you ensure that your application adheres to different isolation levels when handling concurrent transactions?  \nNow let's discuss how the candidate has utilized their knowledge of Python in previous projects or academic work, focusing on",
+    "created_at": "2026-04-27T05:53:23.125Z"
+  },
+  {
+    "id": 121,
+    "interview_id": 21,
+    "role": "user",
+    "content": "to ensure an application at this to specific isolation levels during concurrent transaction you should explicitly configure that transaction properties such as read committed repeatable read et cetera within your database driver or Oram settings to prevent anomalies like 30 reads or Phantom reach this technical implementation is often forced by using optimistic or Pessimistic mechanism and ensure in proper transactions through contact manager",
+    "created_at": "2026-04-27T05:54:21.506Z"
+  },
+  {
+    "id": 122,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Good explanation. Can you explain how Python’s GIL (Global Interpreter Lock) affects multi-threaded applications?  \nNow let's discuss asynchronous programming in Node.js and its impact on handling I/O operations efficiently",
+    "created_at": "2026-04-27T05:54:51.789Z"
+  },
+  {
+    "id": 123,
+    "interview_id": 21,
+    "role": "user",
+    "content": "a global interpreter law is a mutex that allows only one thread to execute Python White Road at a time even on multicore process while its simplifies memory management and ensures thread safety for non trade safe C extensions it's creates a bottle that first CPU Bond multithreaded Applications by preventing true parallel execution",
+    "created_at": "2026-04-27T05:55:48.220Z"
+  },
+  {
+    "id": 124,
+    "interview_id": 21,
+    "role": "ai",
+    "content": "Good explanation., How do you implement error handling for SQL exceptions in your code? Can you discuss how Python’s GIL affects multi-threaded applications and its implications for concurrency control strategies like optimistic locking or Pess",
+    "created_at": "2026-04-27T05:56:27.857Z"
+  },
+  {
+    "id": 125,
+    "interview_id": 22,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-28T03:49:36.474Z"
+  },
+  {
+    "id": 126,
+    "interview_id": 22,
+    "role": "user",
+    "content": " at apssts",
+    "created_at": "2026-04-28T03:50:41.360Z"
+  },
+  {
+    "id": 128,
+    "interview_id": 22,
+    "role": "user",
+    "content": "I don't have good knowledge with sequel but you can ask me questions on that analysis because I want to test myself on that analysis",
+    "created_at": "2026-04-28T03:51:49.700Z"
+  },
+  {
+    "id": 129,
+    "interview_id": 22,
+    "role": "ai",
+    "content": "1. Your experience with Exploratory Data Analysis using Python is a strong match for data analysis roles, as it demonstrates your ability to handle datasets effectively. However, there's no mention",
+    "created_at": "2026-04-28T03:52:14.463Z"
+  },
+  {
+    "id": 130,
+    "interview_id": 22,
+    "role": "user",
+    "content": "I have done that analysis I have chosen the data set from the carrial website on global foot waste analysis and the I collected that data and using Python queries I have converted that raw that I into that are implization after pre crossing and data cleaning the data set",
+    "created_at": "2026-04-28T03:52:52.931Z"
+  },
+  {
+    "id": 131,
+    "interview_id": 22,
+    "role": "ai",
+    "content": "1. Your Python skills for Exploratory Data Analysis are commendable, as data analysis often requires proficiency with programming languages like Python or R to manipulate datasets effectively. However, there",
+    "created_at": "2026-04-28T03:53:17.293Z"
+  },
+  {
+    "id": 132,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-28T04:11:43.449Z"
+  },
+  {
+    "id": 133,
+    "interview_id": 24,
+    "role": "user",
+    "content": " on HTML CSS and JavaScript",
+    "created_at": "2026-04-28T04:12:26.819Z"
+  },
+  {
+    "id": 134,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "Hello, I'm Harshu Thota from Visakhapatnam with a keen interest in software development focusing on HTML, CSS, JavaScript, Python for data analysis, and Java programming during",
+    "created_at": "2026-04-28T04:13:31.192Z"
+  },
+  {
+    "id": 135,
+    "interview_id": 24,
+    "role": "user",
+    "content": "I didn't understand your question could you please complete your question",
+    "created_at": "2026-04-28T04:14:30.811Z"
+  },
+  {
+    "id": 136,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "1. The candidate, Harshu Thota, has skills relevant to frontend development with a focus on HTML, CSS, JavaScript, Python for data analysis (which can be beneficial in understanding",
+    "created_at": "2026-04-28T04:14:58.772Z"
+  },
+  {
+    "id": 137,
+    "interview_id": 24,
+    "role": "user",
+    "content": "I think you didn't ask me any question you are just giving the para but which doesn't have any question in it what should I answer",
+    "created_at": "2026-04-28T04:15:28.621Z"
+  },
+  {
+    "id": 138,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "1. Harshu's skills align well with frontend development, particularly HTML/CSS for UI design and JavaScript alongside Python knowledge which can aid data-driven decisions in web projects.",
+    "created_at": "2026-04-28T04:15:47.646Z"
+  },
+  {
+    "id": 139,
+    "interview_id": 24,
+    "role": "user",
+    "content": "I have done a project using HTML CSS for banking system application I have downloaded good front and using HTML and first telling I have used CSS and using JavaScript I have added event listeners to make my website more effective",
+    "created_at": "2026-04-28T04:16:49.608Z"
+  },
+  {
+    "id": 140,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "1. Your HTML/CSS skills are commendable, Harshu; they form a solid foundation for frontend development. However, your experience with JavaScript seems limited to basic event listeners without",
+    "created_at": "2026-04-28T04:17:13.672Z"
+  },
+  {
+    "id": 141,
+    "interview_id": 24,
+    "role": "user",
+    "content": " my HTML with three structure with JavaScript using the queries like with selective and used by tag name I can write this and I can link my HTML to the JavaScript",
+    "created_at": "2026-04-28T04:17:59.897Z"
+  },
+  {
+    "id": 142,
+    "interview_id": 24,
+    "role": "ai",
+    "content": "1. Harshu's HTML/CSS skills are directly relevant to frontend development, while his Python experience can be advantageous for data-driven web projects. However, there is no",
+    "created_at": "2026-04-28T04:18:18.933Z"
+  },
+  {
+    "id": 143,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-28T04:31:52.376Z"
+  },
+  {
+    "id": 144,
+    "interview_id": 25,
+    "role": "user",
+    "content": "my name is Ruchita currently person my MBA MBA final year in Walter business school I have pursued HR management in my MBA so I am good at human resource management you can ask questions",
+    "created_at": "2026-04-28T04:32:33.479Z"
+  },
+  {
+    "id": 145,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "How do you leverage HRIS systems to enhance talent acquisition and retention strategies?",
+    "created_at": "2026-04-28T04:33:12.073Z"
+  },
+  {
+    "id": 146,
+    "interview_id": 25,
+    "role": "user",
+    "content": " performance",
+    "created_at": "2026-04-28T04:34:14.013Z"
+  },
+  {
+    "id": 147,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "How do you ensure data privacy and security when utilizing HRIS systems for sensitive employee information?",
+    "created_at": "2026-04-28T04:34:31.612Z"
+  },
+  {
+    "id": 148,
+    "interview_id": 25,
+    "role": "user",
+    "content": "ensuring that a privacy and security in Human Resource Information Systems require a multilate approach combining technical safeguard stick policies and regular oversight technical safeguards like a role based access control encryption multi Factor authentication etc coming to policy controls that are minimization standard operating processes compliance coming to monitoring auditrail security audits employee training please security and privacy",
+    "created_at": "2026-04-28T04:35:18.451Z"
+  },
+  {
+    "id": 149,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "How do you implement role-based access control in HRIS to ensure that only authorized personnel can view sensitive employee data?",
+    "created_at": "2026-04-28T04:35:39.911Z"
+  },
+  {
+    "id": 150,
+    "interview_id": 25,
+    "role": "user",
+    "content": " defining role permissions apply the principle of least privilege established the aggregation of duties incorporate or trails and reviews security training",
+    "created_at": "2026-04-28T04:36:26.134Z"
+  },
+  {
+    "id": 151,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "How do you ensure that role-based access control in HRIS is effectively implemented to prevent unauthorized data breaches?",
+    "created_at": "2026-04-28T04:36:47.685Z"
+  },
+  {
+    "id": 152,
+    "interview_id": 25,
+    "role": "user",
+    "content": "ensure the role based access control in hrs effectively prevents another is a databridge we should focus on multilate implementation strategy that balance is strict access with continuous oversight and core implementation strategies like and force the principle of least privilege granular definitions permission mapping and conduct regular access audits and review",
+    "created_at": "2026-04-28T04:37:27.909Z"
+  },
+  {
+    "id": 153,
+    "interview_id": 25,
+    "role": "ai",
+    "content": "How do you integrate user authentication mechanisms within HRIS to ensure secure access for different roles?",
+    "created_at": "2026-04-28T04:37:46.334Z"
+  },
+  {
+    "id": 154,
+    "interview_id": 27,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T04:07:19.219Z"
+  },
+  {
+    "id": 155,
+    "interview_id": 27,
+    "role": "user",
+    "content": "hello everyone my name is geetashree can't you purchase my beta degree in the stream of Computer Science and Engineering at nadempally certain Raju Institute of Technology and I have good quality assurance management as I have a done when course I software testing method",
+    "created_at": "2026-04-29T04:08:11.586Z"
+  },
+  {
+    "id": 156,
+    "interview_id": 27,
+    "role": "ai",
+    "content": "How do you ensure cross-browser compatibility for a web application's user interface?",
+    "created_at": "2026-04-29T04:08:53.472Z"
+  },
+  {
+    "id": 157,
+    "interview_id": 27,
+    "role": "user",
+    "content": " research sharing will be included while developing the web application so that we can say that the cross Browser",
+    "created_at": "2026-04-29T04:09:41.087Z"
+  },
+  {
+    "id": 158,
+    "interview_id": 27,
+    "role": "ai",
+    "content": "How do you implement responsive design techniques to ensure a web application's UI adapts seamlessly across different screen sizes and devices?",
+    "created_at": "2026-04-29T04:10:01.544Z"
+  },
+  {
+    "id": 159,
+    "interview_id": 28,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T04:20:14.691Z"
+  },
+  {
+    "id": 160,
+    "interview_id": 28,
+    "role": "user",
+    "content": "everyone my name is Harshita degree in the stream of Computer Science and Engineering College where I have again more knowledge about how to become a good sales executive I have also done I have good patients and good communication skills and I also like to communicate with others and convince them with my words",
+    "created_at": "2026-04-29T04:21:03.658Z"
+  },
+  {
+    "id": 161,
+    "interview_id": 28,
+    "role": "ai",
+    "content": "How do you ensure responsive design in a web application to accommodate various devices used by customers?",
+    "created_at": "2026-04-29T04:22:12.697Z"
+  },
+  {
+    "id": 162,
+    "interview_id": 28,
+    "role": "user",
+    "content": "I focus on making the layout adapt smoothly to different screen sizes and defaices are flexible layouts with the CSS grid and flex box and media queries I use media rules to apply different styles based on screen with orientation and resolution responsive images and media images",
+    "created_at": "2026-04-29T04:23:44.771Z"
+  },
+  {
+    "id": 163,
+    "interview_id": 28,
+    "role": "ai",
+    "content": "How do you optimize a web application's performance while ensuring responsive design?",
+    "created_at": "2026-04-29T04:24:18.045Z"
+  },
+  {
+    "id": 164,
+    "interview_id": 28,
+    "role": "user",
+    "content": "to Optimizer applications performance while keeping it responsive I balance speed and adaptability across devices",
+    "created_at": "2026-04-29T04:24:51.396Z"
+  },
+  {
+    "id": 165,
+    "interview_id": 28,
+    "role": "ai",
+    "content": "How do you implement lazy loading for images in a web application to improve page load times without sacrificing user experience?",
+    "created_at": "2026-04-29T04:25:10.394Z"
+  },
+  {
+    "id": 166,
+    "interview_id": 29,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T04:37:40.955Z"
+  },
+  {
+    "id": 167,
+    "interview_id": 29,
+    "role": "user",
+    "content": "my name is Harshita country also my BTech degree in the stream of Computer Science and Engineering and I have developed good programming skills like a sweet Java Python during my college and I have also attend few in 10 ships on data analysis and document object model using JavaScript",
+    "created_at": "2026-04-29T04:38:23.366Z"
+  },
+  {
+    "id": 168,
+    "interview_id": 29,
+    "role": "ai",
+    "content": "How do you implement a responsive navigation menu using CSS Flexbox and media queries?",
+    "created_at": "2026-04-29T04:39:28.852Z"
+  },
+  {
+    "id": 169,
+    "interview_id": 30,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T05:09:15.922Z"
+  },
+  {
+    "id": 170,
+    "interview_id": 30,
+    "role": "user",
+    "content": "everyone my name is Harshita country passing my BTech degree in the stream of Computer Science and Engineering at nsrit and I have got a friend and development skills as I have learnt in college like HTML CSS and JavaScript I have got found a good foundation in that I have developed skills in it",
+    "created_at": "2026-04-29T05:10:00.291Z"
+  },
+  {
+    "id": 171,
+    "interview_id": 30,
+    "role": "ai",
+    "content": "What is React and how does its component-based architecture benefit frontend development?",
+    "created_at": "2026-04-29T05:10:51.512Z"
+  },
+  {
+    "id": 172,
+    "interview_id": 30,
+    "role": "user",
+    "content": "react is a Framework which is a combination of HTML and CSS it is a front and uses where we can use API and components and different types of method post method and development which is the realistic and Real world application where there is no need of good more knowledge of programming but we can make small education only waste on our needs",
+    "created_at": "2026-04-29T05:11:37.506Z"
+  },
+  {
+    "id": 173,
+    "interview_id": 30,
+    "role": "ai",
+    "content": "What are some best practices for optimizing JavaScript performance in a React application?",
+    "created_at": "2026-04-29T05:12:01.240Z"
+  },
+  {
+    "id": 174,
+    "interview_id": 31,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T05:18:27.267Z"
+  },
+  {
+    "id": 175,
+    "interview_id": 31,
+    "role": "user",
+    "content": " so I have good knowledge",
+    "created_at": "2026-04-29T05:19:14.483Z"
+  },
+  {
+    "id": 176,
+    "interview_id": 31,
+    "role": "ai",
+    "content": "As an HR Manager with a focus on technology integration within our organization's recruitment process, how would you design and implement a system to automate resume screening using natural language processing techniques?\n\n(Note: This question assumes that the candidate has some technical background or interest in applying it for improving efficiency.)",
+    "created_at": "2026-04-29T05:21:16.241Z"
+  },
+  {
+    "id": 177,
+    "interview_id": 32,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-29T05:28:51.484Z"
+  },
+  {
+    "id": 178,
+    "interview_id": 32,
+    "role": "user",
+    "content": " as I have completed BCA so I can have good programming language",
+    "created_at": "2026-04-29T05:29:38.216Z"
+  },
+  {
+    "id": 179,
+    "interview_id": 32,
+    "role": "ai",
+    "content": "What is a RESTful API and how does it facilitate communication between frontend and backend systems?",
+    "created_at": "2026-04-29T05:30:31.055Z"
+  },
+  {
+    "id": 180,
+    "interview_id": 32,
+    "role": "user",
+    "content": "rest full API is good connection between front and back and we can Trigger those API to call the back and back and the server will be running with that I can run my friend and also while connecting API to both centre and pack and I can run my application",
+    "created_at": "2026-04-29T05:31:09.364Z"
+  },
+  {
+    "id": 181,
+    "interview_id": 32,
+    "role": "ai",
+    "content": "What is a RESTful API and how does it facilitate communication between frontend and backend systems?",
+    "created_at": "2026-04-29T05:31:49.751Z"
+  },
+  {
+    "id": 182,
+    "interview_id": 32,
+    "role": "user",
+    "content": "a restful API is an interface that allows the front and back end of a web application to communicate using standard http methods like get post could and delete rest to stands for representational state transfer and its build around resources like a uses or products that can be access unique urls",
+    "created_at": "2026-04-29T05:32:38.804Z"
+  },
+  {
+    "id": 183,
+    "interview_id": 32,
+    "role": "ai",
+    "content": "What are some best practices for optimizing database queries in a high-traffic web application?",
+    "created_at": "2026-04-29T05:33:09.467Z"
+  },
+  {
+    "id": 184,
+    "interview_id": 32,
+    "role": "user",
+    "content": "in high traffic Pro Publication in a fish and database queries can become the main bottleneck so Optimisation is critical",
+    "created_at": "2026-04-29T05:33:30.555Z"
+  },
+  {
+    "id": 185,
+    "interview_id": 32,
+    "role": "ai",
+    "content": "What strategies can you employ to ensure efficient data retrieval in a relational database under heavy load?",
+    "created_at": "2026-04-29T05:34:01.215Z"
+  },
+  {
+    "id": 186,
+    "interview_id": 33,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-30T03:44:45.236Z"
+  },
+  {
+    "id": 187,
+    "interview_id": 33,
+    "role": "user",
+    "content": "20% of Computer Science and Engineering at nadempally install Technology well and I have good patients so I can solve the issues of the customers with my technical knowledge also",
+    "created_at": "2026-04-30T03:45:45.062Z"
+  },
+  {
+    "id": 188,
+    "interview_id": 33,
+    "role": "ai",
+    "content": "Candidate Harshu's response does not align with the Sales Executive role they applied for; it instead discusses their background in computer science and software development. This answer is irrelevant to a sales position, which typically requires strong interpersonal skills, product knowledge, and an understanding of market dynamics rather than technical coding abilities.",
+    "created_at": "2026-04-30T03:47:33.434Z"
+  },
+  {
+    "id": 189,
+    "interview_id": 33,
+    "role": "user",
+    "content": "understanding about market sales executive in my past company as an internship so I have gained how to manage customers and if I if I feel that any customer is not satisfied with our product I understand their problem and issue with our product and I will explain why is the product is more beneficial and I will try to solve the problem with their facing",
+    "created_at": "2026-04-30T03:48:46.340Z"
+  },
+  {
+    "id": 190,
+    "interview_id": 33,
+    "role": "ai",
+    "content": "Certainly! Here's the revised difficulty level and a professional interview question for Harshu as an entry-level Sales Executive candidate, based on their response about customer management during internship. The answer provided by Harshu is relevant to sales but lacks specificity regarding daily responsibilities of a Sales Executive role:\n\n\n<How do you prioritize and manage multiple client accounts while ensuring personalized attention?>",
+    "created_at": "2026-04-30T03:51:47.714Z"
+  },
+  {
+    "id": 191,
+    "interview_id": 34,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-30T04:14:13.757Z"
+  },
+  {
+    "id": 192,
+    "interview_id": 34,
+    "role": "user",
+    "content": " good funte and I have good writing skills",
+    "created_at": "2026-04-30T04:14:53.498Z"
+  },
+  {
+    "id": 193,
+    "interview_id": 35,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-04-30T04:52:04.058Z"
+  },
+  {
+    "id": 194,
+    "interview_id": 35,
+    "role": "user",
+    "content": "everyone my name is saying my MBA HR and I have good hiding skills and I have good technical background so I can hide people using my knowledge and I can recruit the people and test they knowledge and I can manage the resources and I can manage the client also",
+    "created_at": "2026-04-30T04:52:46.034Z"
+  },
+  {
+    "id": 195,
+    "interview_id": 35,
+    "role": "ai",
+    "content": "Candidate's last answer lacks direct relevance to the core responsibilities of an HR Manager and seems more focused on personal skills rather than professional expertise. The response does not demonstrate a clear understanding or experience in human resources management, recruitment processes, employee relations, or organizational development which are key aspects of this role.\n\n\n<How do you approach creating an effective onboarding process for new hires?>",
+    "created_at": "2026-04-30T04:54:40.325Z"
+  },
+  {
+    "id": 196,
+    "interview_id": 36,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-04T03:55:14.517Z"
+  },
+  {
+    "id": 197,
+    "interview_id": 36,
+    "role": "user",
+    "content": "everyone I am parthu Vasantha I have completed my graduation in NSIT college with CGPA and I have already communication skills and I can also solve the customer problems as I have worked as an internship I am good at it and I have got communication skills and Technical skills also where can help me to communicate with customers and solve their problems efficiently by patiently",
+    "created_at": "2026-05-04T03:56:09.232Z"
+  },
+  {
+    "id": 198,
+    "interview_id": 36,
+    "role": "ai",
+    "content": "Candidate's last answer lacks specificity regarding their technical skills and experience in customer support roles; it also does not directly address the troubleshooting aspect of a Customer Support Executive position. The response seems more like an introduction rather than demonstrating expertise or relevant experiences for this role. Based on these observations, I would decrease difficulty by one level to reflect that while Parthu Vasantha has communication skills and some experience as an intern, they have not yet demonstrated the technical troubleshooting depth required at a Customer Support Executive position in telecommunications:",
+    "created_at": "2026-05-04T03:57:33.491Z"
+  },
+  {
+    "id": 199,
+    "interview_id": 36,
+    "role": "user",
+    "content": "based on the visual feedback from Solaris",
+    "created_at": "2026-05-04T03:59:19.666Z"
+  },
+  {
+    "id": 200,
+    "interview_id": 36,
+    "role": "ai",
+    "content": "Candidate's last answer lacks specificity regarding their technical skills and experience in customer support roles; it also does not directly address the troubleshooting aspect of a Customer Support Executive position. The response seems more like an introduction rather than demonstrating expertise or relevant experiences for this role: \n<Your question here> How would you handle a situation where a customer is frustrated due to repeated service outages, and what steps would you take to resolve their issue while ensuring they feel heard and valued?",
+    "created_at": "2026-05-04T04:02:27.985Z"
+  },
+  {
+    "id": 201,
+    "interview_id": 37,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-05T06:19:52.462Z"
+  },
+  {
+    "id": 202,
+    "interview_id": 37,
+    "role": "user",
+    "content": " by collecting data from different websites",
+    "created_at": "2026-05-05T06:20:33.188Z"
+  },
+  {
+    "id": 203,
+    "interview_id": 37,
+    "role": "ai",
+    "content": "Given the candidate's focus on data collection from different websites during their internship with APSSDC and considering they are applying for a Data Analyst role, it seems that while they have experience in handling raw data sources which is relevant to the job of a Data Analyst, there isn't enough information about analytical skills or tools used. Therefore:\n\n\nCan you describe how you would process and analyze this collected web-based data for trends that could impact business decisions?",
+    "created_at": "2026-05-05T06:21:43.106Z"
+  },
+  {
+    "id": 204,
+    "interview_id": 37,
+    "role": "user",
+    "content": "I can enlist that data by collecting that from website first full I'll clean the data by removing the noisely that from the complete that a sector and by removing noise data the data will it clean the and complete precrossing will be done after that I will analyse the data and I will turn the troad at time today good graphs and charts which helps in visualisation and make user to understand the product",
+    "created_at": "2026-05-05T06:23:05.331Z"
+  },
+  {
+    "id": 205,
+    "interview_id": 37,
+    "role": "ai",
+    "content": "Given the candidate's response lacks specificity in data analysis techniques and tools which are crucial for a Data Analyst role, I would decrease difficulty. The answer seems to be more about general steps rather than analytical methods or insights derived from data. Therefore, \n<Your question here> Can you explain how you use statistical analysis and machine learning techniques in your previous projects to derive actionable business intelligence?",
+    "created_at": "2026-05-05T06:24:21.994Z"
+  },
+  {
+    "id": 206,
+    "interview_id": 37,
+    "role": "user",
+    "content": "actually I use different machine models to classify the data using a technique called random forest recruit support a vector mission models which helps me clean the data and analyse the data and identify the patterns in the that are which are deeply hidden and the those patterns will help us to train the data as 80% of data is train and 20% that I is tested and convert that into visualisation and design the dashboard which helps great understanding of rodta",
+    "created_at": "2026-05-05T06:25:43.771Z"
+  },
+  {
+    "id": 207,
+    "interview_id": 37,
+    "role": "ai",
+    "content": "Given the candidate's response lacks specificity in statistical analysis and machine learning techniques which are crucial for a Data Analyst role, I would decrease difficulty. The answer seems to be more about general steps rather than analytical methods or insights derived from data. Therefore, \n<Your question here> Can you describe how your experience with statistical analysis and machine learning has helped identify key performance indicators (KPIs) for business improvement?",
+    "created_at": "2026-05-05T06:28:03.780Z"
+  },
+  {
+    "id": 208,
+    "interview_id": 38,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T00:41:04.765Z"
+  },
+  {
+    "id": 209,
+    "interview_id": 38,
+    "role": "user",
+    "content": "hello everyone I am Harsha B.Tech degree of computer science in Engineering at nademply search Institute of Technology I am a good front and developer I have good technical skills like HTML CSS programming for developing the front end with goodness and programming sorry",
+    "created_at": "2026-05-07T00:41:45.646Z"
+  },
+  {
+    "id": 210,
+    "interview_id": 39,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T00:47:01.489Z"
+  },
+  {
+    "id": 211,
+    "interview_id": 39,
+    "role": "user",
+    "content": "hello everyone my name is Harshita I have completed my college I have completed my graduations and I am looking for an opportunity where I can work as front and developer so I have I am taking comefortable with HTML CSS JavaScript",
+    "created_at": "2026-05-07T00:47:30.513Z"
+  },
+  {
+    "id": 212,
+    "interview_id": 40,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T00:55:54.541Z"
+  },
+  {
+    "id": 213,
+    "interview_id": 40,
+    "role": "user",
+    "content": "I am Harshal 20% my beta degree in the string of Computer Science and Engineering and I want to become a front and developer so I have developed skills like HTML CSS JavaScript where I can prove myself in the organisation I am looking for an opportunity",
+    "created_at": "2026-05-07T00:56:28.788Z"
+  },
+  {
+    "id": 214,
+    "interview_id": 40,
+    "role": "ai",
+    "content": "Given the candidate's response, it seems they have a basic understanding of their skills and career objectives. However, there is no mention of experience with React/Vue/Angular specifically in HTML/CSS and JavaScript context which are crucial for Frontend Development roles. Therefore:\n\n  \n  \n<Next Question> Can you explain how state management works within React applications, particularly focusing on the use of either Redux for global application state and props drilling avoidance or Context API with hooks to manage local component states? Provide a brief example demonstrating your understanding.",
+    "created_at": "2026-05-07T00:58:16.789Z"
+  },
+  {
+    "id": 215,
+    "interview_id": 40,
+    "role": "user",
+    "content": "state management is a process of managing the data that a web application need to track in react this involves a two primary approaches Global state for app while data and local straight for component specific data",
+    "created_at": "2026-05-07T00:59:37.490Z"
+  },
+  {
+    "id": 216,
+    "interview_id": 40,
+    "role": "ai",
+    "content": "Given the candidate's response, it is evident that they have a foundational understanding of state management in React but lack specific knowledge about how to implement these concepts. They mentioned global and local states without detailing their experience with Redux or Context API/hooks which are essential for managing complex application states effectively as part of Frontend Development roles:\n\n\n\n\n<Next Question> Can you explain how the Context API with hooks can be used to manage local component states without prop drilling, and provide a brief example of its implementation? Here's an advanced",
+    "created_at": "2026-05-07T01:01:00.073Z"
+  },
+  {
+    "id": 217,
+    "interview_id": 40,
+    "role": "user",
+    "content": "contact AP allows you to share the data across the componently without manually passing the crops at every level according proper drilling implementing context API with houses which generally follow 3 steps create the contacts use create context method and provide the contacts we used a provider component to Raptor part of the app that needs data next consume the context use the use contextbook within a functional component to access the value",
+    "created_at": "2026-05-07T01:02:26.894Z"
+  },
+  {
+    "id": 329,
+    "interview_id": 61,
+    "role": "ai",
+    "content": "Can you explain how to implement a balanced binary search tree, such as an AVL Tree or Red-Black Tree, in your preferred programming language? Please include time complexity for the insertion and deletion operations.",
+    "created_at": "2026-05-08T00:36:16.870Z"
+  },
+  {
+    "id": 218,
+    "interview_id": 40,
+    "role": "ai",
+    "content": "Given the response provided, it appears that while you have a grasp on state management in React using Context API and hooks for local storage synchronization. However, there's room to improve your understanding of how context works with functional components as well as practical usage scenarios where this knowledge is essential:\n\n[DIFFICULTY: 5/10]\n\n\nProblem Statement: Implement a custom useLocalStorage hook that syncs state with local storage. This is an advanced topic, as it requires understanding of both the context system within functional components (using React's `useContext",
+    "created_at": "2026-05-07T01:03:55.708Z"
+  },
+  {
+    "id": 219,
+    "interview_id": 40,
+    "role": "user",
+    "content": "to implement a custom use local storage hook in react that things that are with the local storage we can follow a simple pattern with the use it and use effect method in JavaScript and integrating that concept with use context to use with the context system as requested we can wrap we can wrap your provider with this hook to make the process to state available globally",
+    "created_at": "2026-05-07T01:05:06.850Z"
+  },
+  {
+    "id": 220,
+    "interview_id": 40,
+    "role": "ai",
+    "content": "Problem Statement: Implement a custom useLocalStorage hook that syncs state with local storage in React Native using the Context API and Redux. [DIFFICULTY: X/10, where 'X' is an integer between 1-5]  \n\n[Document Topic - Advanced State Management for Custom Hooks in JavaScript (Difficulty Level: More Challenging with Added Constraints]:\n\nIn this task, I want you to create a React Native application that uses the Context API and Redux. The goal is to implement an advanced useLocalStorage hook using `useState` and `useEffect`. This custom hook should encapsulate all of its own logic for synchronizing state with",
+    "created_at": "2026-05-07T01:06:39.193Z"
+  },
+  {
+    "id": 221,
+    "interview_id": 41,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T01:24:44.585Z"
+  },
+  {
+    "id": 222,
+    "interview_id": 41,
+    "role": "user",
+    "content": "stream of Computer Science and Engineering and I want to become a full stack developer for a front and I know very well about reaches and for back and server I know very good about not JS and coming to database connections I am very good with post agree SQL neon database and the connections of it completely this as my full stack web development knowledge",
+    "created_at": "2026-05-07T01:26:07.699Z"
+  },
+  {
+    "id": 223,
+    "interview_id": 41,
+    "role": "ai",
+    "content": "Based on the candidate's response, it seems they have a strong foundation in web development and databases but lack experience with JavaScript. To address this skill gap while also advancing their technical depth for Full Stack Developer roles, I will introduce them to an intermediate-level coding task that involves integrating frontend technologies (HTML/CSS) with backend frameworks using Node.js and MongoDB.\n\n\n\n\n<Problem Statement>\nAs a Full Stack Developer, you are tasked with creating an API endpoint using Node.js and MongoDB that retrieves user",
+    "created_at": "2026-05-07T01:27:27.693Z"
+  },
+  {
+    "id": 224,
+    "interview_id": 41,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\nconst express = require(\"express\");\nconst mongoose = require(\"mongoose\");\n\nconst app = express();\n\napp.use(express.json());\n\n// MongoDB Connection\nmongoose.connect(\"mongodb://127.0.0.1:27017/userdb\", {\n    useNewUrlParser: true,\n    useUnifiedTopology: true\n})\n.then(() => {\n    console.log(\"MongoDB Connected\");\n})\n.catch((error) => {\n    console.log(error);\n});\n\n// User Schema\nconst userSchema = new mongoose.Schema({\n    name: String,\n    email: String,\n    role: String,\n    age: Number\n});\n\n// User Model\nconst User = mongoose.model(\"User\", userSchema);\n\n// GET API - Retrieve User By ID\napp.get(\"/api/users/:id\", async (req, res) => {\n\n    try {\n\n        const userId = req.params.id;\n\n        const user = await User.findById(userId);\n\n        if (!user) {\n            return res.status(404).json({\n                success: false,\n                message: \"User not found\"\n            });\n        }\n\n        res.status(200).json({\n            success: true,\n            message: \"User fetched successfully\",\n            data: user\n        });\n\n    } catch (error) {\n\n        res.status(500).json({\n            success: false,\n            message: \"Server Error\",\n            error: error.message\n        });\n\n    }\n\n});\n\n// Server Start\napp.listen(5000, () => {\n    console.log(\"Server running on port 5000\");\n});\n\n[EXECUTION OUTPUT]\nRuntime Error: Cannot find module 'mongoose'\nRequire stack:\n- C:\\ai-interview-app\\backend\\server.js",
+    "created_at": "2026-05-07T01:29:56.330Z"
+  },
+  {
+    "id": 225,
+    "interview_id": 41,
+    "role": "ai",
+    "content": "[DIFFICULTY: Intermediate\n\n\n\nGiven the runtime error you encountered, it seems there's a need to address your understanding of setting up dependencies for an application using `mongoose`. Let’selaborate on this by providing some guidance or starting code that can help solidify these skills. \n\n[Problem Statement: Implementing Error Handling in Express API]\nConsider the following problem statement and starter code to create a robust error handling mechanism for your Node.js backend application using `mongoose` with an express server, which is crucial when",
+    "created_at": "2026-05-07T01:31:47.416Z"
+  },
+  {
+    "id": 226,
+    "interview_id": 42,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T01:39:19.148Z"
+  },
+  {
+    "id": 227,
+    "interview_id": 42,
+    "role": "user",
+    "content": "hello everyone I am Harshitha suddenly pursuing my BTech degree in the stream of Computer Science and Engineering at nadempally Satyanarayana Raju Institute of Technology and I have good boarding knowledge and I am applying for a software developer role so I am comefortablely in technical languages like she Java and also",
+    "created_at": "2026-05-07T01:40:57.516Z"
+  },
+  {
+    "id": 228,
+    "interview_id": 42,
+    "role": "ai",
+    "content": "Given the candidate's introduction, it seems they have a strong foundation in computer science and are comfortable with programming languages like Java. However, there is no mention of their experience with data structures and algorithms (a primary topic for this role) or system design principles which were part of our blueprint. To address these skill gaps while maintaining an appropriate difficulty level based on the candidate's introduction:\n\n\n\n\nProblem Statement (Theory): Can you explain how binary trees work, particularly in terms of their use for sorting algorithms? Please provide",
+    "created_at": "2026-05-07T01:42:18.853Z"
+  },
+  {
+    "id": 229,
+    "interview_id": 42,
+    "role": "user",
+    "content": "a binary is a tree that are structure where its not has atmos two children refer to as the left child and the right side in the contacts of sorting their most commonly utilised through a specific type called a binary search tree use in sorting organs like a binary tree short heap sort etc",
+    "created_at": "2026-05-07T01:43:26.260Z"
+  },
+  {
+    "id": 230,
+    "interview_id": 42,
+    "role": "ai",
+    "content": "Given the candidate's response, it seems they have a basic understanding of binary trees and their application in sorting algorithms. However, there is room for improvement regarding depth on how exactly these structures are used within different types of sortings like heapsort or quicksort which were not mentioned by them:\n\n\n\n\nCan you explain how binary trees, specifically a balanced variant such as an AVL tree or Red-Black Tree, can optimize search and insertion operations compared to unbalanced binary trees? Please elaborate on the balance maintenance mechanisms.\n\nTAS",
+    "created_at": "2026-05-07T01:45:10.094Z"
+  },
+  {
+    "id": 231,
+    "interview_id": 42,
+    "role": "user",
+    "content": "in an unbalanced binary tree operations like search insertion and deletion can degrade to order of an time complexity in the worst case scenario resembling a linked list of variance ensure these operations remind order of login by keeping that trees height as small as possible relative to the number of modes",
+    "created_at": "2026-05-07T01:46:15.754Z"
+  },
+  {
+    "id": 252,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Given two tables, 'Orders' with columns (OrderID, UserID, OrderDate) and 'Users' with columns (UserID, Name), write a Python script using pandas to filter out orders made by users who joined in the last year. Assume today is 2023-04-15. Start your code snippet below:\n```python\nimport pandas as pd\nfrom datetime import timedelta\n# Sample data creation (replace with actual database query)\ndata = {\n    'OrderID': [...],\n    'UserID':",
+    "created_at": "2026-05-07T02:42:16.537Z"
+  },
+  {
+    "id": 232,
+    "interview_id": 42,
+    "role": "ai",
+    "content": "Given the latest response, it appears that while you have a grasp on binary trees and their basic properties in sorting algorithms like heapsort using unbalanced trees, there is still some confusion about balanced variants such as AVL trees or Red-Black Trees. You've mentioned maintaining balance but haven'ty provided details regarding the specific mechanisms of how these self-balancing binary search trees optimize operations:\n\n\n\n\nExplain the concept of balance maintenance mechanisms within balanced binary trees like an",
+    "created_at": "2026-05-07T01:47:47.455Z"
+  },
+  {
+    "id": 233,
+    "interview_id": 43,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T01:58:00.027Z"
+  },
+  {
+    "id": 234,
+    "interview_id": 43,
+    "role": "user",
+    "content": "stream of Computer Science and Engineering and I have a good and also skills so I have also done a internship on data analyst using Python where I have good knowledge about excel and advanced skills about that and I can also create a dashboard sir converting the rod that I into a visualisation data",
+    "created_at": "2026-05-07T01:58:34.570Z"
+  },
+  {
+    "id": 235,
+    "interview_id": 43,
+    "role": "ai",
+    "content": "Based on the candidate's response, it seems they have a good foundation in Computer Science and Engineering with practical experience using Python for data analysis. However, there is some ambiguity regarding their understanding of ETL processes and advanced Excel skills beyond basic knowledge. To address this while keeping within our interview Next Question or Problem Statement> Can you describe a situation where your data visualizations directly influenced business decisions? If applicable, please provide an example of the dashboard design and how it was received by stakeholders",
+    "created_at": "2026-05-07T01:59:52.995Z"
+  },
+  {
+    "id": 236,
+    "interview_id": 44,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T02:04:23.435Z"
+  },
+  {
+    "id": 237,
+    "interview_id": 44,
+    "role": "user",
+    "content": "hello everyone I am Harshita I have completed my graduation from nadempally college and I am applying for a roll called front and developer so I want to practice myself with that I am looking for an opportunity where I can develop HTML CSS so I can answer on any of these languages",
+    "created_at": "2026-05-07T02:05:09.641Z"
+  },
+  {
+    "id": 238,
+    "interview_id": 44,
+    "role": "ai",
+    "content": "[DIFFICULTY: Basic]\n\n<Question>Describe how you would create a responsive navigation menu using only HTML, CSS, and media queries.</Question>",
+    "created_at": "2026-05-07T02:05:44.751Z"
+  },
+  {
+    "id": 239,
+    "interview_id": 44,
+    "role": "user",
+    "content": "creative responsive navigation menu using only HTML sysses we can use the structure HTML code like we can use Nar element containing is semantic list with the list called u l and l i for your for our links for the mobile hangover toggle without jast weekend include hidden checkbox and corresponding level and styling the desktop layout with CSS in the u l order l and elements for a gently",
+    "created_at": "2026-05-07T02:07:32.549Z"
+  },
+  {
+    "id": 240,
+    "interview_id": 44,
+    "role": "ai",
+    "content": "AI: [DIFFICULTY: Basic]\n\n\n<Question>How would you implement a responsive navigation menu using HTML, CSS, and media queries?</Question>\n\nIF TYPE is CODING (for the HOC example):\nAI: [DIFFICULTY: Intermediate]\n\n\n<Problem Statement>Create a higher-order component in React that displays a 'Loading' spinner while the wrapped component is loading.</Problem Statement>\n<Code",
+    "created_at": "2026-05-07T02:08:16.952Z"
+  },
+  {
+    "id": 241,
+    "interview_id": 44,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\nimport React from \"react\";\n\n// Higher Order Component\nfunction withLoading(WrappedComponent) {\n\n  return function EnhancedComponent({ isLoading, ...props }) {\n\n    if (isLoading) {\n      return (\n        <div style={{ fontSize: \"24px\", textAlign: \"center\" }}>\n          Loading...\n        </div>\n      );\n    }\n\n    return <WrappedComponent {...props} />;\n  };\n\n}\n\n// Main Component\nfunction UserProfile({ name, role }) {\n\n  return (\n    <div style={{\n      border: \"1px solid #ccc\",\n      padding: \"20px\",\n      width: \"300px\",\n      margin: \"20px auto\",\n      borderRadius: \"10px\"\n    }}>\n      <h2>{name}</h2>\n      <p>{role}</p>\n    </div>\n  );\n\n}\n\n// Wrapped Component\nconst UserProfileWithLoading = withLoading(UserProfile);\n\n// App Component\nexport default function App() {\n\n  return (\n    <div>\n\n      <UserProfileWithLoading\n        isLoading={false}\n        name=\"Durga Prasad\"\n        role=\"Full Stack Developer\"\n      />\n\n    </div>\n  );\n\n}\n\n[EXECUTION OUTPUT]\nRuntime Error: Cannot use import statement outside a module",
+    "created_at": "2026-05-07T02:10:06.424Z"
+  },
+  {
+    "id": 242,
+    "interview_id": 44,
+    "role": "ai",
+    "content": "AI: [DIFFICULTY: Basic]\n\n<Problem Statement>How would you implement a responsive navigation menu using HTML, CSS, and media queries?</Problem Statement>\n\nUser provides code snippet.\n\nAI: AI: [DIFFICULTY: Intermediate]\n\n<Question>Can you write a JavaScript function that flattens an arbitrarily nested array of arrays into a single-level array using recursion without any external libraries or built-in methods like `flat()`?</Question>",
+    "created_at": "2026-05-07T02:11:25.447Z"
+  },
+  {
+    "id": 243,
+    "interview_id": 45,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T02:33:31.377Z"
+  },
+  {
+    "id": 244,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T02:35:44.808Z"
+  },
+  {
+    "id": 245,
+    "interview_id": 46,
+    "role": "user",
+    "content": "hello everyone I am Harshita country passing my graduation in nsrit college and I have a good analysis skills where we can conbucket raw that I enter visualisation of data and classify that are using different algorithms and I can also unless that I writing",
+    "created_at": "2026-05-07T02:36:51.335Z"
+  },
+  {
+    "id": 246,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Can you explain what an INNER JOIN is in SQL? How does it differ from a LEFT JOIN, for example?",
+    "created_at": "2026-05-07T02:37:23.163Z"
+  },
+  {
+    "id": 247,
+    "interview_id": 46,
+    "role": "user",
+    "content": " and it from left join because returns only records with matches in both tables but when comes to left joint Returns all the records from the left table plus matching records from the right table",
+    "created_at": "2026-05-07T02:38:11.572Z"
+  },
+  {
+    "id": 248,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Can you explain what an INNER JOIN is in SQL? How does it differ from a LEFT JOIN, for example? \n\nAnalysis of Harshita'in response indicates she understands the basic concept that INNER JOIN returns only records with matches on both tables and LEFT JOIN includes all records from the left table. To further assess her understanding of ETL processes or data visualization skills at a more advanced level, I would proceed to ask:\n\n\n\n Can you demonstrate how to create an interactive",
+    "created_at": "2026-05-07T02:38:45.368Z"
+  },
+  {
+    "id": 249,
+    "interview_id": 46,
+    "role": "user",
+    "content": "in SQL joins are used to combine Rose from two or more tables based on a related colum and he is a breakdown how it can be as an inner join returns only the rows where there is a match in both table if a record exist in one table but not the other it is exploded from the results coming to left join Returns all the records from the left table along with the match will record from the right table if there is no match the result will container values for all columns of the right table every thing from the left is from the right table and he is how the difference is there",
+    "created_at": "2026-05-07T02:40:00.118Z"
+  },
+  {
+    "id": 250,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Can you demonstrate how INNER JOIN can be used in an ETL process to extract, transform, and load data from two tables where the primary key is 'UserID'? Provide a sample code snippet.",
+    "created_at": "2026-05-07T02:40:30.222Z"
+  },
+  {
+    "id": 251,
+    "interview_id": 46,
+    "role": "user",
+    "content": "in a join is used in the extract and transform phases of an ideal process to combine related records from two tables based on a shared key such as user ID it ensures that only records with matching keys in both table are processed sample code is like a inward Pandas as pd uses underscore DF equals to PD daughter frame and user id we can take 1234 and news and names like a frame and we can transform that us",
+    "created_at": "2026-05-07T02:41:28.644Z"
+  },
+  {
+    "id": 295,
+    "interview_id": 57,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T08:36:26.593Z"
+  },
+  {
+    "id": 330,
+    "interview_id": 62,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T00:46:17.302Z"
+  },
+  {
+    "id": 253,
+    "interview_id": 46,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\nimport pandas as pd\nfrom datetime import timedelta\n\n# Sample data creation\norders_data = {\n    'OrderID': [1, 2, 3, 4],\n    'UserID': [101, 102, 103, 104],\n    'OrderDate': ['2023-01-10', '2023-02-05', '2023-03-12', '2023-04-01']\n}\n\nusers_data = {\n    'UserID': [101, 102, 103, 104],\n    'Name': ['Amit', 'Ravi', 'Sneha', 'Priya'],\n    'JoinDate': ['2021-05-20', '2022-08-15', '2023-01-10', '2020-11-25']\n}\n\norders = pd.DataFrame(orders_data)\nusers = pd.DataFrame(users_data)\n\norders['OrderDate'] = pd.to_datetime(orders['OrderDate'])\nusers['JoinDate'] = pd.to_datetime(users['JoinDate'])\n\ntoday = pd.to_datetime('2023-04-15')\none_year_ago = today - timedelta(days=365)\n\nrecent_users = users[users['JoinDate'] >= one_year_ago]\n\nfiltered_orders = orders.merge(recent_users, on='UserID', how='inner')\n\nprint(filtered_orders)",
+    "created_at": "2026-05-07T02:43:14.128Z"
+  },
+  {
+    "id": 254,
+    "interview_id": 46,
+    "role": "ai",
+    "content": "Can you explain how your function identifies whether a number is prime or not, especially in terms of efficiency for large lists? How would it handle edge cases like negative numbers and non-integer values within the list? [|end_of_question|]",
+    "created_at": "2026-05-07T02:44:15.366Z"
+  },
+  {
+    "id": 255,
+    "interview_id": 47,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T02:57:38.275Z"
+  },
+  {
+    "id": 256,
+    "interview_id": 47,
+    "role": "user",
+    "content": "I am Harshita degree and I am good at development of front and back and also so I am good at full stack web development so I have good programming skills like Java Python and I have a good knowledge about the database also",
+    "created_at": "2026-05-07T02:59:33.733Z"
+  },
+  {
+    "id": 257,
+    "interview_id": 47,
+    "role": "ai",
+    "content": "Can you tell me about your experience with full stack web development, specifically any projects where you've implemented both frontend and backend components? What technologies did you use for each part of the application?",
+    "created_at": "2026-05-07T03:00:04.676Z"
+  },
+  {
+    "id": 258,
+    "interview_id": 47,
+    "role": "user",
+    "content": "I have done a full stack development using for a friend and I have use reactious and for back and I have use not just frameworks up and for connection of database I have use done on database and this technology I am very much aware and I can develop a banking website also like that",
+    "created_at": "2026-05-07T03:00:48.146Z"
+  },
+  {
+    "id": 259,
+    "interview_id": 47,
+    "role": "ai",
+    "content": "Can you describe your experience with creating responsive user interfaces using HTML5 and CSS3? For example, how would you implement a navigation bar that adapts to different screen sizes without the use of frameworks like Bootstrap or Foundation?  \n\n\n\n Could you share your experience with handling asynchronous operations in Node.js using Promises and async/await syntax? Please provide an example of a scenario where this",
+    "created_at": "2026-05-07T03:01:24.959Z"
+  },
+  {
+    "id": 260,
+    "interview_id": 47,
+    "role": "user",
+    "content": "responsive design is about ensuring a cyclopes great on anything from a mobile phone to a 4K monitor and this implements the different operations like creating the responsive interfaces implementing in Navigation bar and this operational explain",
+    "created_at": "2026-05-07T03:02:33.989Z"
+  },
+  {
+    "id": 261,
+    "interview_id": 47,
+    "role": "ai",
+    "content": "Can you explain how Flexbox or Grid in CSS3 can be used to create a responsive navigation bar that adjusts its layout based on the screen size? Please provide an example. \n\nHarshu's response indicates familiarity with creating adaptable interfaces but lacks specific technical details and examples, particularly regarding using modern CSS techniques for responsiveness without frameworks like Bootstrap or Foundation. The transcript also shows a misunderstanding of how to implement asynchronous operations in Node.js effectively. Given this information:\n\n\n[TO",
+    "created_at": "2026-05-07T03:03:22.837Z"
+  },
+  {
+    "id": 262,
+    "interview_id": 48,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T03:34:40.836Z"
+  },
+  {
+    "id": 263,
+    "interview_id": 48,
+    "role": "user",
+    "content": "hello everyone I am Harshita country purse in my B.Tech degree in the stream of Computer Science and Engineering I have good front and development skills and such as programming skills called HTML CSS JavaScript for front end I have good knowledge in that area",
+    "created_at": "2026-05-07T03:35:36.023Z"
+  },
+  {
+    "id": 264,
+    "interview_id": 48,
+    "role": "ai",
+    "content": "[TASK]Ask the next technical question. [/TASK]\n\n\n\n Can you explain how Redux works and when it's appropriate to use in a React application?",
+    "created_at": "2026-05-07T03:36:18.460Z"
+  },
+  {
+    "id": 265,
+    "interview_id": 49,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T03:40:49.507Z"
+  },
+  {
+    "id": 266,
+    "interview_id": 49,
+    "role": "user",
+    "content": "hello everyone I am Harsha can't be passing my BTech degree in a stream of Computer Science and Engineering at nsrit I have a good boring knowledge but I am very much good that Cloud Computing where I have no about different services like and service and many networks and how cloud works and about everything",
+    "created_at": "2026-05-07T03:41:54.537Z"
+  },
+  {
+    "id": 267,
+    "interview_id": 49,
+    "role": "ai",
+    "content": "[TASK]Ask the next technical question. [/TASK]\n\n\n\n\n Can you explain how a balanced binary search tree (like an AVL or Red-Black Tree) ensures O(log n) time complexity for insertions and deletions?",
+    "created_at": "2026-05-07T03:42:22.572Z"
+  },
+  {
+    "id": 268,
+    "interview_id": 50,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T03:53:49.299Z"
+  },
+  {
+    "id": 269,
+    "interview_id": 50,
+    "role": "user",
+    "content": "hello everyone I am Harshita completed my graduation with a good CGPA of 9.23 and I have good full stack development skills where I can develop both front and backup in with database connection reacts and nor J and neon database and I can do very well in it",
+    "created_at": "2026-05-07T03:55:11.917Z"
+  },
+  {
+    "id": 270,
+    "interview_id": 50,
+    "role": "ai",
+    "content": "Can you demonstrate your ability to create a responsive navigation menu using HTML and CSS that collapses on mobile devices? Please provide the code snippet for this.",
+    "created_at": "2026-05-07T03:55:40.788Z"
+  },
+  {
+    "id": 271,
+    "interview_id": 50,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\n<!DOCTYPE html>\n<html>\n<head>\n  <title>Responsive Navbar</title>\n\n  <style>\n    body {\n      margin: 0;\n      font-family: Arial, sans-serif;\n    }\n\n    .navbar {\n      background: #1e293b;\n      color: white;\n      padding: 15px 30px;\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    }\n\n    .logo {\n      font-size: 22px;\n      font-weight: bold;\n    }\n\n    .nav-links {\n      display: flex;\n      gap: 25px;\n    }\n\n    .nav-links a {\n      color: white;\n      text-decoration: none;\n    }\n\n    .menu-button {\n      display: none;\n      font-size: 26px;\n      background: none;\n      border: none;\n      color: white;\n      cursor: pointer;\n    }\n\n    @media (max-width: 768px) {\n      .menu-button {\n        display: block;\n      }\n\n      .nav-links {\n        display: none;\n        flex-direction: column;\n        background: #1e293b;\n        position: absolute;\n        top: 60px;\n        right: 0;\n        width: 100%;\n        padding: 20px;\n        text-align: center;\n      }\n\n      .nav-links.active {\n        display: flex;\n      }\n    }\n  </style>\n</head>\n\n<body>\n\n  <nav class=\"navbar\">\n    <div class=\"logo\">MyWebsite</div>\n\n    <button class=\"menu-button\" id=\"menuButton\">☰</button>\n\n    <div class=\"nav-links\" id=\"navLinks\">\n      <a href=\"#\">Home</a>\n      <a href=\"#\">About</a>\n      <a href=\"#\">Services</a>\n      <a href=\"#\">Contact</a>\n    </div>\n  </nav>\n\n  <script>\n    const menuButton = document.getElementById(\"menuButton\");\n    const navLinks = document.getElementById(\"navLinks\");\n\n    menuButton.addEventListener(\"click\", () => {\n      navLinks.classList.toggle(\"active\");\n    });\n  </script>\n\n</body>\n</html>",
+    "created_at": "2026-05-07T03:57:47.354Z"
+  },
+  {
+    "id": 272,
+    "interview_id": 50,
+    "role": "ai",
+    "content": "Can you explain how to manage state in a React application using Context API and provide an example of its implementation?",
+    "created_at": "2026-05-07T03:58:48.750Z"
+  },
+  {
+    "id": 296,
+    "interview_id": 57,
+    "role": "user",
+    "content": "I have completed my graduation in nsrit and I have good front and development skills as I have HTML CSS Travels as my the programming language skills I am think I am fit for this troll",
+    "created_at": "2026-05-07T08:36:55.870Z"
+  },
+  {
+    "id": 297,
+    "interview_id": 58,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T08:43:49.988Z"
+  },
+  {
+    "id": 273,
+    "interview_id": 50,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\nimport React, { createContext, useContext, useState } from \"react\";\n\n// Create Context\nconst ThemeContext = createContext();\n\n// Home Component\nfunction Home() {\n\n  const { theme, toggleTheme } = useContext(ThemeContext);\n\n  return (\n    <div\n      style={{\n        backgroundColor: theme === \"light\" ? \"#ffffff\" : \"#1e293b\",\n        color: theme === \"light\" ? \"#000000\" : \"#ffffff\",\n        height: \"100vh\",\n        padding: \"40px\"\n      }}\n    >\n      <h1>React Context API Example</h1>\n\n      <p>Current Theme: {theme}</p>\n\n      <button onClick={toggleTheme}>\n        Toggle Theme\n      </button>\n    </div>\n  );\n\n}\n\n// Main App Component\nexport default function App() {\n\n  const [theme, setTheme] = useState(\"light\");\n\n  const toggleTheme = () => {\n    setTheme(theme === \"light\" ? \"dark\" : \"light\");\n  };\n\n  return (\n\n    <ThemeContext.Provider value={{ theme, toggleTheme }}>\n      <Home />\n    </ThemeContext.Provider>\n\n  );\n\n}",
+    "created_at": "2026-05-07T04:00:04.567Z"
+  },
+  {
+    "id": 274,
+    "interview_id": 50,
+    "role": "ai",
+    "content": "How can you optimize the performance of a large-scale application using React's Context API to manage state, considering both readability and efficiency?",
+    "created_at": "2026-05-07T04:01:35.578Z"
+  },
+  {
+    "id": 275,
+    "interview_id": 50,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\nimport React, {\n  createContext,\n  useContext,\n  useState,\n  useMemo,\n  useCallback\n} from \"react\";\n\nconst UserContext = createContext();\nconst ThemeContext = createContext();\n\nfunction UserProfile() {\n  const { user } = useContext(UserContext);\n\n  console.log(\"UserProfile rendered\");\n\n  return <h2>Welcome, {user.name}</h2>;\n}\n\nfunction ThemeButton() {\n  const { theme, toggleTheme } = useContext(ThemeContext);\n\n  console.log(\"ThemeButton rendered\");\n\n  return (\n    <button onClick={toggleTheme}>\n      Current Theme: {theme}\n    </button>\n  );\n}\n\nfunction Dashboard() {\n  return (\n    <div>\n      <UserProfile />\n      <ThemeButton />\n    </div>\n  );\n}\n\nexport default function App() {\n  const [user] = useState({\n    name: \"Durga Prasad\",\n    role: \"Full Stack Developer\"\n  });\n\n  const [theme, setTheme] = useState(\"light\");\n\n  const toggleTheme = useCallback(() => {\n    setTheme((prevTheme) =>\n      prevTheme === \"light\" ? \"dark\" : \"light\"\n    );\n  }, []);\n\n  const userValue = useMemo(() => {\n    return { user };\n  }, [user]);\n\n  const themeValue = useMemo(() => {\n    return { theme, toggleTheme };\n  }, [theme, toggleTheme]);\n\n  return (\n    <UserContext.Provider value={userValue}>\n      <ThemeContext.Provider value={themeValue}>\n        <div\n          style={{\n            minHeight: \"100vh\",\n            padding: \"30px\",\n            backgroundColor: theme === \"light\" ? \"#ffffff\" : \"#1e293b\",\n            color: theme === \"light\" ? \"#000000\" : \"#ffffff\"\n          }}\n        >\n          <Dashboard />\n        </div>\n      </ThemeContext.Provider>\n    </UserContext.Provider>\n  );\n}",
+    "created_at": "2026-05-07T04:02:48.287Z"
+  },
+  {
+    "id": 276,
+    "interview_id": 50,
+    "role": "ai",
+    "content": "[DIFFICULTY: Medium\nTopic: React Context API and Hooks in React.js\nType: Coding\n\nHow can you optimize the performance of a large-scale application using `useMemo` to prevent unnecessary recalculations when passing context values down multiple nested components?",
+    "created_at": "2026-05-07T04:04:11.084Z"
+  },
+  {
+    "id": 277,
+    "interview_id": 51,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T05:11:03.562Z"
+  },
+  {
+    "id": 278,
+    "interview_id": 52,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T07:18:14.251Z"
+  },
+  {
+    "id": 279,
+    "interview_id": 52,
+    "role": "user",
+    "content": "everyone I am Harshita I have completed my graduation in nsrit college and I am now looking for an opportunity where I can showcase my skills and my skills are HTML CSS script",
+    "created_at": "2026-05-07T07:19:19.747Z"
+  },
+  {
+    "id": 280,
+    "interview_id": 52,
+    "role": "ai",
+    "content": "Can you explain the time complexity of a binary search algorithm on a sorted array, and provide an example in Python?",
+    "created_at": "2026-05-07T07:19:40.444Z"
+  },
+  {
+    "id": 281,
+    "interview_id": 52,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\ndef binary_search(arr, target):\n    left = 0\n    right = len(arr) - 1\n\n    while left <= right:\n        mid = (left + right) // 2\n\n        # Check if target is present\n        if arr[mid] == target:\n            return mid\n\n        # If target is greater, ignore left half\n        elif arr[mid] < target:\n            left = mid + 1\n\n        # If target is smaller, ignore right half\n        else:\n            right = mid - 1\n\n    return -1\n\n\n# Example usage\nnumbers = [2, 5, 8, 12, 16, 23, 38, 45, 56]\ntarget = 23\n\nresult = binary_search(numbers, target)\n\nif result != -1:\n    print(f\"Element found at index {result}\")\nelse:\n    print(\"Element not found\")",
+    "created_at": "2026-05-07T07:21:03.845Z"
+  },
+  {
+    "id": 282,
+    "interview_id": 52,
+    "role": "ai",
+    "content": "Can you write a test case using Python's unittest framework to validate the correctness of your binary search implementation, including edge cases?",
+    "created_at": "2026-05-07T07:21:36.617Z"
+  },
+  {
+    "id": 283,
+    "interview_id": 52,
+    "role": "user",
+    "content": "write anything because I don't have any panel open here only mike is available I cannot write a test case here",
+    "created_at": "2026-05-07T07:22:00.449Z"
+  },
+  {
+    "id": 284,
+    "interview_id": 52,
+    "role": "ai",
+    "content": "How would you modify your binary search algorithm to handle a sorted array with duplicate elements, ensuring that it returns the first occurrence of the target value?",
+    "created_at": "2026-05-07T07:22:34.902Z"
+  },
+  {
+    "id": 285,
+    "interview_id": 53,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T07:45:18.043Z"
+  },
+  {
+    "id": 286,
+    "interview_id": 53,
+    "role": "user",
+    "content": "hello everyone I am Harshita currently purse in my BTech degree in the stream of Computer Science and Engineering at nadempally satyanaraja Institute Technology where I have good front and development skills like HTML CSS and JavaScript and waiting for an opportunity where I can showcase my skills",
+    "created_at": "2026-05-07T07:45:48.917Z"
+  },
+  {
+    "id": 287,
+    "interview_id": 54,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T07:54:30.264Z"
+  },
+  {
+    "id": 288,
+    "interview_id": 54,
+    "role": "user",
+    "content": "everyone I am Harshita currently purse in my BTech degree in the stream of Computer Science and Engineering at nadempally Sachin Technology I am looking for an HR roll because I have good communication skills and I can also good people because of my technical skills so which helps me to higher good technical people and I can also manage people and I can also angry",
+    "created_at": "2026-05-07T07:55:11.113Z"
+  },
+  {
+    "id": 289,
+    "interview_id": 55,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T08:13:53.603Z"
+  },
+  {
+    "id": 290,
+    "interview_id": 55,
+    "role": "user",
+    "content": "hello everyone I am Harshita I have completed my graduation in nsrit and I am searching for a software quality management roll as I have good experience in Selenium to which is used for white box testing sorry black box testing so it is very much for me so I am looking for opportunity",
+    "created_at": "2026-05-07T08:14:30.204Z"
+  },
+  {
+    "id": 291,
+    "interview_id": 56,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T08:27:36.230Z"
+  },
+  {
+    "id": 292,
+    "interview_id": 56,
+    "role": "user",
+    "content": "I am Hasta I have completed my graduation nsrtc college and I have good communication skills and the problem solving skills which is makes me efficient for sales executive tasks and total also I am also very perfect because I can manage the clients and I have good patients so I fit for this road",
+    "created_at": "2026-05-07T08:28:10.989Z"
+  },
+  {
+    "id": 293,
+    "interview_id": 56,
+    "role": "user",
+    "content": "I am Hasta I have completed my graduation nsrtc college and I have good communication skills and the problem solving skills which is makes me efficient for sales executive tasks and total also I am also very perfect because I can manage the clients and I have good patients so I fit for this road",
+    "created_at": "2026-05-07T08:28:13.446Z"
+  },
+  {
+    "id": 294,
+    "interview_id": 56,
+    "role": "user",
+    "content": "I am Hasta I have completed my graduation nsrtc college and I have good communication skills and the problem solving skills which is makes me efficient for sales executive tasks and total also I am also very perfect because I can manage the clients and I have good patients so I fit for this road",
+    "created_at": "2026-05-07T08:28:15.890Z"
+  },
+  {
+    "id": 298,
+    "interview_id": 58,
+    "role": "user",
+    "content": "I am Harshita I am currently posing my BTech degree in the stream of Computer Science and Engineering and have good recruitment skills I can use not technical skills in hiring technical people and I can higher good people and I can also manage clients and convince them and I can also work with clients and collaborative collaboration and Technology",
+    "created_at": "2026-05-07T08:44:46.706Z"
+  },
+  {
+    "id": 299,
+    "interview_id": 57,
+    "role": "ai",
+    "content": "Based on the transcript, it seems that no technical questions have been asked yet.\n\nHere's my suggestion for the next question:\n\n\n\n\nCan you explain the difference between inline styling and external CSS in HTML? How would you decide when to use each approach?",
+    "created_at": "2026-05-07T08:56:49.235Z"
+  },
+  {
+    "id": 300,
+    "interview_id": 59,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T09:08:37.290Z"
+  },
+  {
+    "id": 301,
+    "interview_id": 59,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T09:09:54.456Z"
+  },
+  {
+    "id": 302,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-07T23:36:03.000Z"
+  },
+  {
+    "id": 303,
+    "interview_id": 60,
+    "role": "user",
+    "content": "everyone I am Harshita currently passing my BTech degree in a stream of Computer Science and Engineering and I have good communication skills and patient skills which help me as a good sales executive officer where I can convince clients with mine knowledge and my technical skills as an computer science engineering student",
+    "created_at": "2026-05-07T23:37:05.152Z"
+  },
+  {
+    "id": 304,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you explain the difference between a stack and a queue, including their use cases in system design? Additionally, could you provide an example of how understanding these data structures can benefit problem-solving during sales negotiations or client interactions involving technical products?",
+    "created_at": "2026-05-07T23:39:07.499Z"
+  },
+  {
+    "id": 305,
+    "interview_id": 60,
+    "role": "user",
+    "content": "allows us to bridge the gap between technical constance and business value for example that their customer support system is dropping request during P cars we can explain how implementing a cube is architecture ensure that every request is captured and processor in order preventing that lost and managing system load effectively",
+    "created_at": "2026-05-07T23:40:12.919Z"
+  },
+  {
+    "id": 306,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you describe a situation where understanding the time complexity of an algorithm helped in making a quick decision during sales negotiations or client interactions?",
+    "created_at": "2026-05-07T23:40:35.766Z"
+  },
+  {
+    "id": 307,
+    "interview_id": 60,
+    "role": "user",
+    "content": "in high pressure sales or client meeting time complexity matters because it translate directly to cost scalability and User experience understanding it allows you to manage Expectations and provide really stick solutions instantly",
+    "created_at": "2026-05-07T23:41:23.131Z"
+  },
+  {
+    "id": 308,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you describe a situation where understanding the time complexity of an algorithm helped in making a quick decision during sales negotiations or client interactions?",
+    "created_at": "2026-05-07T23:41:51.495Z"
+  },
+  {
+    "id": 309,
+    "interview_id": 60,
+    "role": "user",
+    "content": "in a high pressure sales or client meeting time complexity matters because it translate directly to cost scalability and your experience understanding it allows you to manage Expectations and provide realistic solutions instantly",
+    "created_at": "2026-05-07T23:42:21.970Z"
+  },
+  {
+    "id": 310,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "How would you apply the divide and conquer strategy to optimize a sales pipeline, ensuring that high-value leads are prioritized effectively?",
+    "created_at": "2026-05-07T23:42:42.876Z"
+  },
+  {
+    "id": 311,
+    "interview_id": 60,
+    "role": "user",
+    "content": "optimise the sales pipeline using a divide and contest we need to break down the complex sales process in the smaller manasable stages and address each based on priority and value",
+    "created_at": "2026-05-07T23:43:07.635Z"
+  },
+  {
+    "id": 312,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "How would you design a system that automatically categorizes incoming leads  What data points and algorithms might be involved in this process?",
+    "created_at": "2026-05-07T23:43:28.016Z"
+  },
+  {
+    "id": 313,
+    "interview_id": 60,
+    "role": "user",
+    "content": "designer system for automatically categorising incoming leaves we can focus on building a robust data pipeline that feet learning classification model",
+    "created_at": "2026-05-07T23:43:50.757Z"
+  },
+  {
+    "id": 314,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "How would you implement a feedback loop within the sales pipeline system to continuously improve lead categorization accuracy over time? What algorithms could facilitate this learning process, considering both supervised and unsupervised methods might be necessary at different stages of implementation.",
+    "created_at": "2026-05-07T23:44:15.312Z"
+  },
+  {
+    "id": 315,
+    "interview_id": 60,
+    "role": "user",
+    "content": "implementing is feedback loop for Lead categorization involves a Multi State approach using both supervis and ansupervised national learning data collection and initial categories learning and second one is expert feedback model refinment and continuous evolution",
+    "created_at": "2026-05-07T23:44:59.663Z"
+  },
+  {
+    "id": 316,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you describe how to architect a microservices-based system that integrates real-time lead categorization with an external machine learning API, ensuring high availability and fault tolerance? What considerations should be made for data consistency across services in this distributed environment?",
+    "created_at": "2026-05-07T23:45:28.897Z"
+  },
+  {
+    "id": 317,
+    "interview_id": 60,
+    "role": "user",
+    "content": "architect this system use an event driven architecture Centre around a distributed message broker like a patch to de Kapil services and ensure height throughput for real time processing",
+    "created_at": "2026-05-07T23:46:07.086Z"
+  },
+  {
+    "id": 318,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "How would you design a system that not only integrates real-time lead categorization with an external machine learning API but also ensures data consistency across services in this distributed environment, while maintaining high availability and fault tolerance?",
+    "created_at": "2026-05-07T23:46:38.480Z"
+  },
+  {
+    "id": 319,
+    "interview_id": 60,
+    "role": "user",
+    "content": "sorry I don't have a good idea about mission learning and API could you please ask me any other questions as I am in as I am trying to get passed for the HR interview I don't think so I need to verify the technical skills here",
+    "created_at": "2026-05-07T23:47:18.253Z"
+  },
+  {
+    "id": 320,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Given a distributed system for real-time lead categorization, how would you implement event sourcing to maintain data consistency across services while ensuring high availability? Please provide an example using pseudocode or UML sequence diagrams.",
+    "created_at": "2026-05-07T23:47:49.045Z"
+  },
+  {
+    "id": 321,
+    "interview_id": 60,
+    "role": "user",
+    "content": "sorry I don't have good knowledge about technical I only have good knowledge about sales and clients and how to manage them on",
+    "created_at": "2026-05-07T23:48:18.051Z"
+  },
+  {
+    "id": 322,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you explain the concept of event sourcing in distributed systems, its benefits for maintaining data consistency across services, and how it can contribute to high availability? Please provide a brief overview.",
+    "created_at": "2026-05-07T23:48:44.163Z"
+  },
+  {
+    "id": 323,
+    "interview_id": 60,
+    "role": "user",
+    "content": "I don't have any knowledge about technical I only have good knowledge about sales could you please ask me on that only",
+    "created_at": "2026-05-07T23:49:17.014Z"
+  },
+  {
+    "id": 324,
+    "interview_id": 60,
+    "role": "ai",
+    "content": "Can you describe how event sourcing might be used to handle a scenario where multiple sales representatives are updating customer records simultaneously, and what mechanisms would ensure data consistency?",
+    "created_at": "2026-05-07T23:49:44.691Z"
+  },
+  {
+    "id": 325,
+    "interview_id": 61,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T00:32:18.544Z"
+  },
+  {
+    "id": 326,
+    "interview_id": 61,
+    "role": "user",
+    "content": " plan and schedule the project very well as I have good thoughts about",
+    "created_at": "2026-05-08T00:33:36.083Z"
+  },
+  {
+    "id": 327,
+    "interview_id": 61,
+    "role": "ai",
+    "content": "How do you approach a complex problem in software development, and can you describe your process using an example from past projects? Please keep the explanation concise.",
+    "created_at": "2026-05-08T00:35:07.935Z"
+  },
+  {
+    "id": 328,
+    "interview_id": 61,
+    "role": "user",
+    "content": "first of all I will follow the divide and conquer approach break that all the complexity into the smaller parts and analyse and define Research and designing I will follow the iterative implementation testing and review process",
+    "created_at": "2026-05-08T00:35:53.902Z"
+  },
+  {
+    "id": 331,
+    "interview_id": 62,
+    "role": "user",
+    "content": "when I am Gupta I have a completed my post graduation and HR finance and I have observed marketing skills as I have promoted many products also so I know what to do when a product is not a mad so I can make that product has no sales with my knowledge",
+    "created_at": "2026-05-08T00:48:06.994Z"
+  },
+  {
+    "id": 332,
+    "interview_id": 62,
+    "role": "ai",
+    "content": "How would you approach solving a problem where the goal is to optimize an email marketing campaign for maximum engagement using data structures and algorithms? Please describe your strategy.",
+    "created_at": "2026-05-08T00:48:29.609Z"
+  },
+  {
+    "id": 333,
+    "interview_id": 63,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T01:16:09.169Z"
+  },
+  {
+    "id": 334,
+    "interview_id": 63,
+    "role": "user",
+    "content": "I am good technical skills and management skills",
+    "created_at": "2026-05-08T01:16:56.407Z"
+  },
+  {
+    "id": 335,
+    "interview_id": 63,
+    "role": "ai",
+    "content": "Can you explain how closures work in JavaScript and provide an example where they might be useful?",
+    "created_at": "2026-05-08T01:17:25.286Z"
+  },
+  {
+    "id": 336,
+    "interview_id": 63,
+    "role": "user",
+    "content": "[SUBMITTED CODE]\n\n// Write your solution here\n\nfunction solution() {\n  console.log('Hello from Shnoor AI Sandbox!');\n  return true;\n}",
+    "created_at": "2026-05-08T01:17:41.341Z"
+  },
+  {
+    "id": 337,
+    "interview_id": 63,
+    "role": "ai",
+    "content": "Can you demonstrate how to implement a custom hook in React for managing form state, including validation and submission? Include an example with controlled inputs.",
+    "created_at": "2026-05-08T01:18:00.592Z"
+  },
+  {
+    "id": 338,
+    "interview_id": 65,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T01:18:49.149Z"
+  },
+  {
+    "id": 339,
+    "interview_id": 65,
+    "role": "user",
+    "content": "I am Harshita I have completed my graduation in nsrtc college I have a good communication skills and development skills so you can ask me anything on that",
+    "created_at": "2026-05-08T01:19:32.549Z"
+  },
+  {
+    "id": 340,
+    "interview_id": 65,
+    "role": "ai",
+    "content": "Can you explain how closures work in JavaScript and provide an example where they might be useful?",
+    "created_at": "2026-05-08T01:20:22.618Z"
+  },
+  {
+    "id": 341,
+    "interview_id": 66,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T01:42:07.586Z"
+  },
+  {
+    "id": 342,
+    "interview_id": 66,
+    "role": "ai",
+    "content": "Welcome to the interview. Please start by introducing yourself and giving a brief overview of your background.",
+    "created_at": "2026-05-08T01:42:45.199Z"
+  },
+  {
+    "id": 343,
+    "interview_id": 66,
+    "role": "user",
+    "content": " for client management and everything",
+    "created_at": "2026-05-08T01:44:21.186Z"
+  },
+  {
+    "id": 344,
+    "interview_id": 66,
+    "role": "ai",
+    "content": "Given an array of integers, can you describe a method to find the maximum sum subarray using Kadane's algorithm? What is its time complexity and why does it work for this problem?",
+    "created_at": "2026-05-08T01:44:44.495Z"
+  },
+  {
+    "id": 345,
+    "interview_id": 67,
+    "role": "ai",
+    "content": "Welcome to the HR interview. Please start by introducing yourself and sharing a bit about your professional background.",
+    "created_at": "2026-05-08T02:05:46.891Z"
+  },
+  {
+    "id": 346,
+    "interview_id": 67,
+    "role": "user",
+    "content": " business analyst I have a product sales everything",
+    "created_at": "2026-05-08T02:07:07.649Z"
+  },
+  {
+    "id": 347,
+    "interview_id": 67,
+    "role": "ai",
+    "content": "Tell me about a challenge you faced in your previous role and how you handled it.",
+    "created_at": "2026-05-08T02:08:32.620Z"
+  },
+  {
+    "id": 348,
+    "interview_id": 67,
+    "role": "user",
+    "content": "country business analyst with one year experience specialising in bleaching the gap between business in and Technical Solutions coming to my pass I work in product sales which give me a unique perspective on customer pay points this background helps me and sure that the technical requirements I gather actually solved use the problems",
+    "created_at": "2026-05-08T02:09:34.520Z"
+  },
+  {
+    "id": 349,
+    "interview_id": 67,
+    "role": "ai",
+    "content": "What motivates you in your professional life?",
+    "created_at": "2026-05-08T02:09:53.556Z"
+  },
+  {
+    "id": 350,
+    "interview_id": 67,
+    "role": "user",
+    "content": "in my professional life what makes me is I am prevent by technical and time will research of my work knowing that is solutions I developed directly improved clients were flow or increase the three efficiency is incredible rewarded for me and when a client satisfy with what I explain and how I tell to the problems I will be more motivated to do the work for effectively and professionally",
+    "created_at": "2026-05-08T02:10:30.606Z"
+  },
+  {
+    "id": 351,
+    "interview_id": 67,
+    "role": "ai",
+    "content": "What motivates you in your professional life?",
+    "created_at": "2026-05-08T02:10:52.901Z"
+  },
+  {
+    "id": 352,
+    "interview_id": 67,
+    "role": "user",
+    "content": "in my professional life what motivates me is when a client satisfy with what I have explained and how the way I tell with the problems and how I solve it those problems their patiently if a client satisfied with requirements they need and what I have done is satisfied by them then that not to work professionally and perfectly",
+    "created_at": "2026-05-08T02:11:24.539Z"
+  },
+  {
+    "id": 353,
+    "interview_id": 67,
+    "role": "ai",
+    "content": "What motivates you in your professional life?",
+    "created_at": "2026-05-08T02:11:45.714Z"
+  },
+  {
+    "id": 354,
+    "interview_id": 68,
+    "role": "ai",
+    "content": "Welcome to the HR interview. Please start by introducing yourself and sharing a bit about your professional background.",
+    "created_at": "2026-05-08T03:32:45.981Z"
+  },
+  {
+    "id": 355,
+    "interview_id": 68,
+    "role": "user",
+    "content": "hello everyone I am Harsha I am completed my graduation in NSR IT college and I have coming to my professional background I have good technical skills and I know how to manage a product and how can I increase the product sales and went to release the product in the market I have good analysis of that and I also have good and articles of how much time does it take to complete the product and should we build this and why do we will protect and is it really in our budget I have good idea about this",
+    "created_at": "2026-05-08T03:33:36.996Z"
+  },
+  {
+    "id": 356,
+    "interview_id": 68,
+    "role": "ai",
+    "content": "Tell me about a time when you had to lead a team under tight deadlines. How did you manage it?",
+    "created_at": "2026-05-08T03:34:44.348Z"
+  },
+  {
+    "id": 357,
+    "interview_id": 68,
+    "role": "user",
+    "content": "excellent then I will try to priority importance and I will complete the task first deadline is very much near and I will take the permission from the clients are coming",
+    "created_at": "2026-05-08T03:35:53.243Z"
+  },
+  {
+    "id": 358,
+    "interview_id": 68,
+    "role": "ai",
+    "content": "Describe your ideal work environment.",
+    "created_at": "2026-05-08T03:36:20.141Z"
+  },
+  {
+    "id": 359,
+    "interview_id": 68,
+    "role": "user",
+    "content": "my ideal work environment is to work together with team and they need to give me a space to complete my work and my work and not his peaceful when everyone was collabolitively and share their opinions and knowledge this is my work environment I need and so that I cannot at myself to come with the work in time",
+    "created_at": "2026-05-08T03:36:53.642Z"
+  },
+  {
+    "id": 360,
+    "interview_id": 68,
+    "role": "ai",
+    "content": "Difficulty: Medium\nTopic: Teamwork and Aspirations\nType: Behavioral\n Describe your leadership experience. How have you led teams in the past, and what qualities do you bring to a team?",
+    "created_at": "2026-05-08T03:37:14.472Z"
+  },
+  {
+    "id": 361,
+    "interview_id": 68,
+    "role": "user",
+    "content": "focus on a specific time you guy group towards a goal and I always try to motivate my team to complete the task together and when they have any conflicts regarding the opinions I will try to thought by taking the opinions of both and sharing the common nobing in always remember so that we share knowledge",
+    "created_at": "2026-05-08T03:38:17.146Z"
+  },
+  {
+    "id": 362,
+    "interview_id": 68,
+    "role": "ai",
+    "content": "Difficulty: Medium\nTopic: Teamwork and Aspirations\nType: Behavioral\n Tell me about a time when you had to lead a team under tight deadlines. How did you manage it?",
+    "created_at": "2026-05-08T03:38:43.160Z"
+  }
+]

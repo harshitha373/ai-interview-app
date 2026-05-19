@@ -1,0 +1,13 @@
+[
+  {
+    "id": 2,
+    "user_id": 3,
+    "role": "Frontend Developer",
+    "is_it_role": true,
+    "status": "tr_pending",
+    "tr_score": null,
+    "hr_score": null,
+    "final_status": "pending",
+    "created_at": "2026-05-11T00:10:15.088Z"
+  }
+]
