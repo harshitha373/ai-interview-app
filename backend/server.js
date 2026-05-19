@@ -15,6 +15,7 @@ require("dotenv").config();
 const { query } = require("./db");
 const initDB = require("./initDB");
 const aiEngine = require("./ai_engine");
+const chatRouter = require("./chat_endpoints");
 
 const app = express();
 const server = http.createServer(app);
@@ -24,6 +25,7 @@ const io = new Server(server, {
 
 app.use(cors());
 app.use(express.json());
+app.use("/api/chat", chatRouter);
 
 // Middleware to authenticate JWT token
 const authenticateToken = (req, res, next) => {
