@@ -287,28 +287,44 @@ const transporter = nodemailer.createTransport({
 
 // Unified Email Dispatcher (Bypasses Render Free Tier Port Blocks via Brevo HTTP API on port 443!)
 const sendEmail = async ({ to, subject, html }) => {
-  if (process.env.BREVO_API_KEY) {
+  const rawKey = process.env.BREVO_API_KEY || '';
+  const brevoKey = rawKey.trim().replace(/^["']|["']$/g, '');
+  const rawSender = process.env.EMAIL_USER || 'harshitha@shnoor.com';
+  const senderEmail = rawSender.trim().replace(/^["']|["']$/g, '');
+
+  if (brevoKey) {
     console.log(`[EMAIL SERVICE] Attempting dispatch via Brevo HTTP API for: ${to}`);
-    await axios.post(
-      'https://api.brevo.com/v3/smtp/email',
-      {
-        sender: { name: 'Shnoor AI Support', email: process.env.EMAIL_USER || 'harshitha@shnoor.com' },
-        to: [{ email: to }],
-        subject: subject,
-        htmlContent: html
-      },
-      {
-        headers: {
-          'api-key': process.env.BREVO_API_KEY,
-          'Content-Type': 'application/json'
+    console.log(`[BREVO DEBUG] API Key length: ${brevoKey.length}, starts with: ${brevoKey.substring(0, 8)}...`);
+    console.log(`[BREVO DEBUG] Sender email: ${senderEmail}`);
+    try {
+      await axios.post(
+        'https://api.brevo.com/v3/smtp/email',
+        {
+          sender: { name: 'Shnoor AI Support', email: senderEmail },
+          to: [{ email: to }],
+          subject: subject,
+          htmlContent: html
+        },
+        {
+          headers: {
+            'api-key': brevoKey,
+            'Content-Type': 'application/json'
+          }
         }
+      );
+      console.log(`[EMAIL SERVICE] Sent successfully via Brevo HTTP API to: ${to}`);
+    } catch (err) {
+      if (err.response) {
+        console.error("[BREVO API ERROR RESPONSE]:", JSON.stringify(err.response.data));
+      } else {
+        console.error("[BREVO API SYSTEM ERROR]:", err.message);
       }
-    );
-    console.log(`[EMAIL SERVICE] Sent successfully via Brevo HTTP API to: ${to}`);
+      throw err;
+    }
   } else {
     console.log(`[EMAIL SERVICE] Attempting dispatch via Gmail SMTP for: ${to}`);
     await transporter.sendMail({
-      from: `"Shnoor AI Support" <${process.env.EMAIL_USER}>`,
+      from: `"Shnoor AI Support" <${senderEmail}>`,
       to: to,
       subject: subject,
       html: html
