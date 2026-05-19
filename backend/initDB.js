@@ -219,6 +219,18 @@ const initDB = async () => {
       )
     `);
 
+    // Create Feedbacks table
+    await query(`
+      CREATE TABLE IF NOT EXISTS feedbacks (
+        id SERIAL PRIMARY KEY,
+        interview_id INTEGER REFERENCES interviews(id) ON DELETE CASCADE,
+        user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+        rating INTEGER,
+        feedback_text TEXT,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+
     // Seed Default Admin User if empty
     const userCount = await query("SELECT COUNT(*) FROM users");
     if (parseInt(userCount.rows[0].count) === 0) {
