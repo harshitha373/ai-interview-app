@@ -355,7 +355,8 @@ app.post("/api/forgot-password", async (req, res) => {
     );
 
     // Send Reset Email
-    const resetLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${token}`;
+    const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, '');
+    const resetLink = `${frontendUrl}/reset-password/${token}`;
 
     const emailHtml = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e0e0e0; border-radius: 10px;">
@@ -388,7 +389,8 @@ app.post("/api/forgot-password", async (req, res) => {
     // Fallback for development: Log the link to the console if email fails
     const token = await query("SELECT reset_token FROM users WHERE email = $1", [req.body.email]);
     if (token.rows.length > 0) {
-      const fallbackLink = `${process.env.FRONTEND_URL || 'http://localhost:3000'}/reset-password/${token.rows[0].reset_token}`;
+      const frontendUrl = (process.env.FRONTEND_URL || 'http://localhost:3000').replace(/\/$/, '');
+      const fallbackLink = `${frontendUrl}/reset-password/${token.rows[0].reset_token}`;
       console.log(`[FALLBACK] Email failed, but here is your link for testing: ${fallbackLink}`);
     }
 
