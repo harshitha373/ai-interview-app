@@ -1893,15 +1893,21 @@ const cleanupOldChats = async () => {
 setInterval(cleanupOldChats, 24 * 60 * 60 * 1000);
 cleanupOldChats();
 
-// Serve static assets in production (React build output)
-app.use(express.static(path.join(__dirname, "../frontend/build")));
-
-// Wildcard route to serve the React index.html for any client-side routes managed by React Router
-app.get("*", (req, res) => {
-  if (!req.path.startsWith("/api") && !req.path.startsWith("/socket.io")) {
-    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
-  }
-});
+// Serve static assets conditionally (only if the compiled React folder exists)
+const frontendBuildPath = path.join(__dirname, "../frontend/build");
+if (fs.existsSync(frontendBuildPath)) {
+  app.use(express.static(frontendBuildPath));
+  app.get("*", (req, res) => {
+    if (!req.path.startsWith("/api") && !req.path.startsWith("/socket.io")) {
+      res.sendFile(path.join(frontendBuildPath, "index.html"));
+    }
+  });
+} else {
+  // Fallback simple message for separate backend-only deployments (like Render)
+  app.get("/", (req, res) => {
+    res.send("SHNOOR AI API Backend is running successfully");
+  });
+}
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
