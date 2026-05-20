@@ -285,7 +285,7 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Unified Email Dispatcher (Bypasses Render Free Tier Port Blocks via Brevo HTTP API on port 443!)
+
 const sendEmail = async ({ to, subject, html }) => {
   const rawKey = process.env.BREVO_API_KEY || '';
   const brevoKey = rawKey.trim().replace(/^["']|["']$/g, '');
@@ -637,7 +637,7 @@ class OllamaQueue {
         const { GoogleGenerativeAI } = require("@google/generative-ai");
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        
+
         const result = await model.generateContent({
           contents: [{ role: "user", parts: [{ text: prompt }] }],
           generationConfig: {
@@ -646,7 +646,7 @@ class OllamaQueue {
             stopSequences: ["[SYSTEM:", "TRANSCRIPT:", "Analyze response", "TASK:", "IF TYPE is CODING", "Scenario:", "</Question>"]
           }
         });
-        
+
         const responseText = result.response.text();
         resolve(responseText);
       } else {
@@ -671,16 +671,16 @@ class OllamaQueue {
       console.log("⚠️ Activating Offline AI Fail-safe Engine...");
       try {
         let fallbackResponse = "";
-        
+
         if (prompt.includes("HR_DIRECTOR_PERSONA")) {
           // HR Interview
           const roleMatch = prompt.match(/Role:\s*([^\n]+)/i);
           const role = roleMatch ? roleMatch[1].trim() : "General";
-          
+
           const aiEngine = require("./ai_engine");
           const roleSpecificKeys = Object.keys(aiEngine.ROLE_BLUEPRINTS);
           const matchedRoleKey = roleSpecificKeys.find(r => role.toLowerCase().includes(r.toLowerCase())) || "General Resume";
-          
+
           let questions = aiEngine.HR_SAMPLE_QUESTIONS;
           const matches = prompt.match(/Behavioral Bank:\s*([^\n]+)/i);
           if (matches) {
@@ -690,7 +690,7 @@ class OllamaQueue {
           let chosenQuestion = questions[Math.floor(Math.random() * questions.length)];
           const lines = prompt.split("\n");
           const transcriptLines = lines.filter(l => l.startsWith("USER:") || l.startsWith("AI:") || l.startsWith("HR:"));
-          
+
           for (let i = 0; i < 10; i++) {
             const candidate = questions[Math.floor(Math.random() * questions.length)];
             const alreadyAsked = transcriptLines.some(line => line.toLowerCase().includes(candidate.toLowerCase()));
@@ -705,7 +705,7 @@ class OllamaQueue {
           // Technical Interview
           const roleMatch = prompt.match(/Role:\s*([^\n]+)/i);
           const role = roleMatch ? roleMatch[1].trim() : "Software Engineer";
-          
+
           const diffMatch = prompt.match(/Difficulty:\s*(\d+)/i);
           const difficulty = diffMatch ? parseInt(diffMatch[1]) : 2;
 
@@ -1022,7 +1022,7 @@ app.post("/api/interview/:id/answer", async (req, res) => {
         const roleSpecificKeys = Object.keys(aiEngine.ROLE_BLUEPRINTS);
         const matchedRoleKey = roleSpecificKeys.find(r => selectedRole.toLowerCase().includes(r.toLowerCase())) || "Software Engineer";
         const roleBlueprint = aiEngine.ROLE_BLUEPRINTS[matchedRoleKey] || aiEngine.ROLE_BLUEPRINTS["Software Engineer"];
-        
+
         // Merge theory and coding scenarios
         const theoryQuestions = [
           "Can you explain the difference between a stack and a queue, and give a real-world scenario where you would use each?",
@@ -1033,12 +1033,12 @@ app.post("/api/interview/:id/answer", async (req, res) => {
         ];
         const codingScenarios = roleBlueprint.coding_scenarios || [];
         const allTechOptions = [...theoryQuestions, ...codingScenarios];
-        
+
         const unusedTech = allTechOptions.filter(q => !chatHistory.toLowerCase().includes(q.toLowerCase()));
         nextQuestion = unusedTech.length > 0
           ? unusedTech[Math.floor(Math.random() * unusedTech.length)]
           : allTechOptions[Math.floor(Math.random() * allTechOptions.length)];
-        
+
         // Determine type of the forced question
         if (codingScenarios.includes(nextQuestion)) {
           qType = "CODING";
@@ -1339,7 +1339,7 @@ app.get("/api/admin/applications", async (req, res) => {
         const hrInt = interviews.rows.find(i => i.interview_type === 'HR');
 
         const calculatePercentage = (score) => Math.min(100, Math.round((score / 40) * 100));
-        const checkViolationsSafe = (i) => 
+        const checkViolationsSafe = (i) =>
           i.mobile_count <= 2 &&
           i.multi_face_count <= 2 &&
           i.no_face_count <= 2 &&
@@ -1358,7 +1358,7 @@ app.get("/api/admin/applications", async (req, res) => {
             }
             const percentage = calculatePercentage((rawScore !== null && rawScore !== undefined) ? rawScore : 0);
             const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
-            
+
             await query(
               "UPDATE applications SET hr_score = $1, status = 'hr_completed', final_status = $2 WHERE id = $3",
               [percentage, isQualified ? 'selected' : 'rejected', app.id]
@@ -1390,7 +1390,7 @@ app.get("/api/admin/applications", async (req, res) => {
                 }
                 const hrPercentage = calculatePercentage((hrRawScore !== null && hrRawScore !== undefined) ? hrRawScore : 0);
                 const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
-                
+
                 await query(
                   "UPDATE applications SET tr_score = $1, hr_score = $2, status = 'hr_completed', final_status = $3 WHERE id = $4",
                   [trPercentage, hrPercentage, hrQualified ? 'selected' : 'rejected', app.id]
@@ -1892,6 +1892,16 @@ const cleanupOldChats = async () => {
 
 setInterval(cleanupOldChats, 24 * 60 * 60 * 1000);
 cleanupOldChats();
+
+// Serve static assets in production (React build output)
+app.use(express.static(path.join(__dirname, "../frontend/build")));
+
+// Wildcard route to serve the React index.html for any client-side routes managed by React Router
+app.get("*", (req, res) => {
+  if (!req.path.startsWith("/api") && !req.path.startsWith("/socket.io")) {
+    res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
+  }
+});
 
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
