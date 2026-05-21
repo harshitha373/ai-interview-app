@@ -773,8 +773,14 @@ function Interview() {
           </div>
           <h2 style={{ color: 'var(--int-text)', fontSize: '2.5rem', fontWeight: '900', marginBottom: '8px' }}>Ready to start?</h2>
           <p style={{ color: 'var(--int-muted)', fontSize: '1.1rem', marginBottom: '40px' }}>AI will ask questions via voice.</p>
-          <button className="btn-mic-main" style={{ width: 'auto', padding: '0 40px', borderRadius: '14px', height: '56px', fontSize: '1.1rem', fontWeight: '800', background: 'var(--int-primary)' }} onClick={() => {
-            window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+          <button className="btn-start-interview-main" style={{ width: 'auto', padding: '0 40px', borderRadius: '14px', height: '56px', fontSize: '1.1rem', fontWeight: '800', background: 'var(--int-primary)', color: 'white', border: 'none', cursor: 'pointer' }} onClick={() => {
+            try {
+              if (window.speechSynthesis) {
+                window.speechSynthesis.speak(new SpeechSynthesisUtterance(""));
+              }
+            } catch (e) {
+              console.warn("Speech synthesis error on start:", e);
+            }
             startInterview();
           }}>Start Interview Now</button>
         </div>
