@@ -1210,7 +1210,7 @@ function AdminDashboard() {
                       <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', margin: 0, whiteSpace: 'nowrap' }}>Track end-to-end applicant stages and decisions.</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'nowrap', flex: 1, justifyContent: 'flex-end' }}>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap', flex: 1, justifyContent: 'flex-end' }}>
                     <select className="form-select" style={{ width: '110px', background: 'var(--bg-main)', fontSize: '0.75rem', padding: '6px 24px 6px 10px', height: '34px' }} value={appFilterIT} onChange={(e) => setAppFilterIT(e.target.value)}>
                       <option value="all">All Types</option>
                       <option value="IT">IT Role</option>
@@ -1251,7 +1251,7 @@ function AdminDashboard() {
 
                 {getFilteredApplications().length > 0 ? (
                   <div style={{ overflowX: 'auto' }}>
-                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
+                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', minWidth: '1200px', borderCollapse: 'separate', borderSpacing: '0' }}>
                       <thead>
                         <tr>
                           <th style={{ width: '5%', color: 'var(--text-muted)', fontWeight: 700, fontSize: '0.65rem', textAlign: 'center', padding: '12px 8px' }}>APP ID</th>
@@ -1338,7 +1338,7 @@ function AdminDashboard() {
                       <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', margin: 0, whiteSpace: 'nowrap' }}>Filter, search, and manage candidate registration records.</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'nowrap', flex: 1, justifyContent: 'flex-end' }}>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap', flex: 1, justifyContent: 'flex-end' }}>
                     <select className="form-select" style={{ width: '120px', background: 'var(--bg-main)', fontSize: '0.75rem', padding: '6px 24px 6px 10px', height: '34px' }} value={filterRole} onChange={(e) => { setFilterRole(e.target.value); if (e.target.value !== 'candidate-student') setFilterCollege('all'); }}>
                       <option value="all">All Users</option>
                       <option value="candidate-student">Student</option>
@@ -1375,7 +1375,7 @@ function AdminDashboard() {
 
                 {usersList.length > 0 ? (
                   <div style={{ overflowX: 'auto' }}>
-                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', borderCollapse: 'separate', borderSpacing: '0' }}>
+                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', minWidth: '1200px', borderCollapse: 'separate', borderSpacing: '0' }}>
                       <thead>
                         <tr>
                           <th style={{ width: '18%', color: 'var(--text-muted)', fontWeight: 700, fontSize: '0.6rem', letterSpacing: '0.05em', textAlign: 'left', padding: '12px 8px' }}>CANDIDATE</th>
@@ -1469,7 +1469,7 @@ function AdminDashboard() {
             <div className="animate-fade">
               <div className="dash-overview-card" style={{ padding: '32px' }}>
                 {/* Header Section */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', flexWrap: 'nowrap', gap: '16px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', flexWrap: 'wrap', gap: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px', minWidth: '220px' }}>
                     <div style={{ width: '40px', height: '40px', borderRadius: '12px', background: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', flexShrink: 0 }}>
                       <IconChart />
@@ -1479,7 +1479,7 @@ function AdminDashboard() {
                       <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', margin: 0, whiteSpace: 'nowrap' }}>Review candidate performance.</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'nowrap' }}>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap' }}>
                     <select className="form-select" style={{ width: '120px', background: 'var(--bg-main)', fontSize: '0.75rem', padding: '6px 24px 6px 10px', height: '34px' }} value={filterRole} onChange={(e) => { setFilterRole(e.target.value); if (e.target.value !== 'candidate-student') setFilterCollege('all'); }}>
                       <option value="all">All Users</option>
                       <option value="candidate-student">Student</option>
@@ -1557,7 +1557,7 @@ function AdminDashboard() {
                 </div>
 
                 {/* Charts Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '24px', marginBottom: '32px' }}>
+                <div className="reports-charts-grid" style={{ marginBottom: '32px' }}>
                   <div style={{ background: 'var(--bg-main)', padding: '24px', borderRadius: '20px', border: '1px solid var(--border-color)' }}>
                     <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '20px', textAlign: 'center', letterSpacing: '0.05em' }}>CANDIDATE SCORES</h3>
                     <ResponsiveContainer width="100%" height={180}>
@@ -1651,7 +1651,7 @@ function AdminDashboard() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px', marginBottom: '32px', maxWidth: '1100px' }}>
+                  <div className="reports-feedback-grid" style={{ marginBottom: '32px', maxWidth: '1100px' }}>
                     {/* Chat Feedback Rating Distribution - Tightened Legend */}
                     <div style={{ background: 'var(--bg-main)', padding: '24px', borderRadius: '20px', border: '1px solid var(--border-color)' }}>
                       <h3 style={{ fontSize: '0.85rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '20px', textAlign: 'center', letterSpacing: '0.05em' }}>CHAT RATING DISTRIBUTION</h3>
@@ -1793,7 +1793,7 @@ function AdminDashboard() {
 
                 {currentFilteredReports.length > 0 ? (
                   <div style={{ overflowX: 'auto' }}>
-                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%' }}>
+                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', minWidth: '1400px' }}>
                       <thead>
                         <tr>
                           <th style={{ width: '4%', color: 'var(--text-muted)', fontWeight: 700, fontSize: '0.7rem', letterSpacing: '0.05em' }}>APP ID</th>
@@ -1926,7 +1926,7 @@ function AdminDashboard() {
                       <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)', margin: 0, whiteSpace: 'nowrap' }}>Real-time security and integrity alerts.</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'nowrap', flex: 1, justifyContent: 'flex-end' }}>
+                  <div style={{ display: 'flex', gap: '8px', alignItems: 'center', flexWrap: 'wrap', flex: 1, justifyContent: 'flex-end' }}>
                     <select className="form-select" style={{ width: '120px', background: 'var(--bg-main)', fontSize: '0.75rem', padding: '6px 24px 6px 10px', height: '34px' }} value={filterRole} onChange={(e) => { setFilterRole(e.target.value); if (e.target.value !== 'candidate-student') setFilterCollege('all'); }}>
                       <option value="all">All Users</option>
                       <option value="candidate-student">Student</option>
@@ -1964,7 +1964,7 @@ function AdminDashboard() {
                 {/* Violations Table */}
                 {getFilteredViolations().length > 0 ? (
                   <div style={{ overflowX: 'auto' }}>
-                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%' }}>
+                    <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', minWidth: '1100px' }}>
                       <thead>
                         <tr>
                           <th style={{ width: '15%', color: 'var(--text-muted)', fontWeight: 700, fontSize: '0.75rem', letterSpacing: '0.05em' }}>CANDIDATE</th>
@@ -2020,7 +2020,7 @@ function AdminDashboard() {
             <div className="animate-fade">
               <div className="dash-overview-card" style={{ padding: '32px' }}>
                 {/* Header Section */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '32px', flexWrap: 'wrap', gap: '16px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
                     <div style={{ width: '48px', height: '48px', borderRadius: '14px', background: 'var(--primary-light)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)' }}>
                       <IconSchool />
@@ -2030,7 +2030,7 @@ function AdminDashboard() {
                       <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Control college visibility in registration.</p>
                     </div>
                   </div>
-                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', gap: '12px', alignItems: 'center', flexWrap: 'wrap' }}>
                     <div style={{ position: 'relative' }}>
                       <div style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)', color: 'var(--text-muted)' }}>
                         <IconSearch />
@@ -2051,7 +2051,7 @@ function AdminDashboard() {
                 </div>
 
                 {/* Summary Stats Grid */}
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '20px', marginBottom: '32px' }}>
+                <div className="colleges-stats-grid" style={{ marginBottom: '32px' }}>
                   {[
                     { label: 'Total Colleges', value: colleges.length, sub: 'All Institutions', icon: <IconBuilding />, bg: '#F0F7FF', color: 'var(--primary)' },
                     { label: 'Active Colleges', value: colleges.filter(c => c.status === 'active').length, sub: 'Currently Active', icon: <IconShield />, bg: '#DCFCE7', color: '#15803D' },
@@ -2073,7 +2073,7 @@ function AdminDashboard() {
 
                 {/* Table Section */}
                 <div style={{ overflowX: 'auto' }}>
-                  <table className="data-table" style={{ tableLayout: 'fixed', width: '100%' }}>
+                  <table className="data-table" style={{ tableLayout: 'fixed', width: '100%', minWidth: '900px' }}>
                     <thead>
                       <tr>
                         <th style={{ width: '30%', textAlign: 'left' }}>COLLEGE NAME</th>
@@ -2212,10 +2212,10 @@ function AdminDashboard() {
 
           {activeTab === 'queries' && (
             <div className="animate-fade" style={{ height: 'calc(100vh - 140px)' }}>
-              <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', height: '100%', background: 'var(--bg-card)', borderRadius: '24px', overflow: 'hidden', border: '1px solid var(--border-color)' }}>
+              <div className="queries-split-container">
 
                 {/* Inbox Sidebar */}
-                <div style={{ borderRight: '1px solid var(--border-color)', display: 'flex', flexDirection: 'column', width: '300px', minWidth: '300px' }}>
+                <div className="queries-sidebar">
                   <div style={{ padding: '14px 15px', borderBottom: '1px solid var(--border-color)' }}>
                     <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '12px' }}>Inbox</h3>
                     <div style={{
@@ -2270,7 +2270,7 @@ function AdminDashboard() {
                 </div>
 
                 {/* Detail View */}
-                <div style={{ display: 'flex', flexDirection: 'column', background: 'var(--bg-main)' }}>
+                <div className="queries-detail-view">
                   {selectedQuery ? (
                     <>
                       <header style={{ padding: '20px 32px', background: 'var(--bg-card)', borderBottom: '1px solid var(--card-border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>

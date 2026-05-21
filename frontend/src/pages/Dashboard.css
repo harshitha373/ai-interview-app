@@ -1265,6 +1265,45 @@ body {
   gap: 4px !important;
 }
 
+/* Custom Responsive Dashboard Grids & Split panes */
+.reports-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+.reports-feedback-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.colleges-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.queries-split-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  height: 100%;
+  background: var(--bg-card);
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+.queries-sidebar {
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  min-width: 300px;
+}
+.queries-detail-view {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-main);
+  min-width: 0;
+}
+
 /* ==========================================================================
    Mobile & Tablet Responsiveness Overhauls
    ========================================================================== */
@@ -1298,6 +1337,15 @@ body {
   .setup-step:nth-child(2) {
     border-right: none;
     padding-right: 0;
+  }
+
+  .reports-charts-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .colleges-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 }
 
@@ -1425,5 +1473,36 @@ body {
   .segment-btn {
     flex: 1;
     justify-content: center;
+  }
+
+  .reports-charts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .reports-feedback-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .colleges-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .queries-split-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    overflow-y: auto;
+    height: auto;
+    min-height: calc(100vh - 160px);
+  }
+  .queries-sidebar {
+    width: 100%;
+    min-width: unset;
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    max-height: 250px;
+  }
+  .queries-detail-view {
+    width: 100%;
+    height: auto;
   }
 }
