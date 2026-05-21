@@ -36,6 +36,10 @@ function Interview() {
   const [endStatus, setEndStatus] = useState("");
   const isEndingRef = useRef(false);
   const [isCodingMode, setIsCodingMode] = useState(false);
+  const isCodingModeRef = useRef(false);
+  useEffect(() => {
+    isCodingModeRef.current = isCodingMode;
+  }, [isCodingMode]);
   const [code, setCode] = useState("// Write your solution here\n\nfunction solution() {\n  console.log('Hello from Shnoor AI Sandbox!');\n  return true;\n}");
   const [interviewType, setInterviewType] = useState("Technical");
   const [interviewerPersona, setInterviewerPersona] = useState("Technical Specialist");
@@ -358,7 +362,7 @@ function Interview() {
       const facesRaw = await faceModel.estimateFaces(videoRef.current, false);
       let faces = facesRaw.filter(f => {
         const prob = Array.isArray(f.probability) ? f.probability[0] : f.probability;
-        return prob > 0.65;
+        return prob > 0.50; // Lowered to 0.50 to handle glasses/glare reflections
       });
 
       setFaceCount(faces.length);
@@ -389,7 +393,7 @@ function Interview() {
 
       if (faces.length > 1) {
         multiFaceCounterRef.current++;
-        if (multiFaceCounterRef.current >= 3) {
+        if (multiFaceCounterRef.current >= 6) { // Increased to 6 (3s) to prevent false alerts from brief background movement
           statusMsg = "Multiple faces detected!";
           vType = "multi_face";
           flagged = true;
@@ -400,7 +404,7 @@ function Interview() {
 
       if (!flagged && faces.length === 0) {
         noFaceCounterRef.current++;
-        if (noFaceCounterRef.current >= 3) {
+        if (noFaceCounterRef.current >= 10) { // Increased to 10 consecutive frames (5s) to allow for blinking, adjusting glasses, and glare drops
           statusMsg = "No face detected!";
           vType = "no_face";
           flagged = true;
@@ -409,7 +413,7 @@ function Interview() {
         noFaceCounterRef.current = 0;
 
         // 3. Eye Movement Tracking (Sensitivity Optimized)
-        if (!flagged) {
+        if (!flagged && !isCodingModeRef.current) { // Bypass eye movement checks during the coding sandbox to prevent false positives when typing
           const landmarks = faces[0].landmarks;
           const rEye = landmarks[0];
           const lEye = landmarks[1];
@@ -451,7 +455,7 @@ function Interview() {
             if (isLookingAway) {
               cheatingCounterRef.current++;
               // Trigger faster (2.5s instead of 3.5s)
-              if (cheatingCounterRef.current >= 5) {
+              if (cheatingCounterRef.current >= 8) { // Relaxed to 8 frames (4 seconds) to prevent false alerts
                 statusMsg = "Suspicious eye movement!";
                 vType = "cheating";
                 flagged = true;
@@ -655,10 +659,12 @@ function Interview() {
         const isCoding = res.data.type === 'CODING' && interviewType !== 'HR';
         console.log(`[UI] Received response. Type: ${res.data.type}, IsCoding: ${isCoding}`);
 
-        // Only update if it's a coding question, or if we were already in coding mode, keep it active
+        // Dynamically toggle coding mode based on the current question type
         if (isCoding) {
           setIsCodingMode(true);
           setLanguage(res.data.language || "javascript");
+        } else {
+          setIsCodingMode(false);
         }
 
         setMessages(prev => [...prev, { role: 'ai', content: aiReply }]);

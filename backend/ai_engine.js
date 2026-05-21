@@ -39,8 +39,9 @@ const ROLE_BLUEPRINTS = {
     coding_scenarios: [
       "Write a function to flatten a deeply nested array in JavaScript.",
       "Implement a function that reverses each word in a sentence (e.g., 'Hello World' -> 'olleH dlroW').",
-      "Write a custom useLocalStorage hook that syncs state with local storage.",
-      "Create a higher-order component (HOC) that adds a 'Loading' spinner to any component."
+      "Write a JavaScript function to check if a given string is a palindrome.",
+      "Write a JavaScript function to find the unique elements in an array.",
+      "Implement a function to merge two sorted arrays into a single sorted array."
     ],
     rubrics: {
       "Basic": ["DOM manipulation", "CSS Flex/Grid", "ES6+ syntax"],
@@ -370,11 +371,6 @@ const filterBlueprintSkills = (resumeText, blueprint) => {
 };
 
 const generateAdaptivePrompt = (candidateName, role, difficulty, resumeText, chatHistory, blueprint, interviewType = "Technical") => {
-  const filteredTopics = filterBlueprintSkills(resumeText, blueprint);
-  const topics = interviewType === "HR"
-    ? "Behavioral, Soft Skills, Career Goals, Cultural Fit"
-    : (filteredTopics.join(", ") || "General Technical Skills");
-
   if (interviewType === "HR") {
     // Determine role-specific HR questions for contextual guidance
     const roleMatch = Object.keys(ROLE_SPECIFIC_HR_QUESTIONS).find(r =>
@@ -417,21 +413,29 @@ AI:`;
 Role: ${role}
 Candidate: ${candidateName}
 Difficulty: ${difficulty}/5
-Topics Covered by Resume: ${topics}
 
 CANDIDATE RESUME:
 ${resumeText || "No resume uploaded."}
 
 STRICT TECHNICAL RULES:
 1. PURELY TECHNICAL: You are an elite Technical Architect. Do NOT ask behavioral, situational, or soft-skill questions.
-2. STRICT RESUME FILTERING: You MUST only ask questions about topics, skills, frameworks, or languages listed in the CANDIDATE RESUME. Do NOT ask questions about standard blueprint topics that are not present or mentioned in the resume.
-3. DYNAMIC ADAPTATION & CONTEXTUAL FOLLOW-UPS:
-   - Carefully read the TRANSCRIPT below. 
-   - Read the candidate's last answer. If it is incomplete, has a small logical gap, or introduces an interesting concept, you MUST ask a direct follow-up question (contextual question) probing deeper into that specific answer rather than jumping to a new topic.
-   - If they answered successfully, progress to a slightly more advanced conceptual question or a related technical skill on their resume.
-   - If they clearly struggled or did not know the answer, do not make them feel bad; gently pivot to another topic listed on their resume at a lower difficulty.
+2. DYNAMIC RESUME PARSING (BYPASS ALL BLUEPRINTS):
+   - You MUST completely ignore and bypass any generic, hardcoded, or pre-defined role blueprint or checklist.
+   - Dynamically parse the CANDIDATE RESUME and cross-reference it with the applied-for role (${role}).
+   - Identify the candidate's actual technical skills, programming languages, frameworks, and database tools from the resume that match the applied-for role.
+   - Formulate all technical conceptual questions and coding tasks EXCLUSIVELY based on these matching resume skills. Do NOT ask questions on concepts, topics, or languages that are absent from their resume.
+3. DYNAMIC CONTEXTUAL ADAPTATION & DEEP DIVE:
+   - Carefully read the TRANSCRIPT below.
+   - Read the candidate's previous answer in the TRANSCRIPT. Analyze it in depth for logical correctness, technical depth, and specific terminology.
+   - If they gave an answer, you MUST dynamically formulate a direct, context-aware follow-up question (contextual question) that probes deeper into their previous explanation, implementation choices, or coding decisions (e.g. asking them to explain a specific detail they mentioned, justify a design choice, optimize an approach, or solve a variant of the coding problem). Do NOT blindly shift to a new topic if their response warrants a conversational deep dive.
+   - If they clearly struggled or did not know the answer, do not make them feel bad; gently transition to a lower difficulty question on another matched skill from their resume.
+   - Ensure the conversation is a natural, highly fluid flow rather than a rigid list of disconnected questions.
 4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question in the TRANSCRIPT.
-5. CODING REQUIREMENT & TAILORING: You MUST ask at least one coding question (marked with [TYPE: CODING]) during the interview where the candidate must write actual code. Design the programming task specifically around their resume's technical stack (e.g., if they know JavaScript, ask a JavaScript challenge). Provide a simple, clear code stub or problem statement.
+5. CODING REQUIREMENT & SANDBOX TAILORING: 
+   - You MUST ask at least one coding question (marked with [TYPE: CODING]) during the interview where the candidate must write actual code.
+   - Design the programming task specifically around their resume's matching technical stack (e.g., if they know JavaScript, ask a JavaScript challenge; if they know Python, ask a Python challenge).
+   - Provide a simple, clear code stub or problem statement.
+   - The coding task must be standard, algorithmic, or logical (e.g., array manipulation, string parsing, basic functions) that can run in a plain text/JS/Python sandbox. Do NOT ask framework-specific component creation tasks (like React hooks, state lifecycle, or HOCs) that are impossible to test in a clean code sandbox.
 6. Be concise (1-2 sentences). Do not include conversational preambles, greetings, or feedback on their previous answer. Just directly ask the question.
 
 TRANSCRIPT:
