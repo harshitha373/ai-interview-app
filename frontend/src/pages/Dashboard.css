@@ -717,6 +717,7 @@ body {
 
 .data-table {
   width: 100%;
+  min-width: 800px;
   border-collapse: collapse;
   table-layout: fixed;
   background: var(--bg-card);
@@ -1304,6 +1305,30 @@ body {
   min-width: 0;
 }
 
+/* Candidate Dashboard Responsive Classes */
+.dash-content-area {
+  margin-top: 72px;
+}
+.apply-form-container {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  max-width: 800px;
+  align-items: flex-start;
+}
+.violations-chart-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  gap: 30px;
+}
+.help-split-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+}
+
 /* ==========================================================================
    Mobile & Tablet Responsiveness Overhauls
    ========================================================================== */
@@ -1504,5 +1529,25 @@ body {
   .queries-detail-view {
     width: 100%;
     height: auto;
+  }
+  .dash-content-area {
+    margin-top: 0; /* Remove double gap caused by inline style */
+  }
+  .apply-form-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .violations-chart-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+  }
+  .violations-chart-container .recharts-responsive-container {
+    width: 100% !important;
+    height: 240px !important;
+  }
+  .help-split-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

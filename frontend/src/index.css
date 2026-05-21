@@ -432,7 +432,7 @@ rect.recharts-background-rect {
   background-color: transparent !important;
 }
 
-/* Premium Global Logo Container */
+/* Global Logo Container */
 .global-logo-container {
   background: #ffffff !important;
   padding: 5px !important;
@@ -445,11 +445,13 @@ rect.recharts-background-rect {
   transition: all 0.2s ease !important;
   flex-shrink: 0 !important;
 }
+
 html[data-theme='dark'] .global-logo-container {
   background: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(129, 140, 248, 0.2) !important;
 }
+
 .global-logo-container:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15), 0 0 1px rgba(79, 70, 229, 0.2) !important;
@@ -463,7 +465,7 @@ html[data-theme='dark'] .global-logo-container {
     padding: 6px !important;
     border-radius: 8px !important;
   }
-  
+
   .theme-toggle-btn svg {
     width: 16px !important;
     height: 16px !important;

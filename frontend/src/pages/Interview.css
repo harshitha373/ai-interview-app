@@ -603,7 +603,9 @@
 
   .proctoring-status-container {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
     order: 3;
   }
   
@@ -629,17 +631,18 @@
   }
 
   .video-section {
-    height: 300px;
+    height: 200px;
     flex: none;
   }
 
   .ai-section, .coding-section {
     flex: 1;
-    min-height: 500px;
+    min-height: 400px;
   }
 
   .ai-card {
-    padding: 20px;
+    padding: 16px;
+    gap: 16px;
   }
 
   .btn-mic-main {

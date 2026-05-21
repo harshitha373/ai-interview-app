@@ -647,7 +647,7 @@ function CandidateDashboard() {
           </div>
         </header>
 
-        <div className="dash-content-area" style={{ marginTop: '72px' }}>
+        <div className="dash-content-area">
           {activeTab === 'interviews' && (
             <div className="animate-fade">
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
@@ -685,7 +685,7 @@ function CandidateDashboard() {
                           </button>
                         </div>
 
-                        <div style={{ display: 'flex', gap: '12px', width: '100%', maxWidth: '800px', alignItems: 'flex-start' }}>
+                        <div className="apply-form-container">
                           <div style={{ flex: 1 }}>
                             <div className="form-select-wrapper" style={{ marginBottom: 0 }}>
                               {isCustomRole ? (
@@ -968,7 +968,7 @@ function CandidateDashboard() {
 
                 <div className="chart-card" style={{ padding: '30px' }}>
                   <h3 style={{ textAlign: 'center', color: 'var(--text-main)', fontSize: '1.1rem', fontWeight: 800, marginBottom: '24px' }}>Violations</h3>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '240px', gap: '30px' }}>
+                  <div className="violations-chart-container">
                     {totalViolationsCount > 0 ? (
                       <>
                         <ResponsiveContainer width="45%" height="100%">
@@ -1295,7 +1295,7 @@ function CandidateDashboard() {
                 </div>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '32px' }}>
+              <div className="help-split-container">
                 {/* FAQs */}
                 <div className="dash-overview-card" style={{ padding: '32px' }}>
                   <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '24px' }}>Frequently Asked Questions</h3>

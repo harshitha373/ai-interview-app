@@ -1162,7 +1162,7 @@ function AdminDashboard() {
           </div>
         </header>
 
-        <div className="dash-content-area" style={{ marginTop: '72px' }}>
+        <div className="dash-content-area">
           {activeTab === 'live' && (
             <div className="animate-fade">
               <div className="dash-overview-card" style={{ padding: '32px' }}>
