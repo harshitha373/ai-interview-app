@@ -556,6 +556,93 @@ app.post("/api/applications", async (req, res) => {
 app.get("/api/applications/:userId", async (req, res) => {
   const { userId } = req.params;
   try {
+    // --- Data Self-Healing Sync for this specific User ---
+    const userApps = await query("SELECT * FROM applications WHERE user_id = $1", [userId]);
+    for (const app of userApps.rows) {
+      const interviews = await query("SELECT * FROM interviews WHERE application_id = $1 AND status = 'completed'", [app.id]);
+      if (interviews.rows.length > 0) {
+        const trInt = interviews.rows.find(i => i.interview_type === 'Technical');
+        const hrInt = interviews.rows.find(i => i.interview_type === 'HR');
+
+        const calculatePercentage = (score) => Math.min(100, Math.round((score / 40) * 100));
+        const checkViolationsSafe = (i) =>
+          i.mobile_count <= 2 &&
+          i.multi_face_count <= 2 &&
+          i.no_face_count <= 2 &&
+          i.voice_count <= 2 &&
+          i.tab_switch_count <= 2 &&
+          i.cheating_count <= 2;
+
+        if (!app.is_it_role) {
+          // Non-IT role: only needs HR round
+          if (hrInt) {
+            // Only sync if the interview is fully evaluated or was empty
+            if (hrInt.score !== null || hrInt.answered_count <= 2) {
+              let rawScore = hrInt.score;
+              if (hrInt.answered_count <= 2 && rawScore !== 0) {
+                await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+                rawScore = 0;
+              }
+              const percentage = calculatePercentage((rawScore !== null && rawScore !== undefined) ? rawScore : 0);
+              const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+
+              await query(
+                "UPDATE applications SET hr_score = $1, status = 'hr_completed', final_status = $2 WHERE id = $3",
+                [percentage, isQualified ? 'selected' : 'rejected', app.id]
+              );
+            }
+          }
+        } else {
+          // IT role: needs TR (and optionally HR if they passed TR)
+          if (trInt) {
+            // Only sync if TR is evaluated or empty
+            if (trInt.score !== null || trInt.answered_count <= 2) {
+              let trRawScore = trInt.score;
+              if (trInt.answered_count <= 2 && trRawScore !== 0) {
+                await query("UPDATE interviews SET score = 0 WHERE id = $1", [trInt.id]);
+                trRawScore = 0;
+              }
+              const trPercentage = calculatePercentage((trRawScore !== null && trRawScore !== undefined) ? trRawScore : 0);
+              const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
+
+              if (!trQualified) {
+                await query(
+                  "UPDATE applications SET tr_score = $1, status = 'tr_completed', final_status = 'rejected' WHERE id = $2",
+                  [trPercentage, app.id]
+                );
+              } else {
+                // Passed TR! Check if HR is also completed
+                if (hrInt) {
+                  // Only sync HR if evaluated or empty
+                  if (hrInt.score !== null || hrInt.answered_count <= 2) {
+                    let hrRawScore = hrInt.score;
+                    if (hrInt.answered_count <= 2 && hrRawScore !== 0) {
+                      await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+                      hrRawScore = 0;
+                    }
+                    const hrPercentage = calculatePercentage((hrRawScore !== null && hrRawScore !== undefined) ? hrRawScore : 0);
+                    const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+
+                    await query(
+                      "UPDATE applications SET tr_score = $1, hr_score = $2, status = 'hr_completed', final_status = $3 WHERE id = $4",
+                      [trPercentage, hrPercentage, hrQualified ? 'selected' : 'rejected', app.id]
+                    );
+                  }
+                } else {
+                  // TR completed but HR pending
+                  await query(
+                    "UPDATE applications SET tr_score = $1, status = 'hr_pending', final_status = 'pending' WHERE id = $2",
+                    [trPercentage, app.id]
+                  );
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    // --- End Self-Healing Sync for this specific User ---
+
     const apps = await query(`
       SELECT a.*, 
         (SELECT id FROM interviews WHERE application_id = a.id AND status = 'ongoing' LIMIT 1) as ongoing_interview_id,
@@ -1369,57 +1456,65 @@ app.get("/api/admin/applications", async (req, res) => {
         if (!app.is_it_role) {
           // Non-IT role: only needs HR round
           if (hrInt) {
-            let rawScore = hrInt.score;
-            // Zero out score automatically if answered count is <= 2
-            if (hrInt.answered_count <= 2 && rawScore !== 0) {
-              await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
-              rawScore = 0;
-            }
-            const percentage = calculatePercentage((rawScore !== null && rawScore !== undefined) ? rawScore : 0);
-            const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+            // Only sync if the interview is fully evaluated or was empty
+            if (hrInt.score !== null || hrInt.answered_count <= 2) {
+              let rawScore = hrInt.score;
+              if (hrInt.answered_count <= 2 && rawScore !== 0) {
+                await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+                rawScore = 0;
+              }
+              const percentage = calculatePercentage((rawScore !== null && rawScore !== undefined) ? rawScore : 0);
+              const isQualified = percentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
 
-            await query(
-              "UPDATE applications SET hr_score = $1, status = 'hr_completed', final_status = $2 WHERE id = $3",
-              [percentage, isQualified ? 'selected' : 'rejected', app.id]
-            );
+              await query(
+                "UPDATE applications SET hr_score = $1, status = 'hr_completed', final_status = $2 WHERE id = $3",
+                [percentage, isQualified ? 'selected' : 'rejected', app.id]
+              );
+            }
           }
         } else {
           // IT role: needs TR (and optionally HR if they passed TR)
           if (trInt) {
-            let trRawScore = trInt.score;
-            if (trInt.answered_count <= 2 && trRawScore !== 0) {
-              await query("UPDATE interviews SET score = 0 WHERE id = $1", [trInt.id]);
-              trRawScore = 0;
-            }
-            const trPercentage = calculatePercentage((trRawScore !== null && trRawScore !== undefined) ? trRawScore : 0);
-            const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
+            // Only sync if TR is evaluated or empty
+            if (trInt.score !== null || trInt.answered_count <= 2) {
+              let trRawScore = trInt.score;
+              if (trInt.answered_count <= 2 && trRawScore !== 0) {
+                await query("UPDATE interviews SET score = 0 WHERE id = $1", [trInt.id]);
+                trRawScore = 0;
+              }
+              const trPercentage = calculatePercentage((trRawScore !== null && trRawScore !== undefined) ? trRawScore : 0);
+              const trQualified = trPercentage >= 60 && checkViolationsSafe(trInt);
 
-            if (!trQualified) {
-              await query(
-                "UPDATE applications SET tr_score = $1, status = 'tr_completed', final_status = 'rejected' WHERE id = $2",
-                [trPercentage, app.id]
-              );
-            } else {
-              // Passed TR! Check if HR is also completed
-              if (hrInt) {
-                let hrRawScore = hrInt.score;
-                if (hrInt.answered_count <= 2 && hrRawScore !== 0) {
-                  await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
-                  hrRawScore = 0;
-                }
-                const hrPercentage = calculatePercentage((hrRawScore !== null && hrRawScore !== undefined) ? hrRawScore : 0);
-                const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
-
+              if (!trQualified) {
                 await query(
-                  "UPDATE applications SET tr_score = $1, hr_score = $2, status = 'hr_completed', final_status = $3 WHERE id = $4",
-                  [trPercentage, hrPercentage, hrQualified ? 'selected' : 'rejected', app.id]
-                );
-              } else {
-                // TR completed but HR pending
-                await query(
-                  "UPDATE applications SET tr_score = $1, status = 'hr_pending', final_status = 'pending' WHERE id = $2",
+                  "UPDATE applications SET tr_score = $1, status = 'tr_completed', final_status = 'rejected' WHERE id = $2",
                   [trPercentage, app.id]
                 );
+              } else {
+                // Passed TR! Check if HR is also completed
+                if (hrInt) {
+                  // Only sync HR if evaluated or empty
+                  if (hrInt.score !== null || hrInt.answered_count <= 2) {
+                    let hrRawScore = hrInt.score;
+                    if (hrInt.answered_count <= 2 && hrRawScore !== 0) {
+                      await query("UPDATE interviews SET score = 0 WHERE id = $1", [hrInt.id]);
+                      hrRawScore = 0;
+                    }
+                    const hrPercentage = calculatePercentage((hrRawScore !== null && hrRawScore !== undefined) ? hrRawScore : 0);
+                    const hrQualified = hrPercentage >= 60 && checkViolationsSafe(hrInt) && hrInt.answered_count >= 15;
+
+                    await query(
+                      "UPDATE applications SET tr_score = $1, hr_score = $2, status = 'hr_completed', final_status = $3 WHERE id = $4",
+                      [trPercentage, hrPercentage, hrQualified ? 'selected' : 'rejected', app.id]
+                    );
+                  }
+                } else {
+                  // TR completed but HR pending
+                  await query(
+                    "UPDATE applications SET tr_score = $1, status = 'hr_pending', final_status = 'pending' WHERE id = $2",
+                    [trPercentage, app.id]
+                  );
+                }
               }
             }
           }

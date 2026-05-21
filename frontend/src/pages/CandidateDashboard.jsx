@@ -730,41 +730,53 @@ function CandidateDashboard() {
                                     {app.is_it_role && (
                                       <>
                                         {/* TR Round Section */}
-                                        {!app.tr_done && (
+                                        {!app.tr_done ? (
                                           app.ongoing_interview_id && app.ongoing_interview_type === 'Technical' ? (
                                             <button className="start-interview-btn" onClick={() => navigate(`/interview/${app.ongoing_interview_id}`)} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#059669' }}>Resume TR Round</button>
                                           ) : (
                                             <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'Technical' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto' }}>Take TR Round</button>
                                           )
-                                        )}
-
-                                        {/* HR Round Section (Practice vs Real) */}
-                                        {app.tr_score >= 60 ? (
-                                          /* REAL HR ROUND (Qualified) */
-                                          <>
-                                            {!app.hr_done && (
-                                              app.ongoing_interview_id && app.ongoing_interview_type === 'HR' ? (
-                                                <button className="start-interview-btn" onClick={() => navigate(`/interview/${app.ongoing_interview_id}`)} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#059669' }}>Resume HR Round</button>
-                                              ) : (
-                                                <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'HR' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto' }}>Take HR Round Unlock!</button>
-                                              )
-                                            )}
-                                          </>
                                         ) : (
-                                          /* PRACTICE HR ROUND (Not yet qualified or failed TR) */
-                                          <>
-                                            {!app.hr_done && (
-                                              app.ongoing_interview_id && app.ongoing_interview_type === 'HR' ? (
-                                                <button className="start-interview-btn" onClick={() => navigate(`/interview/${app.ongoing_interview_id}`)} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#059669' }}>Resume HR Practice</button>
-                                              ) : (
-                                                <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'HR' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#6366f1' }}>Practice HR Round</button>
-                                              )
-                                            )}
-                                          </>
+                                          app.tr_score === null ? (
+                                            <span className="animate-pulse" style={{ color: '#f59e0b', fontWeight: 'bold', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                                              ⏳ Evaluating Technical Round...
+                                            </span>
+                                          ) : (
+                                            /* HR Round Section (Practice vs Real) */
+                                            app.tr_score >= 60 ? (
+                                              /* REAL HR ROUND (Qualified) */
+                                              <>
+                                                {!app.hr_done && (
+                                                  app.ongoing_interview_id && app.ongoing_interview_type === 'HR' ? (
+                                                    <button className="start-interview-btn" onClick={() => navigate(`/interview/${app.ongoing_interview_id}`)} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#059669' }}>Resume HR Round</button>
+                                                  ) : (
+                                                    <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'HR' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto' }}>Take HR Round Unlock!</button>
+                                                  )
+                                                )}
+                                              </>
+                                            ) : (
+                                              /* PRACTICE HR ROUND (Not yet qualified or failed TR) */
+                                              <>
+                                                {!app.hr_done && (
+                                                  app.ongoing_interview_id && app.ongoing_interview_type === 'HR' ? (
+                                                    <button className="start-interview-btn" onClick={() => navigate(`/interview/${app.ongoing_interview_id}`)} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#059669' }}>Resume HR Practice</button>
+                                                  ) : (
+                                                    <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'HR' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto', background: '#6366f1' }}>Practice HR Round</button>
+                                                  )
+                                                )}
+                                              </>
+                                            )
+                                          )
                                         )}
 
                                         {app.tr_done && app.hr_done && (
-                                          <span style={{ color: '#6366f1', fontWeight: 'bold', fontSize: '0.85rem' }}>All Rounds Completed</span>
+                                          app.hr_score === null ? (
+                                            <span className="animate-pulse" style={{ color: '#f59e0b', fontWeight: 'bold', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                                              ⏳ Evaluating HR Round...
+                                            </span>
+                                          ) : (
+                                            <span style={{ color: '#6366f1', fontWeight: 'bold', fontSize: '0.85rem', padding: '8px 16px' }}>All Rounds Completed</span>
+                                          )
                                         )}
                                       </>
                                     )}
@@ -779,7 +791,13 @@ function CandidateDashboard() {
                                             <button className="start-interview-btn" onClick={() => setSelectedAppForRound({ appId: app.id, role: app.role, type: 'HR' })} style={{ padding: '8px 16px', fontSize: '0.9rem', width: 'auto' }}>Take HR Round</button>
                                           )
                                         ) : (
-                                          <span style={{ color: '#10B981', fontWeight: 'bold', padding: '8px 16px' }}>HR Round Completed</span>
+                                          app.hr_score === null ? (
+                                            <span className="animate-pulse" style={{ color: '#f59e0b', fontWeight: 'bold', padding: '8px 16px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+                                              ⏳ Evaluating Performance...
+                                            </span>
+                                          ) : (
+                                            <span style={{ color: '#10B981', fontWeight: 'bold', padding: '8px 16px' }}>HR Round Completed</span>
+                                          )
                                         )}
                                       </>
                                     )}
