@@ -1051,8 +1051,8 @@ function AdminDashboard() {
     <div className="dashboard-container">
       <aside className="sidebar">
         <div className="sidebar-header" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <div style={{ background: 'white', padding: '6px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', flexShrink: 0 }}>
-            <img src="/shnoor_logo.png" alt="Shnoor" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
+          <div className="global-logo-container" style={{ width: '42px', height: '42px' }}>
+            <img src="/shnoor_logo.png" alt="Shnoor" className="sidebar-logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
           </div>
           <div className="sidebar-brand">
             <h2 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>Shnoor AI</h2>
@@ -1221,7 +1221,7 @@ function AdminDashboard() {
                       onDownloadPDF={handleDownloadAppsPDF}
                       onDownloadExcel={handleDownloadAppsExcel}
                       icon={<IconDownload size={14} />}
-                      style={{ background: '#4f46e5', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
+                      style={{ background: 'var(--primary)', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
                     />
                   </div>
                 </div>
@@ -1345,7 +1345,7 @@ function AdminDashboard() {
                       onDownloadPDF={handleDownloadUsersPDF}
                       onDownloadExcel={handleDownloadUsersExcel}
                       icon={<IconDownload size={14} />}
-                      style={{ background: '#4f46e5', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
+                      style={{ background: 'var(--primary)', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
                     />
                   </div>
                 </div>
@@ -1494,14 +1494,14 @@ function AdminDashboard() {
                       onDownloadPDF={handleDownloadMasterPDF}
                       onDownloadExcel={handleDownloadMasterExcel}
                       icon={<IconDownload size={14} />}
-                      style={{ background: '#4f46e5', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
+                      style={{ background: 'var(--primary)', color: 'white', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
                     />
                   </div>
                 </div>
 
                 {/* Experience & Feedback Summary Row */}
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '20px', marginBottom: '32px' }}>
-                  <div style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)', padding: '20px', borderRadius: '18px', color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                  <div style={{ background: 'linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%)', padding: '20px', borderRadius: '18px', color: '#fff', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <div style={{ fontSize: '0.75rem', opacity: 0.8, marginBottom: '4px', fontWeight: 'bold' }}>AVG. SATISFACTION</div>
                     <div style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
                       <div style={{ fontSize: '1.8rem', fontWeight: 900 }}>{experienceStats?.avgRating || 0}</div>
@@ -1552,7 +1552,7 @@ function AdminDashboard() {
                             boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                           }} 
                         />
-                        <Bar dataKey="score" fill="#4f46e5" radius={[4, 4, 0, 0]} barSize={22} />
+                        <Bar dataKey="score" fill="var(--primary)" radius={[4, 4, 0, 0]} barSize={22} />
                       </BarChart>
                     </ResponsiveContainer>
                   </div>
@@ -1933,7 +1933,7 @@ function AdminDashboard() {
                       onDownloadPDF={handleDownloadViolationsPDF}
                       onDownloadExcel={handleDownloadViolationsExcel}
                       icon={<IconDownload size={14} />}
-                      style={{ background: '#4f46e5', color: 'white', border: 'none', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
+                      style={{ background: 'var(--primary)', color: 'white', border: 'none', padding: '8px 14px', fontSize: '0.75rem', height: '34px', display: 'flex', alignItems: 'center' }}
                     />
                   </div>
                 </div>
@@ -2021,7 +2021,7 @@ function AdminDashboard() {
                         onChange={(e) => setCollegeSearch(e.target.value)}
                       />
                     </div>
-                    <button className="header-btn" style={{ background: '#4f46e5', color: 'white', border: 'none', padding: '10px 20px' }} onClick={handleAddCollege}>
+                    <button className="header-btn" style={{ background: 'var(--primary)', color: 'white', border: 'none', padding: '10px 20px' }} onClick={handleAddCollege}>
                       + Add College
                     </button>
                   </div>
@@ -2176,7 +2176,7 @@ function AdminDashboard() {
                           />
                         </div>
 
-                        <button type="submit" className="header-btn" style={{ background: '#4f46e5', color: 'white', border: 'none', padding: '12px', justifyContent: 'center', fontSize: '0.9rem', marginTop: '8px' }}>
+                        <button type="submit" className="header-btn" style={{ background: 'var(--primary)', color: 'white', border: 'none', padding: '12px', justifyContent: 'center', fontSize: '0.9rem', marginTop: '8px' }}>
                           Update Password
                         </button>
                       </div>

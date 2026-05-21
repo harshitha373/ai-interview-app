@@ -77,11 +77,13 @@ body {
 }
 
 .logo img {
-  height: 40px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .logo-text {
-  color: var(--secondary);
+  color: var(--text-main);
   font-weight: 800;
   font-size: 1.25rem;
   letter-spacing: -0.02em;
@@ -502,10 +504,9 @@ body {
 }
 
 .footer-logo img {
-  height: 48px;
-  background: #fff;
-  border-radius: 8px;
-  padding: 6px;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .footer-brand-tag {

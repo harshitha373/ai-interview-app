@@ -582,8 +582,8 @@ function CandidateDashboard() {
       {/* Sidebar */}
       <aside className="sidebar">
         <div className="sidebar-header" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
-          <div style={{ background: 'white', padding: '6px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', flexShrink: 0 }}>
-            <img src="/shnoor_logo.png" alt="Shnoor" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
+          <div className="global-logo-container" style={{ width: '42px', height: '42px' }}>
+            <img src="/shnoor_logo.png" alt="Shnoor" className="sidebar-logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
           </div>
           <div className="sidebar-brand">
             <h2 style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-main)', margin: 0 }}>Shnoor AI</h2>
@@ -919,7 +919,7 @@ function CandidateDashboard() {
                           boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
                         }} 
                       />
-                      <Bar dataKey="score" fill="#4f46e5" radius={[4, 4, 0, 0]} barSize={32} />
+                      <Bar dataKey="score" fill="var(--primary)" radius={[4, 4, 0, 0]} barSize={32} />
                     </BarChart>
                   </ResponsiveContainer>
                 </div>

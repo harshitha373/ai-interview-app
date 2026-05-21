@@ -391,7 +391,7 @@ const ChatWidget = () => {
         style={{
           position: 'fixed', bottom: '30px', right: '30px',
           width: '60px', height: '60px', borderRadius: '50%',
-          background: 'linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)',
+          background: 'linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           cursor: 'pointer', boxShadow: '0 10px 25px rgba(79, 70, 229, 0.4)',
           zIndex: 9999, transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
@@ -442,7 +442,7 @@ const ChatWidget = () => {
 
         <div style={{ display: 'flex', alignItems: 'center', gap: '14px', zIndex: 1 }}>
           <div style={{ position: 'relative' }}>
-            <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }}>
+            <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary) 0%, #3b82f6 100%)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.2)' }}>
               <UserCircle2 size={24} color="#fff" />
             </div>
             <div style={{ position: 'absolute', bottom: '0px', right: '0px', width: '12px', height: '12px', borderRadius: '50%', background: '#10b981', border: '2px solid #0f172a' }}></div>
@@ -534,7 +534,7 @@ const ChatWidget = () => {
                             background: isAdmin ? '#f1f5f9' : 'rgba(255,255,255,0.15)',
                             padding: '10px', borderRadius: '10px', marginBottom: '8px', cursor: 'pointer'
                           }} onClick={() => handleDownloadFile(m.file_path, m.message, 'doc')}>
-                            <FileText size={20} color={isAdmin ? '#4f46e5' : '#fff'} />
+                            <FileText size={20} color={isAdmin ? 'var(--primary)' : '#fff'} />
                             <div style={{ flex: 1, minWidth: 0 }}>
                               <div style={{ fontSize: '0.85rem', fontWeight: '600', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
                                 {m.message.replace('[DOCUMENT: ', '').replace(']', '').replace('[DOCUMENT:', '')}
@@ -573,7 +573,7 @@ const ChatWidget = () => {
                                 <button 
                                   type="button"
                                   onClick={() => handleRespondClear(m.id, 'ok')}
-                                  style={{ background: '#4f46e5', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}
+                                  style={{ background: 'var(--primary)', color: '#fff', border: 'none', padding: '6px 14px', borderRadius: '8px', fontSize: '0.8rem', fontWeight: 'bold', cursor: 'pointer' }}
                                 >
                                   Yes, Resolved & Clear
                                 </button>
@@ -599,7 +599,7 @@ const ChatWidget = () => {
                         <button
                           onClick={() => setFeedbackSession(prev => ({ ...prev, showRateButton: false }))}
                           style={{
-                            background: '#4f46e5',
+                            background: 'var(--primary)',
                             color: '#fff',
                             border: 'none',
                             padding: '8px 16px',
@@ -688,7 +688,7 @@ const ChatWidget = () => {
 
               {input.trim() ? (
                 <button type="button" onClick={handleSend} style={{ background: 'none', border: 'none', padding: '0', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Send size={24} color="#4f46e5" />
+                  <Send size={24} color="var(--primary)" />
                 </button>
               ) : (
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>

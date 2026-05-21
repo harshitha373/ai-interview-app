@@ -27,7 +27,7 @@ const LandingPage = () => {
       <header className="main-nav">
         <div className="nav-inner">
           <Link to="/" className="logo">
-            <div style={{ background: '#fff', padding: '4px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '32px', height: '32px', marginRight: '10px' }}>
+            <div className="global-logo-container" style={{ width: '38px', height: '38px', marginRight: '10px' }}>
               <img src="/shnoor_logo.png" alt="Shnoor Logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
             </div>
             <span className="logo-text">Shnoor AI System</span>
@@ -226,7 +226,7 @@ const LandingPage = () => {
           <div className="footer-grid">
             <div className="footer-info">
               <div className="footer-logo">
-                <div style={{ background: '#fff', padding: '6px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', marginRight: '12px' }}>
+                <div className="global-logo-container" style={{ width: '42px', height: '42px', marginRight: '12px' }}>
                   <img src="/shnoor_logo.png" alt="Shnoor Logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
                 </div>
                 <span>Shnoor AI System</span>

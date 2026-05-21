@@ -746,7 +746,7 @@ function Interview() {
       {notification && <div className="custom-toast animate-fade">⚠️ {notification}</div>}
       <header className="interview-header">
         <div className="header-brand">
-          <div style={{ background: 'white', padding: '4px', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', height: '40px', width: '40px' }}>
+          <div className="global-logo-container" style={{ height: '42px', width: '42px', marginRight: '12px' }}>
             <img src="/shnoor_logo.png" alt="Shnoor AI" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
           </div>
           <h1 style={{ color: 'var(--int-text)' }}>{isCodingMode ? "Coding Challenge" : "Live Interview Session"}</h1>
@@ -766,8 +766,8 @@ function Interview() {
 
       {!interviewStarted && (
         <div className="loading-overlay" style={{ background: 'var(--int-bg)', zIndex: 2000 }}>
-          <div style={{ background: 'white', padding: '12px', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '32px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>
-            <img src="/shnoor_logo.png" alt="Shnoor AI" style={{ height: '80px', width: 'auto' }} />
+          <div className="global-logo-container" style={{ padding: '12px', borderRadius: '16px', marginBottom: '32px', width: '104px', height: '104px' }}>
+            <img src="/shnoor_logo.png" alt="Shnoor AI" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
           </div>
           <h2 style={{ color: 'var(--int-text)', fontSize: '2.5rem', fontWeight: '900', marginBottom: '8px' }}>Ready to start?</h2>
           <p style={{ color: 'var(--int-muted)', fontSize: '1.1rem', marginBottom: '40px' }}>AI will ask questions via voice.</p>

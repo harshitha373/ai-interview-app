@@ -35,7 +35,7 @@ function AuthLayout({
       <div className="auth-left">
         <div className="auth-left-content">
           <Link to="/" className="auth-brand">
-            <div style={{ background: '#fff', padding: '6px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', width: '40px', height: '40px', marginRight: '12px' }}>
+            <div className="global-logo-container" style={{ width: '40px', height: '40px', marginRight: '12px' }}>
               <img src="/shnoor_logo.png" alt="Shnoor AI" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
             </div>
             <span>Shnoor AI Systems</span>

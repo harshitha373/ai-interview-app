@@ -199,7 +199,7 @@ const Queries = () => {
                 <main style={{ flex: 1, overflowY: 'auto', padding: '40px', display: 'flex', flexDirection: 'column', gap: '24px' }}>
                   <div style={{ background: 'var(--bg-card)', borderRadius: '16px', padding: '24px', border: '1px solid var(--border-color)', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '16px' }}>
-                      <span style={{ fontWeight: 800, fontSize: '0.75rem', color: '#4f46e5', textTransform: 'uppercase' }}>Subject: {selectedQuery.subject || 'N/A'}</span>
+                      <span style={{ fontWeight: 800, fontSize: '0.75rem', color: 'var(--primary)', textTransform: 'uppercase' }}>Subject: {selectedQuery.subject || 'N/A'}</span>
                       <span style={{ fontSize: '0.75rem', color: '#94a3b8' }}>{getFullTime(selectedQuery.created_at)}</span>
                     </div>
                     <div style={{ fontSize: '1rem', lineHeight: '1.7', color: 'var(--text-main)', whiteSpace: 'pre-wrap' }}>{selectedQuery.message}</div>
@@ -240,7 +240,7 @@ const Queries = () => {
               </>
             ) : (
               <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '60px' }}>
-                <div style={{ width: '120px', height: '120px', background: 'var(--bg-card)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#4f46e5', marginBottom: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
+                <div style={{ width: '120px', height: '120px', background: 'var(--bg-card)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--primary)', marginBottom: '24px', boxShadow: '0 4px 12px rgba(0,0,0,0.05)' }}>
                   <Inbox size={56} />
                 </div>
                 <h2 style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '8px' }}>Support Center Inbox</h2>

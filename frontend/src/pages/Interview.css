@@ -28,8 +28,9 @@
 }
 
 .header-brand img {
-  height: 48px;
-  width: auto;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
 }
 
 .header-brand h1 {
