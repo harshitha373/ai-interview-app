@@ -370,7 +370,11 @@ const filterBlueprintSkills = (resumeText, blueprint) => {
   return matchedTopics.length > 0 ? matchedTopics : blueprint.topics.slice(0, 2);
 };
 
-const generateAdaptivePrompt = (candidateName, role, difficulty, resumeText, chatHistory, blueprint, interviewType = "Technical") => {
+const generateAdaptivePrompt = (candidateName, role, difficulty, resumeText, chatHistory, blueprint, interviewType = "Technical", previousQuestions = []) => {
+  const previousQuestionsList = previousQuestions.length > 0
+    ? previousQuestions.map((q, i) => `${i + 1}. ${q}`).join("\n")
+    : "None yet.";
+
   if (interviewType === "HR") {
     // Determine role-specific HR questions for contextual guidance
     const roleMatch = Object.keys(ROLE_SPECIFIC_HR_QUESTIONS).find(r =>
@@ -393,7 +397,9 @@ STRICT BEHAVIORAL RULES:
 3. GUIDED TOPICS (Behavioral Bank for context):
    You can draw inspiration from these standard behavioral points, but you are expected to dynamically formulate the questions to fit the conversation flow:
    ${questionBank.slice(0, 10).join(" | ")}
-4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question in the TRANSCRIPT.
+4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question.
+   LIST OF PREVIOUSLY ASKED QUESTIONS (STRICTLY DO NOT REPEAT ANY OF THESE):
+   ${previousQuestionsList}
 5. Be concise (1-2 sentences). Speak in a professional, natural conversational tone, avoiding dry preambles like "I see" or "That is interesting". Just directly ask the question.
 
 TRANSCRIPT:
@@ -430,7 +436,9 @@ STRICT TECHNICAL RULES:
    - If they gave an answer, you MUST dynamically formulate a direct, context-aware follow-up question (contextual question) that probes deeper into their previous explanation, implementation choices, or coding decisions (e.g. asking them to explain a specific detail they mentioned, justify a design choice, optimize an approach, or solve a variant of the coding problem). Do NOT blindly shift to a new topic if their response warrants a conversational deep dive.
    - If they clearly struggled or did not know the answer, do not make them feel bad; gently transition to a lower difficulty question on another matched skill from their resume.
    - Ensure the conversation is a natural, highly fluid flow rather than a rigid list of disconnected questions.
-4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question in the TRANSCRIPT.
+4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question.
+   LIST OF PREVIOUSLY ASKED QUESTIONS (STRICTLY DO NOT REPEAT ANY OF THESE):
+   ${previousQuestionsList}
 5. CODING REQUIREMENT & SANDBOX TAILORING: 
    - You MUST ask at least one coding question (marked with [TYPE: CODING]) during the interview where the candidate must write actual code.
    - Design the programming task specifically around their resume's matching technical stack (e.g., if they know JavaScript, ask a JavaScript challenge; if they know Python, ask a Python challenge).

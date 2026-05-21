@@ -911,7 +911,24 @@ app.post("/api/interview/:id/answer", async (req, res) => {
       chatHistory = "... (previous history truncated for context) ...\n" + chatHistory;
     }
 
-    const prompt = aiEngine.generateAdaptivePrompt(candidateName, selectedRole, currentDifficulty, resumeText, chatHistory, blueprint, interviewType);
+    // Extract all previously asked questions by the AI to prevent any repetition
+    const previousQuestions = history.rows
+      .filter(m => m.role === 'ai')
+      .map(m => {
+        // Strip out any tag markup or cleaning logic if present, just get the main question text
+        return m.content.replace(/<Question>([\s\S]*?)<\/Question>/i, '$1').trim();
+      });
+
+    const prompt = aiEngine.generateAdaptivePrompt(
+      candidateName,
+      selectedRole,
+      currentDifficulty,
+      resumeText,
+      chatHistory,
+      blueprint,
+      interviewType,
+      previousQuestions
+    );
 
     let aiOutput = await aiQueue.add(prompt, 150);
 
