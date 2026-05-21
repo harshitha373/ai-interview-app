@@ -454,3 +454,18 @@ html[data-theme='dark'] .global-logo-container {
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(79, 70, 229, 0.15), 0 0 1px rgba(79, 70, 229, 0.2) !important;
 }
+
+/* Global Theme Toggle Button Responsiveness */
+@media (max-width: 768px) {
+  .theme-toggle-btn {
+    width: 32px !important;
+    height: 32px !important;
+    padding: 6px !important;
+    border-radius: 8px !important;
+  }
+  
+  .theme-toggle-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}

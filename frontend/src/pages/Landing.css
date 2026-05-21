@@ -566,12 +566,38 @@ body {
 }
 
 @media (max-width: 768px) {
+  .nav-inner {
+    padding: 0 16px;
+  }
+
+  .logo-text {
+    font-size: 1.05rem;
+    white-space: nowrap;
+  }
+
+  .logo .global-logo-container {
+    width: 30px !important;
+    height: 30px !important;
+    margin-right: 6px !important;
+    padding: 4px !important;
+  }
+
   .nav-links > a {
     display: none;
   }
   
   .nav-auth {
-    gap: 12px;
+    gap: 8px;
+  }
+
+  .nav-auth .login-link {
+    font-size: 0.85rem;
+  }
+
+  .nav-auth .btn {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    border-radius: 8px;
   }
 
   .hero-title {
@@ -589,6 +615,12 @@ body {
   .workflow-section {
     margin: 0;
     border-radius: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-system-word {
+    display: none;
   }
 }
 

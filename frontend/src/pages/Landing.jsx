@@ -30,7 +30,7 @@ const LandingPage = () => {
             <div className="global-logo-container" style={{ width: '38px', height: '38px', marginRight: '10px' }}>
               <img src="/shnoor_logo.png" alt="Shnoor Logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
             </div>
-            <span className="logo-text">Shnoor AI System</span>
+            <span className="logo-text">Shnoor AI <span className="logo-system-word">System</span></span>
           </Link>
           <nav className="nav-links">
             <a href="#features">Features</a>
