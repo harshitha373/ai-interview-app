@@ -1308,6 +1308,7 @@ body {
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 4px 0 24px rgba(0, 0, 0, 0.1);
+    z-index: 2000 !important; /* Stand above the fixed header on mobile */
   }
 
   .sidebar.mobile-open {
@@ -1332,6 +1333,10 @@ body {
 
   .user-welcome h1 {
     font-size: 0.9rem;
+  }
+
+  .user-welcome p {
+    display: none !important; /* Hide subtitle text on mobile to save space */
   }
 
   .header-user-info {

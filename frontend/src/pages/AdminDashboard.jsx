@@ -1062,7 +1062,7 @@ function AdminDashboard() {
       {/* Mobile Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
-          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 90, backdropFilter: 'blur(2px)' }} 
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 1500, backdropFilter: 'blur(2px)' }} 
           onClick={() => setIsSidebarOpen(false)}
         />
       )}
@@ -1156,9 +1156,9 @@ function AdminDashboard() {
             <ThemeToggle />
 
             <button className={`header-btn ${activeTab === 'profile' ? 'profile-active' : ''}`} onClick={() => setActiveTab('profile')}>
-              <IconUser /> My Profile
+              <IconUser /> <span>My Profile</span>
             </button>
-            <button className="header-btn logout" onClick={handleLogout}><IconLogout /> Logout</button>
+            <button className="header-btn logout" onClick={handleLogout}><IconLogout /> <span>Logout</span></button>
           </div>
         </header>
 
