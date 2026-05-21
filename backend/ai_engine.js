@@ -344,13 +344,39 @@ DO NOT include any other text.`;
   return ROLE_BLUEPRINTS["Software Engineer"];
 };
 
+const filterBlueprintSkills = (resumeText, blueprint) => {
+  if (!blueprint || !blueprint.topics) return [];
+  if (!resumeText) return blueprint.topics;
+
+  const cleanResume = resumeText.toLowerCase();
+  const matchedTopics = blueprint.topics.filter(topic => {
+    const cleanTopic = topic.toLowerCase();
+    if (cleanResume.includes(cleanTopic)) return true;
+    
+    // Match individual descriptive words and support singular/plural forms (e.g. structures -> structure)
+    const words = cleanTopic.split(/\s+/).filter(w => w.length > 3);
+    if (words.length > 0) {
+      return words.every(w => {
+        const singular = w.endsWith('s') ? w.slice(0, -1) : w;
+        return cleanResume.includes(w) || cleanResume.includes(singular);
+      });
+    }
+    
+    return false;
+  });
+
+  // Fallback: If no topic matched, return first two blueprint topics to maintain context
+  return matchedTopics.length > 0 ? matchedTopics : blueprint.topics.slice(0, 2);
+};
+
 const generateAdaptivePrompt = (candidateName, role, difficulty, resumeText, chatHistory, blueprint, interviewType = "Technical") => {
+  const filteredTopics = filterBlueprintSkills(resumeText, blueprint);
   const topics = interviewType === "HR"
     ? "Behavioral, Soft Skills, Career Goals, Cultural Fit"
-    : (blueprint?.topics?.join(", ") || "General Technical Skills");
+    : (filteredTopics.join(", ") || "General Technical Skills");
 
   if (interviewType === "HR") {
-    // Determine role-specific HR questions
+    // Determine role-specific HR questions for contextual guidance
     const roleMatch = Object.keys(ROLE_SPECIFIC_HR_QUESTIONS).find(r =>
       role.toLowerCase().includes(r.toLowerCase())
     );
@@ -360,27 +386,29 @@ const generateAdaptivePrompt = (candidateName, role, difficulty, resumeText, cha
 Role: ${role}
 Candidate: ${candidateName}
 
-IDENTITY: You are a PURE HR Representative. You have NO technical background. You do not understand code, architectures, or technical frameworks.
+IDENTITY: You are a highly experienced, empathetic, yet rigorous Senior HR Director. You evaluate candidates on soft skills, culture fit, communication, conflict resolution, leadership, and professional alignment.
 
-STRICT RULES:
-1. PURE BEHAVIORAL: Even if the candidate mentions "Computer Science", "Programming", or technical tools, YOU MUST IGNORE THEM.
-2. DO NOT comment on technical skills. If the candidate mentions them, politely steer back to soft skills or personality.
-3. You MUST pick your next question ONLY from this Behavioral Bank:
-   ${questionBank.join(" | ")}
-
-4. NO REPETITION: Check the TRANSCRIPT below. If you have already asked a question about "Self Introduction" or "Strengths", pick a DIFFERENT one from the bank (e.g., Teamwork, Conflict, or Goals).
-5. Be direct. No conversational filler like "That sounds great" or "I understand". Just ask the question.
+STRICT BEHAVIORAL RULES:
+1. PURELY BEHAVIORAL & SOFT SKILLS: Focus entirely on behavioral, situational, leadership, and interpersonal traits. Do NOT ask technical questions or evaluate code syntax, even if the candidate mentions programming tools.
+2. DYNAMIC CONTEXTUAL ADAPTATION:
+   - Carefully read the TRANSCRIPT below. 
+   - Read the candidate's last answer. You MUST dynamically formulate a direct, context-aware follow-up question (contextual question) probing deeper into their previous explanation, actions, or decisions (e.g. asking "How did your team respond to that decision?" or "What did you learn from that conflict?").
+   - Do NOT blindly jump to a generic or unrelated question if the candidate's last answer warrants a deep-dive.
+3. GUIDED TOPICS (Behavioral Bank for context):
+   You can draw inspiration from these standard behavioral points, but you are expected to dynamically formulate the questions to fit the conversation flow:
+   ${questionBank.slice(0, 10).join(" | ")}
+4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question in the TRANSCRIPT.
+5. Be concise (1-2 sentences). Speak in a professional, natural conversational tone, avoiding dry preambles like "I see" or "That is interesting". Just directly ask the question.
 
 TRANSCRIPT:
 ${chatHistory}
 
-INSTRUCTION: Look at the TRANSCRIPT. What was the last thing asked? Now, pick ONE NEW behavioral question from the bank that has NOT been discussed yet. Wrap it in <Question> tags.
-
-Output EXACTLY in this format:
+INSTRUCTION: Evaluate the last response in the TRANSCRIPT and ask the next dynamic behavioral follow-up or situational question now.
+Follow this format:
 [DIFFICULTY: 2]
 [TOPIC: HR]
 [TYPE: BEHAVIORAL]
-<Question> Your behavioral question here </Question>
+<Question> Your question here </Question>
 
 AI:`;
   }
@@ -389,18 +417,27 @@ AI:`;
 Role: ${role}
 Candidate: ${candidateName}
 Difficulty: ${difficulty}/5
-Topics: ${topics}
+Topics Covered by Resume: ${topics}
 
-STRICT RULES:
+CANDIDATE RESUME:
+${resumeText || "No resume uploaded."}
+
+STRICT TECHNICAL RULES:
 1. PURELY TECHNICAL: You are an elite Technical Architect. Do NOT ask behavioral, situational, or soft-skill questions.
-2. NO REPETITION: Carefully read the TRANSCRIPT below. Do NOT ask any question that has already been asked or closely resembles a previous question.
-3. CODING REQUIREMENT: You MUST ask at least one coding question (marked with [TYPE: CODING]) where the candidate is presented with a programming task and must write actual code (e.g., write a function to solve a specific problem). Provide a simple code stub or clear problem statement.
-4. Be concise (1-2 sentences). Do not include conversational preambles, greetings, or feedback on their previous answer. Just directly ask the question.
+2. STRICT RESUME FILTERING: You MUST only ask questions about topics, skills, frameworks, or languages listed in the CANDIDATE RESUME. Do NOT ask questions about standard blueprint topics that are not present or mentioned in the resume.
+3. DYNAMIC ADAPTATION & CONTEXTUAL FOLLOW-UPS:
+   - Carefully read the TRANSCRIPT below. 
+   - Read the candidate's last answer. If it is incomplete, has a small logical gap, or introduces an interesting concept, you MUST ask a direct follow-up question (contextual question) probing deeper into that specific answer rather than jumping to a new topic.
+   - If they answered successfully, progress to a slightly more advanced conceptual question or a related technical skill on their resume.
+   - If they clearly struggled or did not know the answer, do not make them feel bad; gently pivot to another topic listed on their resume at a lower difficulty.
+4. NO REPETITION: Do NOT ask any question that has already been asked or closely resembles a previous question in the TRANSCRIPT.
+5. CODING CHALLENGE TAILORING: When asking a coding question (marked with [TYPE: CODING]), design the task around the candidate's actual projects or technical stack listed in their resume (e.g., if they know JavaScript, ask a JavaScript challenge). Provide a simple, clear code stub or problem statement.
+6. Be concise (1-2 sentences). Do not include conversational preambles, greetings, or feedback on their previous answer. Just directly ask the question.
 
 TRANSCRIPT:
 ${chatHistory}
 
-INSTRUCTION: Ask the next technical theory or coding question now.
+INSTRUCTION: Evaluate the last response in the TRANSCRIPT and ask the next technical theory or dynamic coding follow-up question now.
 Follow this format:
 [DIFFICULTY: X]
 [TOPIC: Name]
