@@ -159,10 +159,18 @@ const IconUsers = () => (
 );
 
 const IconHelp = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"></circle>
     <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
     <line x1="12" y1="17" x2="12.01" y2="17"></line>
+  </svg>
+);
+
+const IconMenu = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
   </svg>
 );
 
@@ -198,6 +206,9 @@ function CandidateDashboard() {
   const [customRole, setCustomRole] = useState("");
   const [isCustomRole, setIsCustomRole] = useState(false);
   const [interviewType, setInterviewType] = useState("Technical");
+
+  // Mobile Sidebar State
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Password Change States
   const [oldPassword, setOldPassword] = useState("");
@@ -579,8 +590,16 @@ function CandidateDashboard() {
 
   return (
     <div className="dashboard-container">
+      {/* Mobile Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div 
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 90, backdropFilter: 'blur(2px)' }} 
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="sidebar">
+      <aside className={`sidebar ${isSidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <div className="global-logo-container" style={{ width: '42px', height: '42px' }}>
             <img src="/shnoor_logo.png" alt="Shnoor" className="sidebar-logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
@@ -592,16 +611,16 @@ function CandidateDashboard() {
         </div>
 
         <nav className="sidebar-menu">
-          <button className={`sidebar-tab ${activeTab === 'interviews' ? 'active' : ''}`} onClick={() => setActiveTab('interviews')}>
+          <button className={`sidebar-tab ${activeTab === 'interviews' ? 'active' : ''}`} onClick={() => { setActiveTab('interviews'); setIsSidebarOpen(false); }}>
             <IconRobot /> <span>My Interviews</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'results' ? 'active' : ''}`} onClick={() => { setActiveTab('results'); fetchUserData(user.id); }}>
+          <button className={`sidebar-tab ${activeTab === 'results' ? 'active' : ''}`} onClick={() => { setActiveTab('results'); fetchUserData(user.id); setIsSidebarOpen(false); }}>
             <IconChart /> <span>Results</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'violations' ? 'active' : ''}`} onClick={() => { setActiveTab('violations'); fetchUserData(user.id); }}>
+          <button className={`sidebar-tab ${activeTab === 'violations' ? 'active' : ''}`} onClick={() => { setActiveTab('violations'); fetchUserData(user.id); setIsSidebarOpen(false); }}>
             <IconAlert /> <span>Violations</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'help' ? 'active' : ''}`} onClick={() => setActiveTab('help')}>
+          <button className={`sidebar-tab ${activeTab === 'help' ? 'active' : ''}`} onClick={() => { setActiveTab('help'); setIsSidebarOpen(false); }}>
             <IconHelp /> <span>Help & Support</span>
           </button>
         </nav>
@@ -610,9 +629,14 @@ function CandidateDashboard() {
       {/* Main Content */}
       <main className="dash-main-wrapper">
         <header className="dash-header-top">
-          <div className="user-welcome">
-            <h1>Hello, {user.name.split(' ')[0]}! 👋</h1>
-            <p>Ready to ace your next interview?</p>
+          <div className="header-brand-mobile-container">
+            <button className="mobile-menu-toggle" onClick={() => setIsSidebarOpen(true)}>
+              <IconMenu />
+            </button>
+            <div className="user-welcome">
+              <h1>Hello, {user.name.split(' ')[0]}! 👋</h1>
+              <p>Ready to ace your next interview?</p>
+            </div>
           </div>
           <div className="header-actions">
             <ThemeToggle />

@@ -576,3 +576,74 @@
     transform: translateY(0);
   }
 }
+
+/* ==========================================================================
+   Mobile & Tablet Responsiveness
+   ========================================================================== */
+
+/* Tablet Layout (max 1024px) */
+@media (max-width: 1024px) {
+  .interview-header {
+    padding: 0 20px;
+  }
+  
+  .interview-body.coding-mode {
+    grid-template-columns: 250px 1fr; /* Shrink video section */
+  }
+}
+
+/* Mobile Layout (max 768px) */
+@media (max-width: 768px) {
+  .interview-header {
+    height: auto;
+    padding: 12px 16px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .proctoring-status-container {
+    width: 100%;
+    justify-content: space-between;
+    order: 3;
+  }
+  
+  .header-brand {
+    order: 1;
+  }
+  
+  .btn-finish {
+    order: 2;
+  }
+
+  .interview-body {
+    grid-template-columns: 1fr;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interview-body.coding-mode {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video-section {
+    height: 300px;
+    flex: none;
+  }
+
+  .ai-section, .coding-section {
+    flex: 1;
+    min-height: 500px;
+  }
+
+  .ai-card {
+    padding: 20px;
+  }
+
+  .btn-mic-main {
+    width: 60px;
+    height: 60px;
+  }
+}

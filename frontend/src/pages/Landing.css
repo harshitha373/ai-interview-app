@@ -566,8 +566,12 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav-links {
+  .nav-links > a {
     display: none;
+  }
+  
+  .nav-auth {
+    gap: 12px;
   }
 
   .hero-title {

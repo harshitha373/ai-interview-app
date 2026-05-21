@@ -69,6 +69,15 @@ const IconMail = () => (
 const IconSearchSmall = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 );
+
+const IconMenu = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
 const IconSend = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
 );
@@ -123,6 +132,7 @@ function AdminDashboard() {
   const location = useLocation();
   const [user, setUser] = useState(null);
   const [activeTab, setActiveTab] = useState(location.pathname === "/admin/chats" ? "chats" : "live");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Password Change States
   const [oldPassword, setOldPassword] = useState("");
@@ -1049,7 +1059,15 @@ function AdminDashboard() {
 
   return (
     <div className="dashboard-container">
-      <aside className="sidebar">
+      {/* Mobile Sidebar Overlay */}
+      {isSidebarOpen && (
+        <div 
+          style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, background: 'rgba(0,0,0,0.5)', zIndex: 90, backdropFilter: 'blur(2px)' }} 
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
+      <aside className={`sidebar ${isSidebarOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header" style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
           <div className="global-logo-container" style={{ width: '42px', height: '42px' }}>
             <img src="/shnoor_logo.png" alt="Shnoor" className="sidebar-logo" style={{ height: '100%', width: '100%', objectFit: 'contain' }} />
@@ -1060,25 +1078,25 @@ function AdminDashboard() {
           </div>
         </div>
         <nav className="sidebar-menu">
-          <button className={`sidebar-tab ${activeTab === 'live' ? 'active' : ''}`} onClick={() => setActiveTab('live')}>
+          <button className={`sidebar-tab ${activeTab === 'live' ? 'active' : ''}`} onClick={() => { setActiveTab('live'); setIsSidebarOpen(false); }}>
             <IconLive /> <span>Live Proctoring</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'manage' ? 'active' : ''}`} onClick={() => { setActiveTab('manage'); fetchStats(); }}>
+          <button className={`sidebar-tab ${activeTab === 'manage' ? 'active' : ''}`} onClick={() => { setActiveTab('manage'); fetchStats(); setIsSidebarOpen(false); }}>
             <IconUser /> <span>Manage Interviews</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'users' ? 'active' : ''}`} onClick={() => { setActiveTab('users'); fetchStats(); }}>
+          <button className={`sidebar-tab ${activeTab === 'users' ? 'active' : ''}`} onClick={() => { setActiveTab('users'); fetchStats(); setIsSidebarOpen(false); }}>
             <IconUsers /> <span>User Management</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'reports' ? 'active' : ''}`} onClick={() => { setActiveTab('reports'); fetchStats(); }}>
+          <button className={`sidebar-tab ${activeTab === 'reports' ? 'active' : ''}`} onClick={() => { setActiveTab('reports'); fetchStats(); setIsSidebarOpen(false); }}>
             <IconChart /> <span>Reports</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'violations' ? 'active' : ''}`} onClick={() => { setActiveTab('violations'); fetchStats(); }}>
+          <button className={`sidebar-tab ${activeTab === 'violations' ? 'active' : ''}`} onClick={() => { setActiveTab('violations'); fetchStats(); setIsSidebarOpen(false); }}>
             <IconAlert /> <span>Violations</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'colleges' ? 'active' : ''}`} onClick={() => { setActiveTab('colleges'); fetchColleges(); }}>
+          <button className={`sidebar-tab ${activeTab === 'colleges' ? 'active' : ''}`} onClick={() => { setActiveTab('colleges'); fetchColleges(); setIsSidebarOpen(false); }}>
             <IconSchool /> <span>Manage Colleges</span>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'queries' ? 'active' : ''}`} onClick={() => { setActiveTab('queries'); fetchQueries(); }}>
+          <button className={`sidebar-tab ${activeTab === 'queries' ? 'active' : ''}`} onClick={() => { setActiveTab('queries'); fetchQueries(); setIsSidebarOpen(false); }}>
             <IconMail />
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <span>Support Queries</span>
@@ -1099,7 +1117,7 @@ function AdminDashboard() {
               )}
             </div>
           </button>
-          <button className={`sidebar-tab ${activeTab === 'chats' ? 'active' : ''}`} onClick={() => setActiveTab('chats')}>
+          <button className={`sidebar-tab ${activeTab === 'chats' ? 'active' : ''}`} onClick={() => { setActiveTab('chats'); setIsSidebarOpen(false); }}>
             <IconMail />
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
               <span>Admin Chats</span>
@@ -1125,9 +1143,14 @@ function AdminDashboard() {
 
       <main className="dash-main-wrapper">
         <header className="dash-header-top">
-          <div className="user-welcome">
-            <h1>Hello, Admin! 👋</h1>
-            <p>System Overview & Control Center</p>
+          <div className="header-brand-mobile-container">
+            <button className="mobile-menu-toggle" onClick={() => setIsSidebarOpen(true)}>
+              <IconMenu />
+            </button>
+            <div className="user-welcome">
+              <h1>Hello, Admin! 👋</h1>
+              <p>System Overview & Control Center</p>
+            </div>
           </div>
           <div className="header-actions">
             <ThemeToggle />
