@@ -7,6 +7,7 @@ import * as cocoSsd from '@tensorflow-models/coco-ssd';
 import '@tensorflow/tfjs';
 import "./Interview.css";
 import Editor from "@monaco-editor/react";
+import ThemeToggle from "../components/ThemeToggle";
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
 
@@ -760,6 +761,7 @@ function Interview() {
             <div className={`status-dot ${isFlagged ? 'warning' : (proctoringStatus === 'Monitoring Active' ? 'active' : '')}`}></div>
             <span>{proctoringStatus}</span>
           </div>
+          <ThemeToggle />
           <button className="btn-finish" onClick={handleEndSession}>End Interview</button>
         </div>
       </header>
